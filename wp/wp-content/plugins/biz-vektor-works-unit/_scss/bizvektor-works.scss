@@ -1,0 +1,148 @@
+@charset "utf-8";
+@import "compass";
+
+$txt_color : #333;
+
+//noimg
+@mixin noimgBg { background: url(../images/bg_noimg.png) center center no-repeat #ddd; }
+@mixin noimgTxt {display: block;font-family: "Lato", sans-serif;font-weight: bold;text-align: center;width: 100%;color: #999;position: relative;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+@mixin noimglink { display:block; text-decoration: none; }
+
+/*-------------------------------------------*/
+/*  .worksData
+/*-------------------------------------------*/
+/* ウィジェットの場合もあるので */
+.worksData,
+#content .worksData { overflow: hidden;clear:both;
+    table { border-spacing: 0; margin:0px 0px 3px;width:100%;
+        th,td{ padding:3px 5px;font-size:10px; }
+        th{ width:80px; font-wight:lighter;background-color:#f3f3f3;font-weight: normal; }
+        td {
+            a { color:$txt_color;
+                &:hover { text-decoration: none; }
+            }
+        }
+    }
+}
+
+#content .works-wrp { display:block; overflow:hidden;padding-bottom:30px; }
+/*-------------------------------------------*/
+/*  シングルページ
+/*-------------------------------------------*/
+.single #content .bizvektorworksunit{
+    h1 { margin-bottom: 25px; }
+    #worksMainImage { margin-bottom: 25px; text-align: center;
+        &.b-f {
+            img{ width:100%;height:auto;border:1px solid #ccc; }
+            #worksBefore{ background: url(../images/arrow_down.png ) center bottom no-repeat; padding-bottom: 30px;margin-bottom:10px; }
+            h5 { text-align: left; margin: 0 0 5px; }
+        }
+    }
+    .worksData{ margin-top:10px;
+        table { 
+                th { width:auto; }
+                th,td { font-size:12px;padding:5px; }
+            }
+    } //.worksData
+}
+/*-------------------------------------------*/
+/*  アーカイブ／ウィジェット
+/*-------------------------------------------*/
+#content .bv_works_list { display:block; overflow:hidden; }
+.bv_works_widget .localHead { margin-bottom:10px; }
+.bv_works_item,
+.content .bv_works_item,
+#content .bv_works_item { display:block;overflow:hidden;width:100%;height:auto;
+    h3 { font-size: 87.5%; font-weight:lighter;padding:0; background: none; box-shadow: none; margin:0 0 8px;border:none;line-height:1.3em; height:2.1em; }
+    h3:after { border: none; }
+    .worksThumbnail{ display:block; overflow:hidden; width:100%; margin-bottom:5px;
+        .worksThumbnailInner { display:block;overflow:hidden; background: #eee;
+            a { display:block; overflow:hidden; position: relative;border:1px solid #ccc;box-sizing: border-box;
+                img { margin: 0 auto; display: block; max-width: 100%;
+                      position: relative;
+                      top: 50%;
+                      -webkit-transform: translateY(-50%);
+                      -ms-transform: translateY(-50%);
+                      transform: translateY(-50%);
+                }
+            }
+        }
+        &.thumbnailTop {
+            a img { top:0;
+                    -webkit-transform: translateY(0%);
+                    -ms-transform: translateY(0%);
+                    transform: translateY(0%);
+            }
+        }
+        div.noimage{ @include noimgBg; width:100%; height:200px;background-size: 180x auto;
+            span{ @include noimgTxt; font-size: 280%; }
+            a { @include noimglink; }
+        } //div.noimage
+    } //.worksThumbnail
+    .worksName{
+        a { text-decoration:none;color:$txt_color;
+            &:hover{ text-decoration:none; }
+        }
+    } //.worksName
+    .worksData table { margin-bottom:20px; }
+    .taxonomy-lists { clear: both; }
+} //.bv_works_item
+
+/*-------------------------------------------*/
+/*  レスポンシブカラム
+/*-------------------------------------------*/
+#content .works-wrp.bvw_column_2 { 
+    .bv_works_item { width:46%;margin:0 2%; float:left;}
+    .bv_works_item:nth-child(2n+1) { clear: both;float:left; }
+}
+
+#content .works-wrp.bvw_column_3 {
+    .bv_works_item { width:31%;margin:0 1%; float:left;}
+    .bv_works_item:nth-child(3n+1) { clear: both;float:left; }
+}
+
+#content .works-wrp.bvw_column_4 {
+    .bv_works_item { width:23%;margin:0 1%; float:left;}
+    .bv_works_item:nth-child(4n+1) { clear: both;float:left; }
+    .worksData table {
+                th { width: auto; }
+                th,td { display: block;border-top:none; }
+            }
+}
+
+/*-------------------------------------------*/
+/*
+/*-------------------------------------------*/
+@media (min-width: 480px) { /* スクロール分余裕に20px */
+
+.single #content {
+    .bizvektorworksunit {
+        #worksMainImage.b-f { overflow: hidden;
+            #worksBefore { float: right; width:40%; background: none; } //worksBefore
+            #worksAfter { float: left; width:55%; }
+        } //#worksMainImage
+    } //.bizvektorworksunit
+} //.single #content
+
+} // min-width: 660px
+
+/*-------------------------------------------*/
+/* コンテンツ推奨サイズより大きい場合
+/*-------------------------------------------*/
+// @media (min-width: 660px) { /* スクロール分余裕に20px */
+
+// } // min-width: 660px
+
+/*-------------------------------------------*/
+/* pc iPad3より大きい場合
+/*-------------------------------------------*/
+// @media (min-width: 770px) {
+
+// } // min-width: 770px
+
+/*-------------------------------------------*/
+/*  フルサイズ
+/*-------------------------------------------*/
+// @media (min-width: 970px) { /* スクロール分余裕に20px */
+
+// }
