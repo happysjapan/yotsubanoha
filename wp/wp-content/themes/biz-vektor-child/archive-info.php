@@ -1,21 +1,27 @@
 <?php get_header(); ?>
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
-  
+
+  <!-- [ #search ] -->
+  <section class="search--holder section">
+
+  </section>
+  <!-- [ /#search ] -->
+
   <!-- [ #content ] -->
-  <div id="content" class="content">
+  <section id="content" class="content">
 
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <div id="post-<?php the_ID(); ?>" class="entry-content">
+    <article id="post-<?php the_ID(); ?>" class="entry-content">
       <?php the_title(); ?>
     	<?php the_content(); ?>
     	<?php wp_link_pages( array( 'before' => '<div class="page-link">' . 'Pages:', 'after' => '</div>' ) ); ?>
 
-    </div><!-- .entry-content -->
+    </article><!-- .entry-content -->
   <?php endwhile; ?>
 
-  </div>
+  </section>
   <!-- [ /#content ] -->
 
 </div>
