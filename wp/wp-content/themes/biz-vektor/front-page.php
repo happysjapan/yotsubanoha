@@ -62,7 +62,7 @@ else :
 			<?php } ?>
 		</div>
 	<?php } // login ?>
-	
+
 	<?php endif; // have_posts() ?>
 
 	<?php get_template_part('module_topPR'); ?>
