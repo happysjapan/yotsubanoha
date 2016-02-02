@@ -135,3 +135,52 @@
 		}
 	}
 }
+
+
+// Side Tower
+#sideTower {
+	.sideWidget {
+		h3 {
+			padding: 4px 10px;
+			background-color: #0e6c3d;
+			color: #fff;
+			font-size: 90%;
+			border: none;
+		}
+		> .ttBoxSection {
+			padding-bottom: 0;
+			border: 1px solid #ccc;
+			.ttBox {
+				padding: 0;
+				border: none;
+				border-bottom: 1px dotted #ccc;
+				&:last-child{border-bottom: none;}
+				div {
+					a {
+						display: block;
+						padding: 6px 10px;
+						color: $color-blue;
+						font-size: 80%;
+						background-image: none;
+						p {
+
+						}
+					}
+				}
+			}
+			.more {
+				a {
+					display: block;
+					padding: 4px 10px;
+					text-align: right;
+					text-decoration: none;
+					color: $color-blue;
+					font-size: 80%;
+					&:hover {
+						background-color: #efefef;
+					}
+				}
+			}
+		}
+	}
+}
