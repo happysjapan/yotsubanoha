@@ -37,9 +37,15 @@ function do_head_contact_custom($headContact){
         </div>
         <div class="rightBox">
         	<ul class="snsBtn">
-				<li>tweet</li>
-				<li>いいね</li>
+				<li>
+                    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+
+                </li>
+				<li>
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                </li>
         	</ul>
+
         	<dl class="total">
 				<dt>掲載相談所数</dt>
 				<dd>1,200件</dd>
