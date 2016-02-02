@@ -18,7 +18,7 @@ get_header(); ?>
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . 'Pages:', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
-	<?php } ?>	
+	<?php } ?>
 <?php if ( is_user_logged_in() == TRUE ) { ?>
 <div class="adminEdit">
 <span class="linkBtn linkBtnS linkBtnAdmin"><?php edit_post_link(__('Edit', 'biz-vektor')); ?></span>
@@ -26,13 +26,13 @@ get_header(); ?>
 <?php } ?>
 <?php endif; ?>
 
-<?php 
+<?php
 $parentId = get_the_ID();
 $args = 'posts_per_page=-1&post_type=page&orderby=menu_order&order=asc&post_parent='.$parentId;
 query_posts($args);
-if (have_posts()) : 
+if (have_posts()) :
   $count = 1;
-  while (have_posts()) : 
+  while (have_posts()) :
     the_post();
     if ( ( $count % 2 ) > 0 ) {
 		$layout	= 'odd';
