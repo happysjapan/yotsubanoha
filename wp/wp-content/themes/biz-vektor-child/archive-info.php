@@ -53,6 +53,7 @@
           <h3 class="title"><a title=""><?php the_title(); ?></a></h3>
           <div class="profileWrap">
             <div class="detailWrap">
+
               <table>
                 <tbody>
                 <tr>
@@ -61,7 +62,7 @@
                 </tr>
                 <tr>
                   <th>場所</th>
-                  <td>東京芸術センター 会義室5</td>
+                  <td><?php echo get_field('place');?> </td>
                 </tr>
                 </tbody>
               </table>
