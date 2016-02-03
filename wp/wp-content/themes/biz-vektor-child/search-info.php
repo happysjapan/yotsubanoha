@@ -1,16 +1,18 @@
 <?php get_header();
 
-// global $query_string;
-// $post_category = get_category_by_slug( $_GET['cat'] );
-// $post_category_id = $post_category->term_id;
-//
-// $terms = get_the_terms( $post_category, 'info-cat' );
-//
-// $post = query_posts( $query_string . '&cat=437' );
-//
-// echo $query_string . '&cat='.$post_category_id;
+global $query_string;
+$post_category_slug = $_GET['info_cat'];
+// $taxonomy = 'info-cat';
+// $info_term = get_terms( $taxonomy, 'slug='.$post_category_slug);
+
+$terms = get_the_terms( $post_category, 'info-cat' );
+
+query_posts( $query_string . '&category_name='.$info_term[0]->slug );
+
+echo $query_string . '&cat='.$info_term[0]->term_id;
 
 ?>
+
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
 

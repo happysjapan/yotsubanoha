@@ -3,9 +3,9 @@
 Theme Name: Child Theme by NEOPA
 Theme URI: http://bizvektor.com
 Template: biz-vektor
-Description: 
+Description:
 Author: NEOPA
-Tags: 
+Tags:
 Version: 0.1.0
 */
 /* setting ▼
@@ -35,28 +35,64 @@ Version: 0.1.0
   font-size: 1.8rem;
   line-height: 30px;
   line-height: 3rem;
-  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  -webkit-border-radius: 4px;
+  -webkit-appearance: none;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
   -moz-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
   text-decoration: none;
 }
 
+/* line 135, sass/core/_utility.scss */
+.article .inner .btnWrap, .info .btnWrap {
+  width: 100%;
+  text-align: center;
+}
+/* line 138, sass/core/_utility.scss */
+.article .inner .btnWrap a, .info .btnWrap a {
+  display: inline-block;
+  width: 200px;
+  margin: 0 10px;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 20px;
+  line-height: 2rem;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+/* line 148, sass/core/_utility.scss */
+.article .inner .btnWrap a.btnLightGreen, .info .btnWrap a.btnLightGreen {
+  background-color: #44b700;
+}
+/* line 149, sass/core/_utility.scss */
+.article .inner .btnWrap a.btnLightBlue, .info .btnWrap a.btnLightBlue {
+  background-color: #33b1cc;
+}
+/* line 150, sass/core/_utility.scss */
+.article .inner .btnWrap a.btnBlue, .info .btnWrap a.btnBlue {
+  background-color: #3569c9;
+}
+/* line 151, sass/core/_utility.scss */
+.article .inner .btnWrap a:hover, .info .btnWrap a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+}
+
 /* line 1, sass/core/_base.scss */
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -183,10 +219,8 @@ img {
   font-size: 1.1rem;
   line-height: 15px;
   line-height: 1.5rem;
-  -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
   text-align: center;
 }
@@ -307,13 +341,13 @@ img {
 /* line 150, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection {
   padding-bottom: 0;
-  border: 1px solid #666666;
+  border: 1px solid #666;
 }
 /* line 153, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox {
   padding: 0;
   border: none;
-  border-bottom: 1px dotted #666666;
+  border-bottom: 1px dotted #666;
 }
 /* line 157, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox:last-child {
@@ -341,52 +375,11 @@ img {
   background-color: #efefef;
 }
 
-/* line 189, sass/_common.scss */
-.btnWrap {
-  width: 100%;
-  text-align: center;
-}
-/* line 192, sass/_common.scss */
-.btnWrap a {
-  display: inline-block;
-  width: 200px;
-  margin: 0 10px;
-  padding: 12px;
-  color: #fff;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 20px;
-  line-height: 2rem;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-/* line 202, sass/_common.scss */
-.btnWrap a.btnLightGreen {
-  background-color: #44b700;
-}
-/* line 203, sass/_common.scss */
-.btnWrap a.btnLightBlue {
-  background-color: #33b1cc;
-}
-/* line 204, sass/_common.scss */
-.btnWrap a.btnBlue {
-  background-color: #3569c9;
-}
-/* line 205, sass/_common.scss */
-.btnWrap a:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-  opacity: 0.9;
-}
-
 /* line 4, sass/_article_list.scss */
 .article {
   margin-top: 30px;
   margin-bottom: 15px;
-  border: 1px solid #666666;
+  border: 1px solid #666;
 }
 /* line 8, sass/_article_list.scss */
 .article p {
@@ -435,10 +428,8 @@ img {
   line-height: 18px;
   line-height: 1.8rem;
   background-color: #cff2cf;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   border: 1px solid #006600;
 }
@@ -466,37 +457,37 @@ img {
 }
 /* line 55, sass/_article_list.scss */
 .article .inner .profileWrap .detailWrap td, .article .inner .profileWrap .detailWrap th {
-  border: 1px solid #999999;
+  border: 1px solid #999;
 }
 /* line 56, sass/_article_list.scss */
 .article .inner .profileWrap .detailWrap th {
   background-color: #e8e8e8;
 }
 @media only screen and (max-width: 767px) {
-  /* line 60, sass/_article_list.scss */
+  /* line 61, sass/_article_list.scss */
   .article .inner .textWrap {
     overflow: hidden;
     *zoom: 1;
   }
-  /* line 62, sass/_article_list.scss */
+  /* line 63, sass/_article_list.scss */
   .article .inner .textWrap .text, .article .inner .textWrap .fee {
     float: none;
   }
-  /* line 63, sass/_article_list.scss */
+  /* line 64, sass/_article_list.scss */
   .article .inner .textWrap .text {
     width: 100%;
     margin-bottom: 10px;
   }
-  /* line 67, sass/_article_list.scss */
+  /* line 68, sass/_article_list.scss */
   .article .inner .textWrap .fee {
     padding: 8px;
   }
-  /* line 70, sass/_article_list.scss */
+  /* line 71, sass/_article_list.scss */
   .article .inner .profileWrap .imageWrap, .article .inner .profileWrap .detailWrap {
     display: block;
   }
 }
-/* line 77, sass/_article_list.scss */
+/* line 78, sass/_article_list.scss */
 .article .linkToDetail {
   display: block;
   padding: 12px;
@@ -509,74 +500,118 @@ img {
   background-color: #016d3b;
   text-decoration: none;
 }
-/* line 86, sass/_article_list.scss */
+/* line 87, sass/_article_list.scss */
 .article .linkToDetail:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
 
 /* =================================================== 
-	全国の就労移行支援事業所を探す ▼
+	全国の就労移行支援事業所を探す 
+	セミナー・説明会検索  ▼
 ===================================================  */
-/* line 6, sass/_office.scss */
+/* line 7, sass/_office.scss */
 .searchArea {
   display: block;
   overflow: hidden;
   *zoom: 1;
   width: 100%;
 }
-/* line 10, sass/_office.scss */
+/* line 11, sass/_office.scss */
 .searchArea .searchBox {
   width: 580px;
   float: left;
 }
-/* line 13, sass/_office.scss */
+/* line 14, sass/_office.scss */
 .searchArea .searchBox h2 {
   padding: 8px 10px;
 }
-/* line 17, sass/_office.scss */
+/* line 18, sass/_office.scss */
 .searchArea .searchBox .inner {
-  padding: 15px;
-  border: 1px solid #999999;
+  padding: 20px 30px;
+  border: 1px solid #999;
   border-top: none;
+  overflow: hidden;
+  *zoom: 1;
 }
-/* line 21, sass/_office.scss */
-.searchArea .searchBox .inner dl {
+/* line 23, sass/_office.scss */
+.searchArea .searchBox .inner form#searchform {
+  float: left;
+  margin: 30px 30px 0 0;
+}
+/* line 26, sass/_office.scss */
+.searchArea .searchBox .inner form#searchform dl {
   display: table;
   margin-bottom: 10px;
 }
-/* line 24, sass/_office.scss */
-.searchArea .searchBox .inner dl > * {
+/* line 29, sass/_office.scss */
+.searchArea .searchBox .inner form#searchform dl > * {
   display: table-cell;
 }
-/* line 25, sass/_office.scss */
-.searchArea .searchBox .inner dl dt {
+/* line 30, sass/_office.scss */
+.searchArea .searchBox .inner form#searchform dl dt {
   color: #333;
   padding-right: 20px;
 }
-/* line 30, sass/_office.scss */
-.searchArea .searchBox .inner dl dd select option {
+/* line 35, sass/_office.scss */
+.searchArea .searchBox .inner form#searchform dl dd select option {
   padding: 5px;
 }
-/* line 35, sass/_office.scss */
-.searchArea .searchBox .inner .btn {
+/* line 40, sass/_office.scss */
+.searchArea .searchBox .inner form#searchform label {
+  display: block;
+  margin-bottom: 30px;
+}
+/* line 44, sass/_office.scss */
+.searchArea .searchBox .inner form#searchform select {
+  margin-left: 5px;
+}
+/* line 45, sass/_office.scss */
+.searchArea .searchBox .inner form#searchform input#s {
+  width: 100%;
+  margin-left: 0;
+  float: none;
+}
+/* line 50, sass/_office.scss */
+.searchArea .searchBox .inner form#searchform input#searchsubmit {
+  display: block;
+  width: auto;
+  margin: 20px auto 30px;
   padding: 10px;
   background-color: #016d3b;
+  float: none;
+  font-size: 14px;
+  font-size: 1.4rem;
 }
-/* line 41, sass/_office.scss */
+/* line 60, sass/_office.scss */
+.searchArea .searchBox .inner .calenderWrap {
+  float: left;
+}
+@media only screen and (max-width: 767px) {
+  /* line 64, sass/_office.scss */
+  .searchArea .searchBox .inner form#searchform {
+    margin: 0;
+    float: none;
+  }
+  /* line 68, sass/_office.scss */
+  .searchArea .searchBox .inner .calenderWrap {
+    float: none;
+  }
+}
+/* line 75, sass/_office.scss */
 .searchArea .consultBox {
   width: 330px;
   height: 100%;
   padding: 15px;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   float: right;
 }
-/* line 47, sass/_office.scss */
+/* line 81, sass/_office.scss */
 .searchArea .consultBox .btn {
   padding: 10px;
   background-color: #44b700;
 }
-/* line 52, sass/_office.scss */
+/* line 86, sass/_office.scss */
 .searchArea .btn {
   display: block;
   width: 120px;
@@ -588,59 +623,97 @@ img {
   line-height: 2rem;
 }
 @media only screen and (max-width: 767px) {
-  /* line 62, sass/_office.scss */
+  /* line 96, sass/_office.scss */
   .searchArea > div {
     float: none;
   }
-  /* line 63, sass/_office.scss */
+  /* line 97, sass/_office.scss */
   .searchArea .searchBox {
     width: 100%;
     margin-bottom: 20px;
     padding-right: 0;
   }
-  /* line 68, sass/_office.scss */
+  /* line 102, sass/_office.scss */
   .searchArea .consultBox {
     width: 100%;
   }
 }
 
-/* line 78, sass/_office.scss */
+/* line 110, sass/_office.scss */
+form#searchform {
+  background-color: transparent;
+  padding: 0;
+}
+
+/*	セミナー説明会検索　個別スタイル
+===================================== */
+/* line 120, sass/_office.scss */
 .post-type-archive-info .searchArea .searchBox {
   width: 100%;
 }
 
-/* =================================================== 
+/* line 4, sass/_single-info.scss */
+.info .mainImage {
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+}
+/* line 9, sass/_single-info.scss */
+.info h1.entryPostTitle {
+  border: none;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+/* line 13, sass/_single-info.scss */
+.info .entry-content {
+  padding: 25px;
+  border: 1px solid #999;
+}
+/* line 16, sass/_single-info.scss */
+.info .entry-content h2.title {
+  margin-bottom: 0;
+  border: none;
+  font-weight: normal;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+/* line 25, sass/_single-info.scss */
+.info .btnWrap a.btnBlue {
+  background-color: #2180ac;
+}
+
+/* ===================================================
 	トップページ ▼
 ===================================================  */
-/* line 24, sass/style.scss */
+/* line 25, sass/style.scss */
 .sideTower .sideWidget .textwidget {
   padding-top: 0;
 }
-/* line 26, sass/style.scss */
+/* line 27, sass/style.scss */
 .sideTower .sideWidget .textwidget .banner {
   display: block;
   margin-bottom: 15px;
 }
-/* line 30, sass/style.scss */
+/* line 31, sass/style.scss */
 .sideTower .sideWidget .textwidget .SideListWrap {
   margin-bottom: 15px;
 }
-/* line 32, sass/style.scss */
+/* line 33, sass/style.scss */
 .sideTower .sideWidget .textwidget .SideListWrap h3 {
   padding: 4px 10px;
   background-color: #0e6c3d;
   color: #fff;
   font-size: 90%;
 }
-/* line 38, sass/style.scss */
+/* line 39, sass/style.scss */
 .sideTower .sideWidget .textwidget .SideListWrap > div {
   border: 1px solid #ccc;
 }
-/* line 41, sass/style.scss */
+/* line 42, sass/style.scss */
 .sideTower .sideWidget .textwidget .SideListWrap > div ul li {
   border-bottom: 1px dotted #ccc;
 }
-/* line 43, sass/style.scss */
+/* line 44, sass/style.scss */
 .sideTower .sideWidget .textwidget .SideListWrap > div ul li a {
   display: block;
   padding: 6px 10px;
@@ -648,7 +721,7 @@ img {
   font-size: 80%;
   background-image: none;
 }
-/* line 56, sass/style.scss */
+/* line 57, sass/style.scss */
 .sideTower .sideWidget .textwidget .SideListWrap > div .more a {
   display: block;
   padding: 4px 10px;
@@ -657,32 +730,32 @@ img {
   color: #3569c9;
   font-size: 80%;
 }
-/* line 63, sass/style.scss */
+/* line 64, sass/style.scss */
 .sideTower .sideWidget .textwidget .SideListWrap > div .more a:hover {
   background-color: #efefef;
 }
-/* line 71, sass/style.scss */
+/* line 72, sass/style.scss */
 .sideTower .sideWidget .textwidget .ThumbnailList > div ul li a {
   display: table;
 }
-/* line 73, sass/style.scss */
+/* line 74, sass/style.scss */
 .sideTower .sideWidget .textwidget .ThumbnailList > div ul li a img, .sideTower .sideWidget .textwidget .ThumbnailList > div ul li a p {
   display: table-cell;
   vertical-align: top;
 }
-/* line 77, sass/style.scss */
+/* line 78, sass/style.scss */
 .sideTower .sideWidget .textwidget .ThumbnailList > div ul li a img {
   width: 36px;
   height: 36px;
 }
-/* line 81, sass/style.scss */
+/* line 82, sass/style.scss */
 .sideTower .sideWidget .textwidget .ThumbnailList > div ul li a p {
   padding-left: 5px;
 }
 
 /* コンテンツ ▼
 -------------------------------------------- */
-/* line 91, sass/style.scss */
+/* line 92, sass/style.scss */
 .content .sectionBox p {
   font-size: 13px;
   font-size: 1.3rem;
@@ -690,25 +763,23 @@ img {
 
 /* 全国の障害年金無料相談対応の社会労務士事務所を探す ▼
 -------------------------------------------- */
-/* line 98, sass/style.scss */
+/* line 99, sass/style.scss */
 .content {
   /* selectboxカスタム */
   /* inputカスタム */
   /* 新着事業所一覧 ▼
   -------------------------------------------- */
 }
-/* line 99, sass/style.scss */
+/* line 100, sass/style.scss */
 .content select, .content input {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
-/* line 106, sass/style.scss */
+/* line 107, sass/style.scss */
 .content .select-box select {
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   border: 0;
   margin: 0;
@@ -722,59 +793,55 @@ img {
   font-size: 11px;
   font-size: 1.1rem;
 }
-/* line 123, sass/style.scss */
+/* line 124, sass/style.scss */
 .content .topSearch {
   background: #eeeeee;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 5px;
   border: none;
   color: #333;
   width: 60%;
 }
-/* line 131, sass/style.scss */
+/* line 132, sass/style.scss */
 .content input[type="submit"] {
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 3px 20px;
   border: none;
   color: #fff;
   background: #44b700;
 }
-/* line 137, sass/style.scss */
+/* line 138, sass/style.scss */
 .content input[type="submit"]:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
-/* line 139, sass/style.scss */
+/* line 140, sass/style.scss */
 .content .areaSearch {
   margin-bottom: 40px;
 }
-/* line 142, sass/style.scss */
+/* line 143, sass/style.scss */
 .content .areaSearch > h2:first-child {
   padding: 8px 10px;
 }
-/* line 146, sass/style.scss */
+/* line 147, sass/style.scss */
 .content .areaSearch .searchTitle {
   text-align: center;
 }
-/* line 149, sass/style.scss */
+/* line 150, sass/style.scss */
 .content .areaSearch .searchInner {
   padding: 20px;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   border-top: none;
 }
-/* line 153, sass/style.scss */
+/* line 154, sass/style.scss */
 .content .areaSearch .searchInner ul {
   margin: 0;
 }
-/* line 155, sass/style.scss */
+/* line 156, sass/style.scss */
 .content .areaSearch .searchInner .listP h2 {
   font-size: 14px;
   font-size: 1.4rem;
@@ -782,45 +849,45 @@ img {
   padding: 0;
   border: none;
 }
-/* line 161, sass/style.scss */
+/* line 162, sass/style.scss */
 .content .areaSearch .searchInner .listP > li {
   display: inline-block;
   margin-bottom: 20px;
   vertical-align: top;
   width: 48%;
 }
-/* line 166, sass/style.scss */
+/* line 167, sass/style.scss */
 .content .areaSearch .searchInner .listP > li:nth-child(2n+1) {
   margin-right: 3%;
 }
-/* line 167, sass/style.scss */
+/* line 168, sass/style.scss */
 .content .areaSearch .searchInner .listP > li:last-child, .content .areaSearch .searchInner .listP > li:nth-child(7) {
   margin-bottom: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 161, sass/style.scss */
+  /* line 162, sass/style.scss */
   .content .areaSearch .searchInner .listP > li {
     width: 100%;
   }
 }
-/* line 172, sass/style.scss */
+/* line 173, sass/style.scss */
 .content .areaSearch .searchInner .listP .listC li {
   display: inline-block;
   margin-right: 10px;
   margin-bottom: 2px;
 }
-/* line 176, sass/style.scss */
+/* line 177, sass/style.scss */
 .content .areaSearch .searchInner .listP .listC li a {
   color: #3569c9;
   text-decoration: none;
   font-size: 13px;
   font-size: 1.3rem;
 }
-/* line 180, sass/style.scss */
+/* line 181, sass/style.scss */
 .content .areaSearch .searchInner .listP .listC li a:hover {
   text-decoration: underline;
 }
-/* line 184, sass/style.scss */
+/* line 185, sass/style.scss */
 .content .areaSearch .searchInner .listP .cSelect dt {
   display: inline-block;
   margin-right: 5px;
@@ -829,55 +896,55 @@ img {
   font-size: 1.2rem;
   color: #333;
 }
-/* line 191, sass/style.scss */
+/* line 192, sass/style.scss */
 .content .areaSearch .searchInner .listP .cSelect dd {
   display: inline-block;
   margin-bottom: 0;
 }
 @media only screen and (max-width: 767px) {
-  /* line 183, sass/style.scss */
+  /* line 184, sass/style.scss */
   .content .areaSearch .searchInner .listP .cSelect {
     width: 100%;
     margin-top: 20px;
   }
 }
-/* line 202, sass/style.scss */
+/* line 203, sass/style.scss */
 .content .areaSearch .searchInner .searchText {
   margin: 5px 0;
 }
-/* line 204, sass/style.scss */
+/* line 205, sass/style.scss */
 .content .areaSearch .searchInner .searchText input.topSearch {
   width: 60%;
 }
-/* line 209, sass/style.scss */
+/* line 210, sass/style.scss */
 .content .areaSearch .innerSearchList {
   padding: 50px 76px 40px 44px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 209, sass/style.scss */
+  /* line 210, sass/style.scss */
   .content .areaSearch .innerSearchList {
     padding: 25px 38px 20px 22px;
   }
 }
-/* line 214, sass/style.scss */
+/* line 215, sass/style.scss */
 .content .areaSearch .innerSearchList .searchListContent {
   width: 100%;
   display: table;
 }
 @media only screen and (max-width: 767px) {
-  /* line 214, sass/style.scss */
+  /* line 215, sass/style.scss */
   .content .areaSearch .innerSearchList .searchListContent {
     display: block;
   }
 }
-/* line 220, sass/style.scss */
+/* line 221, sass/style.scss */
 .content .areaSearch .innerSearchList .searchListContent > * {
   display: table-cell;
   vertical-align: middle;
   padding-bottom: 32px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 220, sass/style.scss */
+  /* line 221, sass/style.scss */
   .content .areaSearch .innerSearchList .searchListContent > * {
     margin: 0 auto;
     text-align: center;
@@ -885,7 +952,7 @@ img {
     padding-bottom: 16px;
   }
 }
-/* line 231, sass/style.scss */
+/* line 232, sass/style.scss */
 .content .areaSearch .innerSearchList .searchListContent .selectLabel {
   font-size: 15px;
   font-size: 1.5rem;
@@ -893,48 +960,48 @@ img {
   width: 70%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 231, sass/style.scss */
+  /* line 232, sass/style.scss */
   .content .areaSearch .innerSearchList .searchListContent .selectLabel {
     font-size: 12px;
     font-size: 1.2rem;
     width: 100%;
   }
 }
-/* line 240, sass/style.scss */
+/* line 241, sass/style.scss */
 .content .areaSearch .innerSearchList .searchListContent .selectList {
   width: 30%;
 }
-/* line 242, sass/style.scss */
+/* line 243, sass/style.scss */
 .content .areaSearch .innerSearchList .searchListContent .selectList select {
   width: 100%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 240, sass/style.scss */
+  /* line 241, sass/style.scss */
   .content .areaSearch .innerSearchList .searchListContent .selectList {
     width: 80%;
   }
 }
-/* line 250, sass/style.scss */
+/* line 251, sass/style.scss */
 .content .areaSearch .innerSearchList .searchText2 {
   width: 100%;
 }
-/* line 252, sass/style.scss */
+/* line 253, sass/style.scss */
 .content .areaSearch .innerSearchList .searchText2 form {
   text-align: center;
 }
-/* line 254, sass/style.scss */
+/* line 255, sass/style.scss */
 .content .areaSearch .innerSearchList .searchText2 form .searchWord {
   width: 100%;
   margin-bottom: 34px;
   text-align: left;
 }
 @media only screen and (max-width: 767px) {
-  /* line 254, sass/style.scss */
+  /* line 255, sass/style.scss */
   .content .areaSearch .innerSearchList .searchText2 form .searchWord {
     margin-bottom: 17px;
   }
 }
-/* line 262, sass/style.scss */
+/* line 263, sass/style.scss */
 .content .areaSearch .innerSearchList .searchText2 form .searchBtn {
   max-width: 248px;
   padding: 14px 20px;
@@ -945,35 +1012,35 @@ img {
   width: 100%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 262, sass/style.scss */
+  /* line 263, sass/style.scss */
   .content .areaSearch .innerSearchList .searchText2 form .searchBtn {
     padding: 8px 10px;
     font-size: 15px;
     font-size: 1.5rem;
   }
 }
-/* line 282, sass/style.scss */
+/* line 283, sass/style.scss */
 .content .ContentList {
   margin: 40px 0 0;
 }
-/* line 284, sass/style.scss */
+/* line 285, sass/style.scss */
 .content .ContentList h3 {
   padding: 6px 10px;
 }
-/* line 288, sass/style.scss */
+/* line 289, sass/style.scss */
 .content .ContentList > div {
   padding: 20px;
-  border-left: 1px solid #999999;
-  border-right: 1px solid #999999;
-  border-bottom: 1px solid #999999;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
 }
-/* line 293, sass/style.scss */
+/* line 294, sass/style.scss */
 .content .ContentList > div ul {
   overflow: hidden;
   *zoom: 1;
   margin: 0;
 }
-/* line 296, sass/style.scss */
+/* line 297, sass/style.scss */
 .content .ContentList > div ul li {
   margin-right: 30px;
   float: left;
@@ -982,39 +1049,39 @@ img {
   width: -webkit-calc(100%/3 - 20px);
   width: calc(100%/3 - 20px);
 }
-/* line 299, sass/style.scss */
+/* line 300, sass/style.scss */
 .content .ContentList > div ul li:nth-child(3n) {
   margin-right: 0;
 }
-/* line 301, sass/style.scss */
+/* line 302, sass/style.scss */
 .content .ContentList > div ul li a {
   display: block;
 }
-/* line 303, sass/style.scss */
+/* line 304, sass/style.scss */
 .content .ContentList > div ul li a p {
   margin-bottom: 6px;
 }
-/* line 304, sass/style.scss */
+/* line 305, sass/style.scss */
 .content .ContentList > div ul li a .ttl {
   font-weight: bold;
 }
-/* line 307, sass/style.scss */
+/* line 308, sass/style.scss */
 .content .ContentList > div ul li a .desc {
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 310, sass/style.scss */
+/* line 311, sass/style.scss */
 .content .ContentList > div ul li a .reward {
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 313, sass/style.scss */
+/* line 314, sass/style.scss */
 .content .ContentList > div ul li a img {
   display: block;
   width: 120px;
   height: 120px;
 }
-/* line 318, sass/style.scss */
+/* line 319, sass/style.scss */
 .content .ContentList > div ul li a .btn {
   display: block;
   width: 90px;
@@ -1026,28 +1093,28 @@ img {
   font-size: 1.5rem;
   text-align: center;
 }
-/* line 327, sass/style.scss */
+/* line 328, sass/style.scss */
 .content .ContentList > div ul li a .btn:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
   text-decoration: none;
 }
-/* line 336, sass/style.scss */
+/* line 337, sass/style.scss */
 .content .ContentList > div .more {
   margin-top: 8px;
   text-align: right;
 }
-/* line 341, sass/style.scss */
+/* line 342, sass/style.scss */
 .content .ContentList > div a {
   color: #3569c9;
   text-decoration: none;
 }
-/* line 344, sass/style.scss */
+/* line 345, sass/style.scss */
 .content .ContentList > div a:hover {
   text-decoration: underline;
 }
 @media only screen and (max-width: 767px) {
-  /* line 351, sass/style.scss */
+  /* line 352, sass/style.scss */
   .content .ContentList div ul li {
     margin-right: 20px;
     float: left;
@@ -1056,11 +1123,11 @@ img {
     width: -webkit-calc(100%/2 - 20px);
     width: calc(100%/2 - 20px);
   }
-  /* line 354, sass/style.scss */
+  /* line 355, sass/style.scss */
   .content .ContentList div ul li:nth-child(3n) {
     margin-right: 20px;
   }
-  /* line 355, sass/style.scss */
+  /* line 356, sass/style.scss */
   .content .ContentList div ul li:nth-child(2n) {
     margin-right: 0;
   }
