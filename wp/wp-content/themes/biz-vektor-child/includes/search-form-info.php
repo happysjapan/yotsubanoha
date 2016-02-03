@@ -5,17 +5,21 @@
     <!-- [ #search form ] -->
     <form method="get" id="searchform" action="<?php echo home_url(); ?>/info">
 
+      <input class="topSearch" type="search" placeholder="フリーワード" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s">
+
       <div class="select-box">
         <label for ="searchSelect" class="search--form--label">お住いの地域をお選びください</label>
-        <select id="searchSelect" name="tag" class="search--form--select">
-          <option value="mie">三重県</option>
-          <option value="kyoto">京都府</option>
-          <option value="saga">佐賀県</option>
-          <option value="hyougo">兵庫県</option>
+        <select id="searchSelect" name="info_cat" class="search--form--select">
+          <option value="" selected>Default</option>
+          <?php
+            $tax_terms = get_terms( 'info-cat');
+            foreach ($tax_terms as $tax_term) {
+              echo '<option value="'.$tax_term->slug.'">'.$tax_term->name.'</option>';
+            }
+          ?>
         </select>
       </div>
 
-      <input class="topSearch" type="search" placeholder="フリーワード" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s">
       <input type="hidden" name="post_type" value="info" />
       <input class="btn" id="searchsubmit"  type="submit" value="検索する">
     </form>
