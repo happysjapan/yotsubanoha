@@ -3,8 +3,46 @@
 <div id="container" class="innerBox">
 
   <!-- [ #search ] -->
-  <section class="search--holder section">
-    
+  <section class="search section">
+    <h3 class="section--title">Section title</h3>
+    <article class="search--content-holder clearfix">
+
+      <!-- [ #search form ] -->
+      <div class="search--form-holder">
+        <form class="search--form">
+          <div class="search--form--row">
+            <label class="search--form--label">Select Label
+              <select class="search--form--select">
+                <option value="husker">Husker</option>
+                <option value="starbuck">Starbuck</option>
+                <option value="hotdog">Hot Dog</option>
+                <option value="apollo">Apollo</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="search--form--row">
+            <label class="search--form--label">Input Label
+              <input class="search--form--text" type="text" placeholder="Text field">
+            </label>
+          </div>
+
+          <div class="search--form-row search--form--button-holder">
+            <input class="search--form--button" type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+      <!-- [ /#search form ] -->
+
+      <!-- [ #search calendar ] -->
+      <div class="search--calendar-holder">
+        <?php
+          if ( is_active_sidebar( 'info-search-right-widget-area' ) ) dynamic_sidebar( 'info-search-right-widget-area' );
+        ?>
+      </div>
+      <!-- [ /#search calendar ] -->
+
+    </article>
   </section>
   <!-- [ /#search ] -->
 
