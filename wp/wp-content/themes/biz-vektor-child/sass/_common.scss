@@ -184,24 +184,3 @@
 		}
 	}
 }
-
-
-.btnWrap {
-	width: 100%;
-	text-align: center;
-	a {
-		display: inline-block;
-		width: 200px;
-		margin: 0 10px;
-		padding: 12px;
-		color: #fff;
-		@include font-size(1.6);
-		@include line-height(2);
-		@include border-radius(5px);
-		text-decoration: none;
-		&.btnLightGreen {background-color: $color-lightGreen;}
-		&.btnLightBlue {background-color: $color-lightBlue;}
-		&.btnBlue {background-color: $color-blue;}
-		&:hover {@include opacity(.9);}
-	}
-}
