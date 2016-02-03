@@ -50,7 +50,7 @@
 			<dl>
 				<dt>条件でお選びください</dt>
 				<dd>
-					<div class="select-box01">
+					<div class="select-box">
 						<?php $tags = get_tags(); if ( $tags ) : ?>
 							<select name='tag' id='tag'>
 								<option value="" selected="selected">条件</option>

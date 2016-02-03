@@ -12,6 +12,8 @@ Version: 0.1.0
 
 @import "core";
 @import "common";
+@import "article_list";
+@import "office";
 
 
 /* =================================================== 
@@ -101,7 +103,7 @@ Version: 0.1.0
 
 	}
 	/* selectboxカスタム */
-	.select-box01 select {
+	.select-box select {
 		@include border-radius(5px);
 		border: 0;
 		margin: 0;
@@ -136,20 +138,18 @@ Version: 0.1.0
 	}
 	.areaSearch {
 		margin-bottom: 40px;
-		border: 1px solid #999999;
+
 		> h2:first-child {
-			margin: 0;
+			@extend %greenTitle;
 			padding: 8px 10px;
-			background: $color-green;
-			color: #fff;
-			border: none;
-			@include font-size(1.6);
 		}
 		.searchTitle {
 			text-align: center;
 		}
 		.searchInner {
-			padding: 3%;
+			padding: 20px;
+			border: 1px solid $color-grey;
+			border-top: none;
 			ul {margin: 0;}
 			.listP {
 				h2 {
@@ -282,17 +282,14 @@ Version: 0.1.0
 	.ContentList {
 		margin: 40px 0 0;
 		h3 {
-			margin: 0;
+			@extend %greenTitle;
 			padding: 6px 10px;
-			background-color: #0e6c3d;
-			color: #fff;
-			border-left: none;
 		}
 		> div {
 			padding: 20px;
-			border-left: 1px solid #ccc;
-			border-right: 1px solid #ccc;
-			border-bottom: 1px solid #ccc;
+			border-left: 1px solid $color-grey;
+			border-right: 1px solid $color-grey;
+			border-bottom: 1px solid $color-grey;
 			ul {
 				@include clearfix;
 				margin: 0;
@@ -364,177 +361,3 @@ Version: 0.1.0
 } // end of .content
 
 
-
-/* =================================================== 
-	全国の就労移行支援事業所を探す ▼
-===================================================  */
-
-.searchArea {
-	display: table;
-	width: 100%;
-	> div {display: table-cell;}
-	.searchBox {
-		width: 580px;
-		padding-right: 30px;
-		h2 {
-			margin-bottom: 0;
-			padding: 10px;
-			background-color: $color-green;
-			color: #fff;
-			border: none;
-		}
-		.inner {
-			padding: 15px;
-			border: 1px solid #ccc;
-			border-top: none;
-			dl {
-				display: table;
-				margin-bottom: 10px;
-				> * {display: table-cell;}
-				dt {
-					color: #333;
-					padding-right: 20px;
-				}
-				dd {
-					select option {
-						padding: 5px;
-					}
-				}
-			}
-			.btn {
-				padding: 10px;
-				background-color: $color-green;
-			}
-		}
-	}
-	.consultBox {
-		padding: 15px;
-		border: 1px solid #ccc;
-		.btn {
-			padding: 10px;
-			background-color: $color-lightGreen;
-		}
-	}
-	.btn {
-		display: block;
-		width: 120px;
-		margin: 0 auto;
-		text-align: center;
-		@include font-size(1.6);
-		@include line-height(2);
-	}
-
-	@include SP {
-		> div {display: block;}
-		.searchBox {
-			width: 100%;
-			margin-bottom: 20px;
-			padding-right: 0;
-		}
-	}
-
-}
-.officeArea {
-	margin-top: 30px;
-	.officeWrap {
-		margin-bottom: 15px;
-		border: 1px solid #ccc;
-		p {
-			margin-bottom: 0;
-			padding: 0;
-		}
-		.inner {
-			padding: 20px;
-			h3 {
-				padding: 0;
-				margin: 0;
-				border: none;
-				a {
-					color: $color-blue;
-					text-decoration: none;
-				}
-			}
-			.textWrap {
-				@include clearfix;
-				.text {
-					float: left;
-					@include font-size(1.3);
-					@include line-height(1.8);
-					@include calc(width,"100% - 200px");
-				}
-				.fee {
-					float: right;
-					width: 150px;
-					padding: 10px;
-					@include font-size(1.3);
-					@include line-height(1.8);
-					background-color: #cff2cf;
-					@include border-radius(5px);
-					border: 1px solid #006600;
-				}
-			}
-			.profileWrap {
-				display: table;
-				width: 100%;
-				.imageWrap {
-					display: table-cell;
-					img {
-						width: 120px;
-						height: auto;
-					}
-				}
-				.detailWrap {
-					display: table-cell;
-				}
-			}
-
-			.btnWrap {
-				width: 100%;
-				text-align: center;
-				a {
-					display: inline-block;
-					width: 200px;
-					margin: 0 10px;
-					padding: 12px;
-					color: #fff;
-					@include font-size(1.6);
-					@include line-height(2);
-					@include border-radius(5px);
-					text-decoration: none;
-					&.btnLightGreen {background-color: $color-lightGreen;}
-					&.btnLightBlue {background-color: $color-lightBlue;}
-					&.btnBlue {background-color: $color-blue;}
-					&:hover {@include opacity(.9);}
-				}
-			}
-			@include SP {
-				.textWrap {
-					@include clearfix;
-					.text, .fee {float: none;}
-					.text {
-						width: 100%;
-						margin-bottom: 10px;
-					}
-					.fee {padding: 8px;}
-				}
-				.profileWrap {
-					.imageWrap,.detailWrap {
-						display: block;
-					}
-				}
-
-			}
-		}
-		.linkToDetail {
-			display: block;
-			padding: 12px;
-			@include font-size(1.6);
-			@include line-height(2);
-			text-align: center;
-			color: #fff;
-			background-color: $color-green;
-			text-decoration: none;
-			&:hover {@include opacity(.9);}
-		}
-	}
-}

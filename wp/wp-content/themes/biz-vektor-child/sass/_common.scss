@@ -4,6 +4,7 @@
 
 #main #container .content {
 	width: 680px;
+	@include SP {width: 100%;}
 }
 
 // header
@@ -141,19 +142,17 @@
 #sideTower {
 	.sideWidget {
 		h3 {
-			padding: 4px 10px;
-			background-color: #0e6c3d;
-			color: #fff;
-			font-size: 90%;
-			border: none;
+			@extend %greenTitle;
+		    padding: 6px 10px;
+		   	@include font-size(1.4);
 		}
 		> .ttBoxSection {
 			padding-bottom: 0;
-			border: 1px solid #ccc;
+			border: 1px solid $color-darkGrey;
 			.ttBox {
 				padding: 0;
 				border: none;
-				border-bottom: 1px dotted #ccc;
+				border-bottom: 1px dotted $color-darkGrey;
 				&:last-child{border-bottom: none;}
 				div {
 					a {
