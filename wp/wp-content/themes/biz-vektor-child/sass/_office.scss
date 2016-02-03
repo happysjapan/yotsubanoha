@@ -1,6 +1,7 @@
 
 /* =================================================== 
-	全国の就労移行支援事業所を探す ▼
+	全国の就労移行支援事業所を探す 
+	セミナー・説明会検索  ▼
 ===================================================  */
 
 .searchArea {
@@ -15,26 +16,59 @@
 			padding: 8px 10px;
 		}
 		.inner {
-			padding: 15px;
+			padding: 20px 30px;
 			border: 1px solid $color-grey;
 			border-top: none;
-			dl {
-				display: table;
-				margin-bottom: 10px;
-				> * {display: table-cell;}
-				dt {
-					color: #333;
-					padding-right: 20px;
-				}
-				dd {
-					select option {
-						padding: 5px;
+			@include clearfix;
+			form#searchform {
+				float: left;
+				margin: 30px 30px 0 0;
+				dl {
+					display: table;
+					margin-bottom: 10px;
+					> * {display: table-cell;}
+					dt {
+						color: #333;
+						padding-right: 20px;
+					}
+					dd {
+						select option {
+							padding: 5px;
+						}
 					}
 				}
+				label {
+					display: block;
+					margin-bottom: 30px;
+				}
+				select {margin-left: 5px;}
+				input#s {
+					width: 100%;
+					margin-left: 0;
+					float: none;
+				}
+				input#searchsubmit {
+					display: block;
+					width: auto;
+					margin: 20px auto 30px;
+					padding: 10px;
+					background-color: $color-green;
+					float: none;
+					@include font-size(1.4);
+				}
 			}
-			.btn {
-				padding: 10px;
-				background-color: $color-green;
+			.calenderWrap {
+				float: left;
+			}
+			@include SP {
+				form#searchform {
+					margin: 0;
+					float: none;
+				}
+				.calenderWrap {
+					float: none;
+				}
+
 			}
 		}
 	}
@@ -73,6 +107,14 @@
 }
 
 
+form#searchform {
+	background-color: transparent;
+	padding: 0;
+}
+
+
+ /*	セミナー説明会検索　個別スタイル
+ ===================================== */
 .post-type-archive-info {
 	.searchArea {
 		.searchBox {
