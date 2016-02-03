@@ -111,6 +111,13 @@ $SPPoint:    768px;
 /* ---------------------------------
   placeholder
 --------------------------------- */
+%greenTitle {
+  margin: 0;
+    background-color: #0e6c3d;
+    color: #fff;
+    border: none;
+    @include font-size(1.8);
+}
 .btn {
   display: inline-block;
   padding: 10px;
@@ -123,71 +130,4 @@ $SPPoint:    768px;
   @include box-sizing(border-box);
   border: none;
   text-decoration: none;
-}
-
-%sp_ttl {
-  @include SP {
-      .img_wrap {
-        margin-top: 50px;
-      }
-      .text_wrap .inner {
-        padding: 0;
-        .fukidashi {
-          color: #000;
-          width: 100%;
-          bottom: auto;
-          top: -50px;
-          br {display: none;}
-          >div {
-            h1 {
-              display: inline-block;
-              margin-bottom: 0;
-              padding: 14px 10px 14px 50px;
-              background: url(../images/fukidashi.png) no-repeat scroll left center;
-              background-size: 40px 31px;
-              @include font-size(1.7);
-            }
-
-          }
-          &.smile > div h1 {
-              background: url(../images/fukidashi3.png) no-repeat scroll left center;
-              background-size: 40px 31px;
-          }
-
-          &.face_btm > div h1 {
-              background: url(../images/fukidashi2.png) no-repeat scroll left center;
-              background-size: 40px 31px;
-          }
-          &.face_btm2 > div h1 {
-              background: url(../images/fukidashi4.png) no-repeat scroll left center;
-              background-size: 40px 31px;
-          }
-        }
-        #breadcrumbs {
-          ol li {
-            color: #333;
-            a {
-              color: #333;
-            }
-          }
-        }
-      }
-    }
-}
-
-%icon_link {
-  position: relative;
-  display: inline-block;
-  margin-right: 22px;
-  text-decoration: none;
-  border-bottom: 1px solid #000;
-    &:after {
-       content: "\f106";
-       display: inline-block;
-       font-family: "carsensor-fonts";
-       position: absolute;
-       top: 1px;
-       right: -17px;
-       border-bottom: none;
-    }
 }
