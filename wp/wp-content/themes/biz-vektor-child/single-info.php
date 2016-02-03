@@ -12,9 +12,9 @@
 
 
 	<div class="entry-content post-content">
-		<img src="" alt="" />
+		<img src="" alt="" class="mainImage" />
 
-		<h2>開催情報</h2>
+		<h2 class="title">■&nbsp;開催情報</h2>
 		<table>
 			<tbody>
 				<tr>
