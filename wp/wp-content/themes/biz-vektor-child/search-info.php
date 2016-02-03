@@ -21,13 +21,13 @@ echo $query_string . '&cat='.$info_term[0]->term_id;
 
     <!-- [ #search ] -->
     <section class="searchArea">
-      <?php get_template_part( 'includes/search', 'form-info' ); ?>
+      <?php get_template_part( 'includes/search', 'info-search' ); ?>
     </section>
     <!-- [ /#search ] -->
 
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <?php get_template_part( 'includes/search', 'form-panel' ); ?>
+    <?php get_template_part( 'includes/search', 'info-panel' ); ?>
     <!-- .entry-content -->
   <?php endwhile; ?>
 
