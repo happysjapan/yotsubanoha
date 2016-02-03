@@ -137,12 +137,13 @@ $SPPoint:    768px;
       text-align: center;
       a {
         display: inline-block;
-        width: 200px;
+        min-width: 220px;
         margin: 0 10px;
-        padding: 12px;
+        padding: 15px;
         color: #fff;
-        @include font-size(1.6);
+        @include font-size(2);
         @include line-height(2);
+        @include letter-spacing(.1);
         @include border-radius(5px);
         text-decoration: none;
         &.btnLightGreen {background-color: $color-lightGreen;}
