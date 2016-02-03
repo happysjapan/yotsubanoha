@@ -6,6 +6,10 @@
 #main #container .content {
 	width: 680px;
 	@include SP {width: 100%;}
+	table {
+		td,th {border: 1px solid $color-grey;}
+		th {background-color: #e8e8e8}
+	}
 }
 
 // header
@@ -39,10 +43,13 @@
 				}
 				&.telNumTime {
 					#headContactTel {
-						margin-bottom: 5px;
-						padding-left: 30px;
+						padding-left: 45px;
 						color: $color-red;
 						font-family: arial,helvetica;
+						@include font-size(2.4);
+						@include line-height(2.4);
+						background: url("images/icon_free_voice.gif") no-repeat scroll left center;
+						background-size: 40px auto;
 					}
 					#headContactTime {
 						@include font-size(1.1);
