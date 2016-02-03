@@ -5,42 +5,9 @@
   <!-- [ #content ] -->
   <section id="content" class="content">
 
-    <!-- [ #search form ] -->
+    <!-- [ #search ] -->
     <section class="searchArea">
-      <div class="searchBox">
-        <h2>セミナー・説明会検索</h2>
-        <div class="inner">
-
-          <!-- [ #search form ] -->
-          <form method="get" id="searchform" action="<?php echo home_url(); ?>/info">
-
-            <div class="select-box">
-              <label class="search--form--label">お住いの地域をお選びください
-                <select class="search--form--select">
-                  <option value="husker">地域</option>
-                  <option value="starbuck">Starbuck</option>
-                  <option value="hotdog">Hot Dog</option>
-                  <option value="apollo">Apollo</option>
-                </select>
-              </label>
-            </div>
-
-            <input class="topSearch" type="search" placeholder="フリーワード" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s">
-            <input type="hidden" name="post_type" value="info" />
-            <input class="btn" id="searchsubmit"  type="submit" value="検索する">
-          </form>
-          <!-- [ /#search form ] -->
-
-          <!-- [ #search calendar ] -->
-          <div class="calenderWrap">
-            <?php
-              if ( is_active_sidebar( 'info-search-right-widget-area' ) ) dynamic_sidebar( 'info-search-right-widget-area' );
-            ?>
-          </div>
-          <!-- [ /#search calendar ] -->
-
-        </div>
-      </div>
+      <?php get_template_part( 'includes/search', 'form-info' ); ?>
     </section>
     <!-- [ /#search ] -->
 
@@ -49,6 +16,12 @@
   <article id="post-<?php the_ID(); ?>" class="entry-content article">
     	<?php wp_link_pages( array( 'before' => '<div class="page-link">' . 'Pages:', 'after' => '</div>' ) ); ?>
 
+        <?php
+        echo "<pre>";
+        var_dump($post->ID);
+        var_dump(get_the_category($post->ID));
+        echo "</pre>";
+        ?>
         <div class="inner">
           <h3 class="title"><a title=""><?php the_title(); ?></a></h3>
           <div class="profileWrap">
