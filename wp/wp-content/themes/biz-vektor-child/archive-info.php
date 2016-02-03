@@ -3,7 +3,7 @@
 <div id="container" class="innerBox">
 
   <!-- [ #content ] -->
-  <section id="content" class="content">
+  <section id="content" class="content wide">
 
     <!-- [ #search ] -->
     <section class="searchArea">

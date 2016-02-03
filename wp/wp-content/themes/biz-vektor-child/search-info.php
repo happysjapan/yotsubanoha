@@ -17,7 +17,7 @@ echo $query_string . '&cat='.$info_term[0]->term_id;
 <div id="container" class="innerBox">
 
   <!-- [ #content ] -->
-  <section id="content" class="content">
+  <section id="content" class="content wide">
 
     <!-- [ #search ] -->
     <section class="searchArea">
