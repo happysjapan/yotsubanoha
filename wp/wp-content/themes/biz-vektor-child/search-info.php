@@ -36,11 +36,11 @@
                 <tbody>
                 <tr>
                   <th>日時</th>
-                  <td><?php the_date(); ?></td>
+                  <td><?php echo get_field('opening_date') ?></td>
                 </tr>
                 <tr>
-                  <th>場所</th>
-                  <td>東京芸術センター 会義室5</td>
+                  <th>会場</th>
+                  <td><?php echo get_field('place'); ?></td>
                 </tr>
                 </tbody>
               </table>
