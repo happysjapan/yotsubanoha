@@ -16,12 +16,6 @@
   <article id="post-<?php the_ID(); ?>" class="entry-content article">
     	<?php wp_link_pages( array( 'before' => '<div class="page-link">' . 'Pages:', 'after' => '</div>' ) ); ?>
 
-        <?php
-        echo "<pre>";
-        var_dump($post->ID);
-        var_dump(get_the_category($post->ID));
-        echo "</pre>";
-        ?>
         <div class="inner">
           <h3 class="title"><a title=""><?php the_title(); ?></a></h3>
           <div class="profileWrap">
