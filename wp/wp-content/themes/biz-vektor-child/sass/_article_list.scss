@@ -32,12 +32,7 @@
 			.fee {
 				float: right;
 				width: 150px;
-				padding: 10px;
-				@include font-size(1.3);
-				@include line-height(1.8);
-				background-color: #cff2cf;
-				@include border-radius(5px);
-				border: 1px solid #006600;
+				@extend  %reward;
 			}
 		}
 		.profileWrap {

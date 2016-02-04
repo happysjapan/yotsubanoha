@@ -18,17 +18,46 @@
 		<section class="indivInfo tableRow">
 			<div class="leftBox">
 				<img src="<?php echo get_field('office_image'); ?>" alt="<?php the_title(); ?>" />
-				<p class="reward">お祝い金：25,000円</p>
+				<p class="reward">お祝い金：<?php echo get_field('reward'); ?>円</p>
 			</div>
 			<div class="rightBox">
 				<div class="tableRow">
-					<div class="schedule leftBox">weekly schedule</div>
+					<div class="schedule leftBox">
+						<table>
+							<tr>
+								<th>受付時間</th>
+								<th>月</th>
+								<th>火</th>
+								<th>水</th>
+								<th>木</th>
+								<th>金</th>
+								<th>土</th>
+								<th>日</th>
+								<th>祝</th>
+							</tr>
+							<?php
+									while(have_rows('office_time_table')): the_row();
+								?>
+							<tr>
+								<td><?php the_sub_field('office_time'); ?></td>
+								<td><?php the_sub_field('office_time_mon'); ?></td>
+								<td><?php the_sub_field('office_time_tue'); ?></td>
+								<td><?php the_sub_field('office_time_wed'); ?></td>
+								<td><?php the_sub_field('office_time_thu'); ?></td>
+								<td><?php the_sub_field('office_time_fri'); ?></td>
+								<td><?php the_sub_field('office_time_sat'); ?></td>
+								<td><?php the_sub_field('office_time_sun'); ?></td>
+								<td><?php the_sub_field('office_time_holi'); ?></td>
+							</tr>
+							<?php endwhile; ?>
+						</table>
+					</div>
 					<div class="contactWrap rightBox">
 						<p class="telNumber">0120-905-812</p>
 						<a href="/contact/" title="まずはフォームで無料相談" class="btn">まずはフォームで無料相談</a>
 					</div>
 				</div>
-				<p class="text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+				<p class="text"><?php echo get_field('office_introduction'); ?></p>
 			</div>
 		</section>
 		
@@ -68,11 +97,11 @@
 							</tr>
 							<tr>
 							  <th>ホームページ</th>
-							  <td><a href=""><?php echo get_field('office_url'); ?></a></td>
+							  <td><a href="<?php echo get_field('office_url'); ?>" title="<?php the_title(); ?>"><?php echo get_field('office_url'); ?></a></td>
 							</tr>
 							<tr>
 							  <th>お問い合わせ番号</th>
-							  <td><?php echo get_field('offie_contact-number'); ?></td>
+							  <td><?php echo get_field('office_contact-number'); ?></td>
 							</tr>
 						</tbody>
 					</table>
@@ -87,7 +116,7 @@
 					</div>
 					<dl class="comment">
 						<dt>事務所から皆様へコメント</dt>
-						<dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+						<dd><?php echo get_field('office_comment'); ?></dd>
 					</dl>
 				</div>
 			</div>
@@ -102,13 +131,19 @@
 		<section class="indivSlider">			
 			<h2 class="title">事務所紹介画像・紹介動画</h2>
 			<div class="tableRow">
-				<div class="leftBox"></div>
-				<div class="rightBox"></div>
+				<div class="leftBox">			
+					<?php echo get_field('office_image_slider1'); ?>
+				</div>
+				<div class="rightBox">				
+					<?php echo get_field('office_image_slider2'); ?>
+				</div>
 			</div>	
 			<h2 class="title">カリキュラム・実習・人材育成などの取り組みに関して</h2>
 			<div class="slideWrap">
-				<div class="slider"></div>
-				<p>てきすとーーーーーーーーーーてきすとーーーーーーーーーーてきすとーーーーーーーーーーてきすとーーーーーーーーーーてきすとーーーーーーーーーーてきすとーーーーーーーーーー</p>
+				<div class="slider">
+					<?php echo get_field('office_image_slider3'); ?>
+				</div>
+				<p><?php echo get_field('office_description'); ?></p>
 			</div>
 		</section>
 
@@ -120,16 +155,16 @@
 
 		<section class="indivText">
 			<dl>
-				<dt>タイトル</dt>
-				<dd>詳細詳細詳細詳細詳細</dd>
+				<dt><?php echo get_field('office_title1'); ?></dt>
+				<dd><?php echo get_field('office_description1'); ?></dd>
 			</dl>
 			<dl>
-				<dt>タイトル</dt>
-				<dd>詳細詳細詳細詳細詳細</dd>
+				<dt><?php echo get_field('office_title2'); ?></dt>
+				<dd><?php echo get_field('office_description2'); ?></dd>
 			</dl>
 			<dl>
-				<dt>タイトル</dt>
-				<dd>詳細詳細詳細詳細詳細</dd>
+				<dt><?php echo get_field('office_title3'); ?></dt>
+				<dd><?php echo get_field('office_description3'); ?></dd>
 			</dl>
 		</section>
 
@@ -142,14 +177,18 @@
 		<section class="indivStaff">	
 			<h2 class="title">スタッフ紹介</h2>
 			<ul>
+				<?php
+						while(have_rows('office_staff_introduction')): the_row();
+					?>
 				<li>
-					<img src="" alt=""/>
+					<img src="<?php the_sub_field('office_staff_image'); ?>" alt="<?php the_sub_field('office_staff_name'); ?>"/>
 					<div>
-						<p class="name">名前</p>
-						<p class="role">担当</p>
-						<p class="text">あそsghgんlsjん</p>
+						<p class="name"><?php the_sub_field('office_staff_name'); ?></p>
+						<p class="role"><?php the_sub_field('office_staff_role'); ?></p>
+						<p class="text"><?php the_sub_field('office_staff_text'); ?></p>
 					</div>
 				</li>
+				<?php endwhile; ?>
 			</ul>	
 		</section>
 
@@ -181,10 +220,6 @@
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 25,000円</span>を支給致します。</p>
 		</section>
 
-
-		<div class="textWrap">
-			<?php the_content(); ?>
-		</div>
 		<div class="btnWrap">
 			<a href="tel:0120-697-182" onclick="ga('send', 'event', '電話リンク', 'タップ', '一覧ボタン');" class="btnLightGreen" title="電話でのお問い合わせ">電話でのお問い合わせ</a>
 			<a href="/contact/" class="btnBlue" title="フォームでのお申し込み">フォームでのお申し込み</a>
