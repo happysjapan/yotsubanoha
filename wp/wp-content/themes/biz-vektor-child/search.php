@@ -11,6 +11,13 @@ if ( isset( $post_type ) && locate_template( 'search-' . $post_type . '.php' ) )
   // and then exit out
   exit;
 }
+else if ( isset( $post_type ) && locate_template( 'search-' . $post_type . '.php' ) ) {
+  // if so, load that template
+  get_template_part( 'search', $post_type );
+
+  // and then exit out
+  exit;
+}
 ?>
 
 <!-- default search results here -->

@@ -1,17 +1,28 @@
-<?php get_header();
+<?php
+$post_search = $_GET['s'];
+$post_type = $_GET['post_type'];
+$post_slug = $_GET['category_name'];
 
-global $query_string;
-$post_category_slug = $_GET['info_cat'];
-// $taxonomy = 'info-cat';
-// $info_term = get_terms( $taxonomy, 'slug='.$post_category_slug);
+if (isset($post_slug) && $post_slug != '') {
+  $post_args = array(
+    's' => $post_search,
+    'post_type' => $post_type,
+    'category_name' => $post_slug
+  );
+} else {
+  $post_args = array(
+    's' => $post_search,
+    'post_type' => $post_type,
+  );
+}
 
-$terms = get_the_terms( $post_category, 'info-cat' );
+$the_query = new WP_Query( $post_args );
 
-query_posts( $query_string . '&category_name='.$info_term[0]->slug );
-
-echo $query_string . '&cat='.$info_term[0]->term_id;
-
+// echo '<pre>';
+// var_dump($post_args);
+// echo '</pre>';
 ?>
+<?php get_header(); ?>
 
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
