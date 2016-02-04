@@ -70,13 +70,13 @@ $the_query = new WP_Query( $post_args );
 
     <!-- [ #search ] -->
     <section class="searchArea">
-      <?php get_template_part( 'includes/search', 'info-search' ); ?>
+      <?php get_template_part( 'includes/category', 'info-search' ); ?>
     </section>
     <!-- [ /#search ] -->
 
   <?php if ( $the_query->have_posts() ) while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-    <?php get_template_part( 'includes/search', 'info-panel' ); ?>
+    <?php get_template_part( 'includes/category', 'info-panel' ); ?>
     <!-- .entry-content -->
   <?php endwhile; ?>
 

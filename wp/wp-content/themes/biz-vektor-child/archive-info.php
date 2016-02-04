@@ -7,12 +7,12 @@
 
     <!-- [ #search ] -->
     <section class="searchArea">
-      <?php get_template_part( 'includes/search', 'info-search' ); ?>
+      <?php get_template_part( 'includes/category', 'info-search' ); ?>
     </section>
     <!-- [ /#search ] -->
 
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <?php get_template_part( 'includes/search', 'info-panel' ); ?>
+    <?php get_template_part( 'includes/category', 'info-panel' ); ?>
     <!-- .entry-content -->
   <?php endwhile; ?>
 
