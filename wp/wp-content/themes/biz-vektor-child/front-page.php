@@ -132,13 +132,11 @@ else :
 	<?php } // login ?>
 
 	<?php endif; // have_posts() ?>
-
 	<?php get_template_part('module_topPR'); ?>
 	<?php if ( function_exists( 'biz_vektor_topSpecial' ) ): biz_vektor_topSpecial(); endif; ?>
 	<?php get_template_part('module_top_list_info'); ?>
 	<?php get_template_part('module_top_list_post'); ?>
 <?php endif; ?>
-
 <?php do_action('biz_vektor_fbLikeBoxDisplay'); ?>
 <?php do_action('biz_vektor_snsBtns'); ?>
 <?php do_action('biz_vektor_fbComments'); ?>
