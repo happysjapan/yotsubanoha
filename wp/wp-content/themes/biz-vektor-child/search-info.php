@@ -70,7 +70,7 @@ $the_query = new WP_Query( $post_args );
 
     <!-- [ #search ] -->
     <section class="searchArea">
-      <?php get_template_part( 'includes/search', 'info-form' ); ?>
+      <?php get_template_part( 'includes/search', 'info-search' ); ?>
     </section>
     <!-- [ /#search ] -->
 
