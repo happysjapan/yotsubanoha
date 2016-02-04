@@ -7,17 +7,18 @@
 
     <!-- [ #search ] -->
     <section class="searchArea">
-      <?php get_template_part( 'includes/search', 'form-info' ); ?>
+      <?php get_template_part( 'includes/search', 'info-form' ); ?>
     </section>
     <!-- [ /#search ] -->
 
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <?php get_template_part( 'includes/search', 'form-panel' ); ?>
+    <?php get_template_part( 'includes/search', 'info-panel' ); ?>
     <!-- .entry-content -->
   <?php endwhile; ?>
 
   </section>
   <!-- [ /#content ] -->
+
 
 </div>
 <!-- [ /#container ] -->
