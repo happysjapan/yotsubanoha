@@ -12,26 +12,26 @@
 
 
 	<div class="entry-content post-content">
-		<img src="" alt="" class="mainImage" />
+		<img src="<?php echo get_field('seminar_image'); ?>" alt="" class="mainImage" />
 
 		<h2 class="title">■&nbsp;開催情報</h2>
 		<table>
 			<tbody>
 				<tr>
 				  <th>日時</th>
-				  <td><?php echo get_field('opening_date');?></td>
+				  <td><?php echo get_field('opening_date'); ?></td>
 				</tr>
 				<tr>
 				  <th>会場</th>
-				  <td><?php echo get_field('place');?></td>
+				  <td><?php echo get_field('place'); ?></td>
 				</tr>
 				<tr>
 				  <th>参加費</th>
-				  <td><?php echo get_field('fee');?></td>
+				  <td><?php echo get_field('fee'); ?></td>
 				</tr>
 				<tr>
 				  <th>アクセス</th>
-				  <td><?php echo get_field('access');?></td>
+				  <td><?php echo get_field('access'); ?></td>
 				</tr>
 			</tbody>
 		</table>
