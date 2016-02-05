@@ -62,3 +62,8 @@
     <!-- [ /#search form ] -->
   </div>
 </div>
+
+<div class="consultBox">
+  <img src="" alt="" />
+  <a href="" title="相談する" class="btn">相談する</a>
+</div>
