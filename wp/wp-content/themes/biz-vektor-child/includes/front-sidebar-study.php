@@ -17,9 +17,12 @@ $the_query = new WP_Query( $post_args );
 
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-        <div class="ttBox" id="post-<?php echo get_the_id(); ?>">
+        <div class="ttBox study" id="post-<?php echo get_the_id(); ?>">
           <div>
-            <a href="<?php echo get_the_permalink(); ?>"><?php echo the_title(); ?></a>
+            <a href="<?php echo get_the_permalink(); ?>">
+              <img src="<?php echo get_field('jobhunting_image'); ?>" alt="<?php echo the_title(); ?>" />
+              <p><?php echo the_title(); ?></p>
+            </a>
           </div>
         </div>
 
@@ -29,5 +32,6 @@ $the_query = new WP_Query( $post_args );
       echo 'No result';
     }
     ?>
+    <div class="more"><a href="/info/" title="もっと見る">もっと見る</a></div>
   </div>
 </div>

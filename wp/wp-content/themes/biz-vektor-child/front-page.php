@@ -160,8 +160,8 @@ else :
 endif;
 if ( is_active_sidebar( 'common-side-bottom-widget-area' ) ) dynamic_sidebar( 'common-side-bottom-widget-area' );
 ?>
-		<?php get_template_part( 'includes/front', 'sidebar-study' ); ?>
 		<?php get_template_part( 'includes/front', 'sidebar-info' ); ?>
+		<?php get_template_part( 'includes/front', 'sidebar-study' ); ?>
 	</div>
 	<!-- [ /#sideTower ] -->
 	<?php biz_vektor_sideTower_after();?>
