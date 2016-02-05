@@ -464,22 +464,18 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 			"cpostnoindex" => Array(
 				'name' => __( 'Default to NOINDEX:', 'all-in-one-seo-pack' ), 
 				'type' => 'multicheckbox', 'default' => array(),
-				'condshow' => Array( 'aiosp_enablecpost' => 'on' )
 				),
 			"cpostnofollow" => Array(
 				'name' => __( 'Default to NOFOLLOW:', 'all-in-one-seo-pack' ), 
 				'type' => 'multicheckbox', 'default' => array(),
-				'condshow' => Array( 'aiosp_enablecpost' => 'on' )
 				),
 			"cpostnoodp"=> Array(
 					'name' => __( 'Default to NOODP:', 'all-in-one-seo-pack' ),
 					'type' => 'multicheckbox', 'default' => array(),
-					'condshow' => Array( 'aiosp_enablecpost' => 'on' )
 				),
 			"cpostnoydir"=> Array(
 				'name' => __( 'Default to NOYDIR:', 'all-in-one-seo-pack' ),
 				'type' => 'multicheckbox', 'default' => array(),
-				'condshow' => Array( 'aiosp_enablecpost' => 'on' )
 				),
 			"cposttitles" => Array(
 				'name' => __( 'Custom titles:', 'all-in-one-seo-pack' ), 
@@ -796,6 +792,7 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 				add_action( "aioseop_global_settings_header",	Array( $this, 'display_right_sidebar' ) );
 				add_action( "aioseop_global_settings_footer",	Array( $this, 'display_settings_footer' ) );
 				add_action( "output_option", Array( $this, 'custom_output_option' ), 10, 2 );
+				add_action('all_admin_notices', array( $this, 'visibility_warning'));
 			}
 	}
 	
@@ -1634,6 +1631,29 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		return Array( 'publisher' => $publisher, 'author' => $author );
 	}
 	
+	function visibility_warning() {
+				
+		$aioseop_visibility_notice_dismissed = get_user_meta( get_current_user_id(), 'aioseop_visibility_notice_dismissed', true ); 
+		
+	  if ( '0' == get_option('blog_public') && empty( $aioseop_visibility_notice_dismissed ) ) {
+		
+		printf( '
+			<div id="message" class="error notice is-dismissible aioseop-notice">
+				<p>
+					<strong>%1$s</strong>
+					%2$s
+					
+				</p>
+			</div>',
+			__( 'Warning: You\'re blocking access to search engines.', 'all-in-one-seo-pack' ),
+			sprintf( __( 'You can %s click here%s to go to your reading settings and toggle your blog visibility.', 'all-in-one-seo-pack' ), sprintf( '<a href="%s">', esc_url( admin_url( 'options-reading.php' ) ) ), '</a>' ));
+		
+	  }elseif( '1' == get_option('blog_public') && !empty( $aioseop_visibility_notice_dismissed ) ){
+			delete_user_meta( get_current_user_id(), 'aioseop_visibility_notice_dismissed' );
+			}
+	}
+	
+
 	function get_robots_meta() {
 		global $aioseop_options;
 		$opts = $this->meta_opts;
@@ -2829,7 +2849,22 @@ EOF;
 			}
 			if (empty( $title ) )
 				$title = $this->internationalize( get_option( 'blogname' ) ) . ' | ' . $this->internationalize( get_bloginfo( 'description' ) );
-			return $this->paged_title( $title );
+				
+			if ( is_post_type_archive() && is_post_type_archive( 'product' ) && $post_id = woocommerce_get_page_id( 'shop' ) &&  $post = get_post( $post_id ) ){
+				
+				$title = $this->internationalize( get_post_meta( $post->ID, "_aioseop_title", true ) );
+				if ( !$title ) $title = $this->internationalize( $post->post_title );
+				if ( !$title ) $title = $this->internationalize( $this->get_original_title( '', false ) );
+				$title = $this->apply_page_title_format( $title, $post );
+	            $title = $this->paged_title( $title );
+				$title = apply_filters( 'aioseop_title_page', $title );
+				return $title;
+			
+			}	
+				
+				
+				
+			return $this->paged_title( $title ); //this is returned for woo
 		} else if ( is_attachment() ) {
 			if ( $post === null ) return false;
 			$title = get_post_meta( $post->ID, "_aioseop_title", true );
@@ -2871,6 +2906,7 @@ EOF;
 				return $title;
 			}
 		} else if ( function_exists( 'woocommerce_get_page_id' ) && is_post_type_archive( 'product' ) && ( $post_id = woocommerce_get_page_id( 'shop' ) ) && ( $post = get_post( $post_id ) ) ) {
+			//too far down? -mrt
 			$title = $this->internationalize( get_post_meta( $post->ID, "_aioseop_title", true ) );
 			if ( !$title ) $title = $this->internationalize( $post->post_title );
 			if ( !$title ) $title = $this->internationalize( $this->get_original_title( '', false ) );
@@ -3382,7 +3418,8 @@ EOF;
 		
 		add_action( 'aioseop_modules_add_menus', Array( $this, 'add_menu' ), 5 );
 		do_action( 'aioseop_modules_add_menus', $file );
-
+		
+			
 		$metaboxes = apply_filters( 'aioseop_add_post_metabox', Array() );
 		if ( !empty( $metaboxes ) ) {
 			if ( $this->tabbed_metaboxes ) {

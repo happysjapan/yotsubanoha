@@ -8,12 +8,71 @@
 	<div id="content" class="content wide indivlawyer">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
+	<div class="social--holder">
+		<ul class="social--list">
+			<li class="google social--listitem">
+				<!-- Placez cette balise où vous souhaitez faire apparaître le gadget Bouton +1. -->
+				<div class="g-plusone" data-annotation="none"></div>
+
+				<!-- Placez cette ballise après la dernière balise Bouton +1. -->
+				<script type="text/javascript">
+				  window.___gcfg = {lang: 'fr'};
+
+				  (function() {
+				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				    po.src = 'https://apis.google.com/js/platform.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+				</script>
+			</li>
+			<li class="facebook social--listitem">
+				<div class="fb-like"
+					data-href="<?php the_permalink(); ?>"
+					data-layout="standard"
+					data-action="like"
+					data-show-faces="true">
+				</div>
+			</li>
+			<li class="twitter social--listitem">
+				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</li>
+			<li class="bookmark social--listitem">
+				<a id="bookmarkme" href="<?php the_permalink(); ?>" rel="sidebar" title="bookmark this page">Bookmark</a>
+				<script type="text/javascript">
+				    $(function() {
+				        $('#bookmarkme').click(function() {
+				            if (window.sidebar && window.sidebar.addPanel) { // Mozilla Firefox Bookmark
+				                window.sidebar.addPanel(document.title,window.location.href,'');
+				            } else if(window.external && ('AddFavorite' in window.external)) { // IE Favorite
+				                window.external.AddFavorite(location.href,document.title);
+				            } else if(window.opera && window.print) { // Opera Hotlist
+				                this.title=document.title;
+				                return true;
+				            } else { // webkit - safari/chrome
+				                alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+				            }
+				        });
+				    });
+				</script>
+			</li>
+			<li class="line social--listitem">
+				<span>
+				<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
+				<script type="text/javascript">
+				new media_line_me.LineButton({"pc":false,"lang":"en","type":"a"});
+				</script>
+				</span>
+				<a href="http://line.me/R/msg/text/?LINE%20it%21%0d%0ahttp%3a%2f%2fline%2enaver%2ejp%2f"><img src="[URL of Button image]" width="[width of Button]" height="[height of Button]" alt="LINE it!" /></a>
+			</li>
+		</ul>
+	</div>
+
 <!-- [ #post- ] -->
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<h1 class="entryPostTitle entry-title">
 		<?php the_title(); ?><?php edit_post_link(__('Edit', 'biz-vektor'), ' <span class="edit-link edit-item">[ ', ' ]' ); ?>
 	</h1>
-
 
 	<div class="entry-content post-content">
 
@@ -62,7 +121,7 @@
 				<p class="text"><?php echo get_field('office_introduction'); ?></p>
 			</div>
 		</section>
-		
+
 		<section class="indivProfile">
 			<h2 class="title">■&nbsp;事務所紹介</h2>
 			<div class="tableRow">
@@ -114,7 +173,7 @@
 						<a href="" title="" class="btn">お祝い金とは？</a>
 					</div>
 					<div class="googleMap">
-						
+
 					</div>
 					<dl class="comment">
 						<dt>事務所から皆様へコメント</dt>
@@ -130,16 +189,16 @@
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 25,000円</span>を支給致します。</p>
 		</section>
 
-		<section class="indivSlider">			
+		<section class="indivSlider">
 			<h2 class="title">事務所紹介画像・紹介動画</h2>
 			<div class="tableRow">
-				<div class="leftBox">			
+				<div class="leftBox">
 					<?php echo get_field('office_image_slider1'); ?>
 				</div>
-				<div class="rightBox">				
+				<div class="rightBox">
 					<?php echo get_field('office_image_slider2'); ?>
 				</div>
-			</div>	
+			</div>
 			<h2 class="title">カリキュラム・実習・人材育成などの取り組みに関して</h2>
 			<div class="slideWrap">
 				<div class="slider">
@@ -176,7 +235,7 @@
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 25,000円</span>を支給致します。</p>
 		</section>
 
-		<section class="indivStaff">	
+		<section class="indivStaff">
 			<h2 class="title">スタッフ紹介</h2>
 			<ul>
 				<?php
@@ -191,10 +250,10 @@
 					</div>
 				</li>
 				<?php endwhile; ?>
-			</ul>	
+			</ul>
 		</section>
 
-		<section class="indivAroundLawyer">	
+		<section class="indivAroundLawyer">
 			<h2 class="title">周辺の終了移行支援事業所一覧</h2>
 			<div class="slideWrap">
 				<ul>
@@ -206,12 +265,12 @@
 						<a href="" title="" class="btn">詳細</a>
 					</li>
 				</ul>
-			</div>			
+			</div>
 		</section>
 
-		<section class="indivSeminar">	
+		<section class="indivSeminar">
 			<h2 class="title">説明会・セミナー一覧</h2>
-			<p>てきsつおおおお</p>			
+			<p>てきsつおおおお</p>
 			<p class="note">まずは、働くことに関する不安などの就職相談等も承ります。お気軽にご連絡ください。</p>
 			<div class="btn_wrap"><a href="/info/" title="説明会・セミナー一覧" class="btn">説明会・セミナー一覧</a></div>
 		</section>
