@@ -71,12 +71,6 @@
 		</div>
 	</div><!-- /searchInner -->
 
-    <!-- [ #search ] -->
-    <section class="searchArea">
-      <?php get_template_part( 'includes/category', 'lawyer-search' ); ?>
-    </section>
-    <!-- [ /#search ] -->
-
 	</div><!-- /areaSearch -->
 	</form>
 <?php
