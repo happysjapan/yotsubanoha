@@ -18,11 +18,6 @@
       'exclude' => $exclude_ids
     );
     $categories = get_categories($args);
-
-    // echo '<pre>';
-    // var_dump($categories);
-    // echo '</pre>';
-
     ?>
 
     <!-- [ #search form ] -->

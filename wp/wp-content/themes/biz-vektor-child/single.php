@@ -1,4 +1,34 @@
-<?php get_header(); ?>
+<?php get_header();
+
+$current_category = get_the_category();
+if( $current_category[0]->term_id == 2 ){
+	$current_category_id = $current_category[1]->term_id;
+} else { $current_category_id = $current_category[0]->term_id; }
+
+$args = array(
+	'posts_per_page'   => -1,
+	'category'         => $current_category_id,
+	'exclude'						=> get_the_id(),
+	'post_type'        => 'post',
+);
+$lawyer_by_category = get_posts( $args );
+?>
+
+<!-- Copy this where you want ! -->
+
+<!-- [ #lawyer-slider ] -->
+<section class="lawyer-slider">
+	<h4 class="lawyer-slider--title">Lawyers slider</h4>
+	<?php foreach ($lawyer_by_category as $lawyer) {
+		setup_postdata( $lawyer ); ?>
+
+		<article class="lawyer-slide">
+			<h5 class="lawyer-slide--title"><?php the_title(); ?></h5>
+		</article>
+		
+	<?php } wp_reset_postdata(); ?>
+</section>
+<!-- [ #lawyer-slider ] -->
 
 <script src="/js/jquery.bxslider.js"></script>
 
