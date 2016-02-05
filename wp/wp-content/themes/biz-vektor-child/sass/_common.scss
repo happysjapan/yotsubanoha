@@ -145,7 +145,6 @@
 	}
 }
 
-
 // Side Tower
 #sideTower {
 	.sideWidget {
@@ -201,6 +200,21 @@
 						background-color: #efefef;
 					}
 				}
+			}
+		}
+	}
+}
+
+// social buttons
+.social--holder {
+	text-align: right;
+	.social--list {
+		li {
+			display: inline-block;
+			list-style: none;
+			vertical-align: top;
+			.lineButtonPc {
+				@include SP {display: none;}
 			}
 		}
 	}
