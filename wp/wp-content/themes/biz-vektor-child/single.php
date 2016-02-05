@@ -29,7 +29,10 @@ $lawyer_by_category = get_posts( $args );
 	<?php } ?>
 </section>
 
-<script src="/js/jquery.bxslider.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
 
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
@@ -54,20 +57,21 @@ $lawyer_by_category = get_posts( $args );
 				  })();
 				</script>
 			</li>
-			<li class="facebook social--listitem">
-				<div class="fb-like"
-					data-href="<?php the_permalink(); ?>"
-					data-layout="standard"
-					data-action="like"
-					data-show-faces="true">
-				</div>
-			</li>
 			<li class="twitter social--listitem">
 				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 			</li>
+			<li class="facebook social--listitem">
+				<div class="fb-like"
+					data-href="<?php the_permalink(); ?>"
+					data-layout="button"
+					data-action="like"
+					data-show-faces="true">
+				</div>
+			</li>
 			<li class="bookmark social--listitem">
-				<a id="bookmarkme" href="<?php the_permalink(); ?>" rel="sidebar" title="bookmark this page">Bookmark</a>
+				<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+				<!-- <a id="bookmarkme" href="<?php the_permalink(); ?>" rel="sidebar" title="bookmark this page">Bookmark</a> -->
 				<script type="text/javascript">
 				    $(function() {
 				        $('#bookmarkme').click(function() {
@@ -89,10 +93,10 @@ $lawyer_by_category = get_posts( $args );
 				<span>
 				<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
 				<script type="text/javascript">
-				new media_line_me.LineButton({"pc":false,"lang":"en","type":"a"});
+				new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a"});
 				</script>
 				</span>
-				<a href="http://line.me/R/msg/text/?LINE%20it%21%0d%0ahttp%3a%2f%2fline%2enaver%2ejp%2f"><img src="[URL of Button image]" width="[width of Button]" height="[height of Button]" alt="LINE it!" /></a>
+				<a href="http://line.me/R/msg/text/?LINE%20it%21%0d%0ahttp%3a%2f%2fline%2enaver%2ejp%2f" class="lineButtonPc"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/line20x20.png" width="20" height="20" alt="LINEで送る!" /></a>
 			</li>
 		</ul>
 	</div>
@@ -285,7 +289,49 @@ $lawyer_by_category = get_posts( $args );
 		<section class="indivAroundLawyer">
 			<h2 class="title">周辺の終了移行支援事業所一覧</h2>
 			<div class="slideWrap">
-				<ul>
+				<ul class="areaSlider">
+					<li>
+						<p class="title">タイトル</p>
+						<p>東京都台東区</p>
+						<p>お祝い金: 25,000円</p>
+						<img src="" alt="" />
+						<a href="" title="" class="btn">詳細</a>
+					</li>
+					<li>
+						<p class="title">タイトル</p>
+						<p>東京都台東区</p>
+						<p>お祝い金: 25,000円</p>
+						<img src="" alt="" />
+						<a href="" title="" class="btn">詳細</a>
+					</li>
+					<li>
+						<p class="title">タイトル</p>
+						<p>東京都台東区</p>
+						<p>お祝い金: 25,000円</p>
+						<img src="" alt="" />
+						<a href="" title="" class="btn">詳細</a>
+					</li>
+					<li>
+						<p class="title">タイトル</p>
+						<p>東京都台東区</p>
+						<p>お祝い金: 25,000円</p>
+						<img src="" alt="" />
+						<a href="" title="" class="btn">詳細</a>
+					</li>
+					<li>
+						<p class="title">タイトル</p>
+						<p>東京都台東区</p>
+						<p>お祝い金: 25,000円</p>
+						<img src="" alt="" />
+						<a href="" title="" class="btn">詳細</a>
+					</li>
+					<li>
+						<p class="title">タイトル</p>
+						<p>東京都台東区</p>
+						<p>お祝い金: 25,000円</p>
+						<img src="" alt="" />
+						<a href="" title="" class="btn">詳細</a>
+					</li>
 					<li>
 						<p class="title">タイトル</p>
 						<p>東京都台東区</p>
@@ -331,7 +377,6 @@ $lawyer_by_category = get_posts( $args );
 
 <?php do_action('biz_vektor_fbComments'); ?>
 
-<?php comments_template( '', true ); ?>
 
 <?php endwhile; // end of the loop. ?>
 
