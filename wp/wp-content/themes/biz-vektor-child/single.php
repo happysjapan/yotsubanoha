@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<script src="/js/jquery.bxslider.js"></script>
+
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
 	<!-- [ #content ] -->
@@ -211,7 +213,7 @@
 			<h2 class="title">説明会・セミナー一覧</h2>
 			<p>てきsつおおおお</p>			
 			<p class="note">まずは、働くことに関する不安などの就職相談等も承ります。お気軽にご連絡ください。</p>
-			<div class="btn_wrap"><a href="" title="説明会・セミナー一覧" class="btn">説明会・セミナー一覧</a></div>
+			<div class="btn_wrap"><a href="/info/" title="説明会・セミナー一覧" class="btn">説明会・セミナー一覧</a></div>
 		</section>
 
 		<section class="indivContact">
@@ -252,5 +254,44 @@
 
 </div>
 <!-- [ /#container ] -->
+
+	<script>
+	$(document).ready(function(){
+		// $('.infoBottomSlider').bxSlider({
+		// 	pagerCustom: '#infoBottom_pager',
+		// 	responsive: true
+		// });
+
+
+		var settings = function() {
+			var setting1 = {
+				minSlides: 1,
+				maxSlides: 1,
+				moveSlides: 1,
+				slideWidth: 245,
+				responsive: true,
+				pager: false
+			};
+			var setting2 = {
+				minSlides: 3,
+				maxSlides: 3,
+				moveSlides: 3,
+				slideWidth: 245,
+				slideMargin: 50,
+				responsive: true,
+				pager: false
+			};
+			return ($(window).width()<740) ? setting1 : setting2;
+		}
+		var mySlider;
+		function tourLandingScript(){
+			mySlider.reloadSlider(settings());
+		}
+
+		mySlider = $('.areaSlider').bxSlider(settings());
+		$(window).resize(tourLandingScript);
+	});
+
+	</script>
 
 <?php get_footer(); ?>
