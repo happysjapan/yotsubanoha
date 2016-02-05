@@ -154,12 +154,6 @@ Version: 0.1.0
 			border-top: none;
 			ul {margin: 0;}
 			.listP {
-				h2 {
-					@include font-size(1.4);
-					margin: 0 0 10px;
-					padding: 0;
-					border: none;
-				}
 				> li{
 					display: inline-block;
 					margin-bottom: 20px;
@@ -167,6 +161,12 @@ Version: 0.1.0
 					width: 48%;
 					&:nth-child(2n+1) {margin-right: 3%;}
 					&:last-child,&:nth-child(7) {margin-bottom: 0;}
+					h3 {
+						@include font-size(1.4);
+						margin: 0 0 10px;
+						padding: 0;
+						border: none;
+					}
 					@include SP {
 						width: 100%;
 					}
@@ -281,82 +281,81 @@ Version: 0.1.0
 
 	/* 新着事業所一覧 ▼
 	-------------------------------------------- */
-	.ContentList {
-		margin: 40px 0 0;
-		h3 {
+
+	.postInFrontPage {
+		margin-bottom: 40px;
+		h2 {
 			@extend %greenTitle;
 			padding: 6px 10px;
 		}
-		> div {
+		.inner {
 			padding: 20px;
 			border-left: 1px solid $color-grey;
 			border-right: 1px solid $color-grey;
 			border-bottom: 1px solid $color-grey;
-			ul {
-				@include clearfix;
-				margin: 0;
-				li {
-					margin-right: 30px;
-					float: left;
-					&:nth-child(3n)  {margin-right: 0;}
-					@include calc(width,'100%/3 - 20px');
-					a {
+		}
+		ul {
+			@include clearfix;
+			margin: 0;
+			li {
+				margin-right: 30px;
+				float: left;
+				&:nth-child(3n)  {margin-right: 0;}
+				@include calc(width,'100%/3 - 20px');
+				a {
+					display: block;
+					p {margin-bottom: 6px;}
+					.ttl {
+						font-weight: bold;
+					}
+					.desc {
+						@include font-size(1.2);
+					}
+					.reward {
+						@include font-size(1.2);
+					}
+					img {
 						display: block;
-						p {margin-bottom: 6px;}
-						.ttl {
-							font-weight: bold;
-						}
-						.desc {
-							@include font-size(1.2);
-						}
-						.reward {
-							@include font-size(1.2);
-						}
-						img {
-							display: block;
-							width: 120px;
-							height: 120px;
-						}
-						.btn {
-							display: block;
-							width: 90px;
-							margin: 0 auto;
-							padding: 6px;
-							background-color: #48b420;
-							color: #fff;
-							@include font-size(1.5);
-							text-align: center;
-							&:hover {
-								@include opacity(.9);
-								text-decoration: none;
-							}
+						width: 120px;
+						height: 120px;
+					}
+					.btn {
+						display: block;
+						width: 90px;
+						margin: 0 auto;
+						padding: 6px;
+						background-color: #48b420;
+						color: #fff;
+						@include font-size(1.5);
+						text-align: center;
+						&:hover {
+							@include opacity(.9);
+							text-decoration: none;
 						}
 					}
 				}
 			}
+		}
 
-			.more {
-				margin-top: 8px;
-				text-align: right;
-			}
+		.more {
+			margin-top: 8px;
+			text-align: right;
+		}
 
-			a {
-				color: $color-blue;
-				text-decoration: none;
-				&:hover {
-					text-decoration: underline;
-				}
+		a {
+			color: $color-blue;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 		@include SP {
-			div {
-				ul li {
-					margin-right: 20px;
-					float: left;
-					&:nth-child(3n)  {margin-right: 20px;}
-					&:nth-child(2n)  {margin-right: 0;}
-					@include calc(width,'100%/2 - 20px');
-				}
+			ul li {
+				margin-right: 20px;
+				float: left;
+				&:nth-child(3n)  {margin-right: 20px;}
+				&:nth-child(2n)  {margin-right: 0;}
+				@include calc(width,'100%/2 - 20px');
 			}
 		}
 	}
