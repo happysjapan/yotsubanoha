@@ -1,6 +1,8 @@
 <?php get_header();
 
 $current_category = get_the_category();
+
+
 if( $current_category[0]->term_id == 2 ){
 	$current_category_id = $current_category[1]->term_id;
 } else { $current_category_id = $current_category[0]->term_id; }
@@ -12,23 +14,20 @@ $args = array(
 	'post_type'        => 'post',
 );
 $lawyer_by_category = get_posts( $args );
+
+// echo '<pre>';
+// var_dump($lawyer_by_category);
+// echo '</pre>';
 ?>
 
-<!-- Copy this where you want ! -->
-
-<!-- [ #lawyer-slider ] -->
 <section class="lawyer-slider">
-	<h4 class="lawyer-slider--title">Lawyers slider</h4>
-	<?php foreach ($lawyer_by_category as $lawyer) {
-		setup_postdata( $lawyer ); ?>
-
+	<h4 class="lawyer-slider--title">Lawyer slider</h4>
+	<?php foreach ($lawyer_by_category as $lawyer) { ?>
 		<article class="lawyer-slide">
-			<h5 class="lawyer-slide--title"><?php the_title(); ?></h5>
+			<h5 class="lawyer-slide--title"><?php echo $lawyer->post_title; ?></h5>
 		</article>
-		
-	<?php } wp_reset_postdata(); ?>
+	<?php } ?>
 </section>
-<!-- [ #lawyer-slider ] -->
 
 <script src="/js/jquery.bxslider.js"></script>
 
