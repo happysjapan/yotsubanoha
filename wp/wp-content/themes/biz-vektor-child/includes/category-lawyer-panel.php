@@ -1,27 +1,42 @@
 <article id="post-<?php the_ID(); ?>" class="entry-content article">
     <?php wp_link_pages( array( 'before' => '<div class="page-link">' . 'Pages:', 'after' => '</div>' ) ); ?>
-
+    <div class="officeWrap">
       <div class="inner">
-        <h3 class="title"><a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a></h3>
+        <h3 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
         <div class="profileWrap">
+          <div class="imageWrap"><img src="<?php echo get_field('office_image'); ?>" alt="<?php the_title(); ?>" /></div>
           <div class="detailWrap">
-            <table>
-              <tbody>
-              <tr>
-                <th>日時</th>
-                <td><?php //echo get_field('opening_date') ?></td>
-              </tr>
-              <tr>
-                <th>会場</th>
-                <td><?php //echo get_field('place'); ?></td>
-              </tr>
-              </tbody>
-            </table>
             <div class="textWrap">
+              <p class="text"><?php echo get_field('office_introduction'); ?></p>
+              <p class="fee">お祝い金：<?php echo get_field('reward'); ?>円</p>
             </div>
+            <table>
+              <tr>
+                <th>住所</th>
+                <td><?php echo get_field('office_address'); ?></td>
+              </tr>
+              <tr>
+                <th>アクセス</th>
+                <td><?php echo get_field('office_access'); ?></td>
+              </tr>
+              <tr>
+                <th>定員</th>
+                <td><?php echo get_field('office_capacity'); ?>人</td>
+              </tr>
+              <tr>
+                <th>プログラム 提供時間</th>
+                <td><?php echo get_field('office_time'); ?></td>
+              </tr>
+            </table>
           </div>
         </div>
+        <div class="btnWrap">
+          <a href="" title="無料電話相談" class="btnLightGreen">無料電話相談</a>
+          <a href="/contact/" title="資料請求" class="btnLightBlue">資料請求</a>
+          <a href="/contact/" title="見学会へ参加" class="btnBlue">見学会へ参加</a>
+        </div>
       </div>
+      <a href="<?php the_permalink(); ?>"  title="詳細ページへ" class="linkToDetail">▶︎&nbsp;詳細ページへ</a>
+    </div>
 
-      <p><a href="<?php the_permalink(); ?>" class="linkToDetail" title="詳細ページへ">▶︎&nbsp;詳細ページへ</a></p>
   </article><!-- .entry-content -->
