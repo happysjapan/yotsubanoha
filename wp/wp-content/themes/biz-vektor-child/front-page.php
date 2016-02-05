@@ -6,7 +6,7 @@
 	<?php biz_vektor_contentMain_before();?>
 	<div id="content-main">
 
-	<form name="searchform1" id="searchform1" method="get" action="<?php bloginfo( 'url' ); ?>">
+	<form name="searchform1" id="searchform1" method="get" action="<?php bloginfo( 'url' ); ?>/search">
 	<div class="areaSearch">
 		<h2>全国の就労移行支援事業所を検索</h2>
 		<div class="searchInner">
@@ -47,26 +47,29 @@
 				 </ul>
 		</li>
 		<li class="cSelect">
-			<dl>
-				<dt>条件でお選びください</dt>
-				<dd>
-					<div class="select-box">
-						<?php $tags = get_tags(); if ( $tags ) : ?>
-							<select name='tag' id='tag'>
-								<option value="" selected="selected">条件</option>
-								<?php foreach ( $tags as $tag ): ?>
-									<option value="<?php echo esc_html( $tag->slug);  ?>"><?php echo esc_html( $tag->name ); ?></option>
-								<?php endforeach; ?>
-							</select>
-						<?php endif; ?>
-					</div>
-				</dd>
-			</dl>
+			<?php
+			$subcategories_parent = get_category_by_slug('47zenkoku');
+	    $sub_args = array('child_of' => $subcategories_parent->term_id);
+	    $subcategories = get_categories( $sub_args );
+			?>
+			<div class="select-box">
+        <label for ="searchSelect" class="search--form--label">条件でお選びください
+        <select id="searchSelect" name="subcategory_name" class="search--form--select">
+          <option value="" selected>Default</option>
+          <?php
+            foreach ($subcategories as $subcategory) {
+              echo '<option value="'.$subcategory->slug.'">'.$subcategory->name.'</option>';
+            }
+          ?>
+        </select>
+        </label>
+      </div>
 		</li>
 
 		</ul>
 		<div class="searchText">
 			<input name="s" id="s" type="text" placeholder="フリーワード" class="topSearch"/>
+			<input type="hidden" name="post_type" value="lawyer" />
 			<input type="submit" value="検索" id="submit" class="btnGreen" />
 		</div>
 	</div><!-- /searchInner -->
