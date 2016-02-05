@@ -15,24 +15,8 @@ $args = array(
 );
 $lawyer_by_category = get_posts( $args );
 
-// echo '<pre>';
-// var_dump($lawyer_by_category);
-// echo '</pre>';
 ?>
 
-<section class="lawyer-slider">
-	<h4 class="lawyer-slider--title">Lawyer slider</h4>
-	<?php foreach ($lawyer_by_category as $lawyer) { ?>
-		<article class="lawyer-slide">
-			<h5 class="lawyer-slide--title"><?php echo $lawyer->post_title; ?></h5>
-		</article>
-	<?php } ?>
-</section>
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
 
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
@@ -40,66 +24,66 @@ $lawyer_by_category = get_posts( $args );
 	<div id="content" class="content wide indivlawyer">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-	<div class="social--holder">
-		<ul class="social--list">
-			<li class="google social--listitem">
-				<!-- Placez cette balise où vous souhaitez faire apparaître le gadget Bouton +1. -->
-				<div class="g-plusone" data-annotation="none"></div>
+<div class="social--holder">
+	<ul class="social--list">
+		<li class="google social--listitem">
+			<!-- Placez cette balise où vous souhaitez faire apparaître le gadget Bouton +1. -->
+			<div class="g-plusone" data-annotation="none"></div>
 
-				<!-- Placez cette ballise après la dernière balise Bouton +1. -->
-				<script type="text/javascript">
-				  window.___gcfg = {lang: 'fr'};
+			<!-- Placez cette ballise après la dernière balise Bouton +1. -->
+			<script type="text/javascript">
+			  window.___gcfg = {lang: 'fr'};
 
-				  (function() {
-				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-				    po.src = 'https://apis.google.com/js/platform.js';
-				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-				  })();
-				</script>
-			</li>
-			<li class="twitter social--listitem">
-				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-			</li>
-			<li class="facebook social--listitem">
-				<div class="fb-like"
-					data-href="<?php the_permalink(); ?>"
-					data-layout="button"
-					data-action="like"
-					data-show-faces="true">
-				</div>
-			</li>
-			<li class="bookmark social--listitem">
-				<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-				<!-- <a id="bookmarkme" href="<?php the_permalink(); ?>" rel="sidebar" title="bookmark this page">Bookmark</a> -->
-				<script type="text/javascript">
-				    $(function() {
-				        $('#bookmarkme').click(function() {
-				            if (window.sidebar && window.sidebar.addPanel) { // Mozilla Firefox Bookmark
-				                window.sidebar.addPanel(document.title,window.location.href,'');
-				            } else if(window.external && ('AddFavorite' in window.external)) { // IE Favorite
-				                window.external.AddFavorite(location.href,document.title);
-				            } else if(window.opera && window.print) { // Opera Hotlist
-				                this.title=document.title;
-				                return true;
-				            } else { // webkit - safari/chrome
-				                alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
-				            }
-				        });
-				    });
-				</script>
-			</li>
-			<li class="line social--listitem">
-				<span>
-				<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
-				<script type="text/javascript">
-				new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a"});
-				</script>
-				</span>
-				<a href="http://line.me/R/msg/text/?LINE%20it%21%0d%0ahttp%3a%2f%2fline%2enaver%2ejp%2f" class="lineButtonPc"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/line20x20.png" width="20" height="20" alt="LINEで送る!" /></a>
-			</li>
-		</ul>
-	</div>
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/platform.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</li>
+		<li class="twitter social--listitem">
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</li>
+		<li class="facebook social--listitem">
+			<div class="fb-like"
+				data-href="<?php the_permalink(); ?>"
+				data-layout="button"
+				data-action="like"
+				data-show-faces="true">
+			</div>
+		</li>
+		<li class="bookmark social--listitem">
+			<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+			<!-- <a id="bookmarkme" href="<?php the_permalink(); ?>" rel="sidebar" title="bookmark this page">Bookmark</a> -->
+			<script type="text/javascript">
+			    jQuery(function() {
+			        jQuery('#bookmarkme').click(function() {
+			            if (window.sidebar && window.sidebar.addPanel) { // Mozilla Firefox Bookmark
+			                window.sidebar.addPanel(document.title,window.location.href,'');
+			            } else if(window.external && ('AddFavorite' in window.external)) { // IE Favorite
+			                window.external.AddFavorite(location.href,document.title);
+			            } else if(window.opera && window.print) { // Opera Hotlist
+			                this.title=document.title;
+			                return true;
+			            } else { // webkit - safari/chrome
+			                alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+			            }
+			        });
+			    });
+			</script>
+		</li>
+		<li class="line social--listitem">
+			<span>
+			<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
+			<script type="text/javascript">
+			new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a"});
+			</script>
+			</span>
+			<a href="http://line.me/R/msg/text/?LINE%20it%21%0d%0ahttp%3a%2f%2fline%2enaver%2ejp%2f" class="lineButtonPc"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/line20x20.png" width="20" height="20" alt="LINEで送る!" /></a>
+		</li>
+	</ul>
+</div>
 
 <!-- [ #post- ] -->
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -290,57 +274,26 @@ $lawyer_by_category = get_posts( $args );
 			<h2 class="title">周辺の終了移行支援事業所一覧</h2>
 			<div class="slideWrap">
 				<ul class="areaSlider">
-					<li>
-						<p class="title">タイトル</p>
-						<p>東京都台東区</p>
-						<p>お祝い金: 25,000円</p>
-						<img src="" alt="" />
-						<a href="" title="" class="btn">詳細</a>
-					</li>
-					<li>
-						<p class="title">タイトル</p>
-						<p>東京都台東区</p>
-						<p>お祝い金: 25,000円</p>
-						<img src="" alt="" />
-						<a href="" title="" class="btn">詳細</a>
-					</li>
-					<li>
-						<p class="title">タイトル</p>
-						<p>東京都台東区</p>
-						<p>お祝い金: 25,000円</p>
-						<img src="" alt="" />
-						<a href="" title="" class="btn">詳細</a>
-					</li>
-					<li>
-						<p class="title">タイトル</p>
-						<p>東京都台東区</p>
-						<p>お祝い金: 25,000円</p>
-						<img src="" alt="" />
-						<a href="" title="" class="btn">詳細</a>
-					</li>
-					<li>
-						<p class="title">タイトル</p>
-						<p>東京都台東区</p>
-						<p>お祝い金: 25,000円</p>
-						<img src="" alt="" />
-						<a href="" title="" class="btn">詳細</a>
-					</li>
-					<li>
-						<p class="title">タイトル</p>
-						<p>東京都台東区</p>
-						<p>お祝い金: 25,000円</p>
-						<img src="" alt="" />
-						<a href="" title="" class="btn">詳細</a>
-					</li>
-					<li>
-						<p class="title">タイトル</p>
-						<p>東京都台東区</p>
-						<p>お祝い金: 25,000円</p>
-						<img src="" alt="" />
-						<a href="" title="" class="btn">詳細</a>
-					</li>
+
+					<?php foreach ($lawyer_by_category as $lawyer) { ?>
+
+						<li>
+							<p class="title"><?php echo $lawyer->post_title; ?></p>
+							<p><?php echo get_field('office_address', $lawyer->ID); ?></p>
+							<p>お祝い金: <?php echo get_field('reward', $lawyer->ID); ?>円</p>
+							<img src="<?php echo get_field('office_image', $lawyer->ID); ?>" alt="" />
+							<a href="<?php echo get_permalink($lawyer->ID); ?>" title="詳細" class="btn">詳細</a>
+						</li>
+					<?php } ?>
+
+
 				</ul>
 			</div>
+					<?php 
+						echo '<pre>';
+						var_dump($lawyer);
+						echo '</pre>';
+					 ?>
 		</section>
 
 		<section class="indivSeminar">
@@ -356,10 +309,6 @@ $lawyer_by_category = get_posts( $args );
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 25,000円</span>を支給致します。</p>
 		</section>
 
-		<div class="btnWrap">
-			<a href="tel:0120-697-182" onclick="ga('send', 'event', '電話リンク', 'タップ', '一覧ボタン');" class="btnLightGreen" title="電話でのお問い合わせ">電話でのお問い合わせ</a>
-			<a href="/contact/" class="btnBlue" title="フォームでのお申し込み">フォームでのお申し込み</a>
-		</div>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . 'Pages:', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
@@ -370,10 +319,66 @@ $lawyer_by_category = get_posts( $args );
 </div>
 <!-- [ /#post- ] -->
 
-<div id="nav-below" class="navigation">
-	<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&larr;</span> %title' ); ?></div>
-	<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&rarr;</span>' ); ?></div>
-</div><!-- #nav-below -->
+<div class="social--holder">
+	<ul class="social--list">
+		<li class="google social--listitem">
+			<!-- Placez cette balise où vous souhaitez faire apparaître le gadget Bouton +1. -->
+			<div class="g-plusone" data-annotation="none"></div>
+
+			<!-- Placez cette ballise après la dernière balise Bouton +1. -->
+			<script type="text/javascript">
+			  window.___gcfg = {lang: 'fr'};
+
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/platform.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</li>
+		<li class="twitter social--listitem">
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</li>
+		<li class="facebook social--listitem">
+			<div class="fb-like"
+				data-href="<?php the_permalink(); ?>"
+				data-layout="button"
+				data-action="like"
+				data-show-faces="true">
+			</div>
+		</li>
+		<li class="bookmark social--listitem">
+			<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+			<!-- <a id="bookmarkme" href="<?php the_permalink(); ?>" rel="sidebar" title="bookmark this page">Bookmark</a> -->
+			<script type="text/javascript">
+			    jQuery(function() {
+			        jQuery('#bookmarkme').click(function() {
+			            if (window.sidebar && window.sidebar.addPanel) { // Mozilla Firefox Bookmark
+			                window.sidebar.addPanel(document.title,window.location.href,'');
+			            } else if(window.external && ('AddFavorite' in window.external)) { // IE Favorite
+			                window.external.AddFavorite(location.href,document.title);
+			            } else if(window.opera && window.print) { // Opera Hotlist
+			                this.title=document.title;
+			                return true;
+			            } else { // webkit - safari/chrome
+			                alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+			            }
+			        });
+			    });
+			</script>
+		</li>
+		<li class="line social--listitem">
+			<span>
+			<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
+			<script type="text/javascript">
+			new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a"});
+			</script>
+			</span>
+			<a href="http://line.me/R/msg/text/?LINE%20it%21%0d%0ahttp%3a%2f%2fline%2enaver%2ejp%2f" class="lineButtonPc"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/line20x20.png" width="20" height="20" alt="LINEで送る!" /></a>
+		</li>
+	</ul>
+</div>
 
 <?php do_action('biz_vektor_fbComments'); ?>
 
@@ -389,7 +394,7 @@ $lawyer_by_category = get_posts( $args );
 <!-- [ /#container ] -->
 
 	<script>
-	$(document).ready(function(){
+	jQuery(document).ready(function(){
 		// $('.infoBottomSlider').bxSlider({
 		// 	pagerCustom: '#infoBottom_pager',
 		// 	responsive: true
@@ -414,15 +419,15 @@ $lawyer_by_category = get_posts( $args );
 				responsive: true,
 				pager: false
 			};
-			return ($(window).width()<740) ? setting1 : setting2;
+			return (jQuery(window).width()<740) ? setting1 : setting2;
 		}
 		var mySlider;
 		function tourLandingScript(){
 			mySlider.reloadSlider(settings());
 		}
 
-		mySlider = $('.areaSlider').bxSlider(settings());
-		$(window).resize(tourLandingScript);
+		mySlider = jQuery('.areaSlider').bxSlider(settings());
+		jQuery(window).resize(tourLandingScript);
 	});
 
 	</script>
