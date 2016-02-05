@@ -26,10 +26,6 @@ if (isset($post_slug) && $post_slug != '') {
 }
 
 $the_query = new WP_Query( $post_args );
-
-// echo '<pre>';
-// var_dump($post_args);
-// echo '</pre>';
 ?>
 <?php get_header(); ?>
 
