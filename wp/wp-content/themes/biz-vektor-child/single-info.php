@@ -19,19 +19,19 @@
 			<tbody>
 				<tr>
 				  <th>日時</th>
-				  <td><?php echo get_field('opening_date'); ?></td>
+				  <td><?php echo get_field('seminar_opening_date'); ?></td>
 				</tr>
 				<tr>
 				  <th>会場</th>
-				  <td><?php echo get_field('place'); ?></td>
+				  <td><?php echo get_field('seminar_place'); ?></td>
 				</tr>
 				<tr>
 				  <th>参加費</th>
-				  <td><?php echo get_field('fee'); ?></td>
+				  <td><?php echo get_field('seminar_fee'); ?></td>
 				</tr>
 				<tr>
 				  <th>アクセス</th>
-				  <td><?php echo get_field('access'); ?></td>
+				  <td><?php echo get_field('seminar_access'); ?></td>
 				</tr>
 			</tbody>
 		</table>
