@@ -1705,17 +1705,35 @@ class All_in_One_SEO_Pack extends All_in_One_SEO_Pack_Module {
 		return $robots_meta;
 	}
 	
+	
+	
+	
+			
 	function get_main_description( $post = null ) {
 		global $aioseop_options;
 		$opts = $this->meta_opts;
 		$description = '';
 		if ( is_author()  && $this->show_page_description() ) {
 			$description = $this->internationalize( get_the_author_meta( 'description' ) );
+		} else if ( function_exists( 'woocommerce_get_page_id' ) && is_post_type_archive( 'product' ) && ( $post_id = woocommerce_get_page_id( 'shop' ) ) && ( $post = get_post( $post_id ) ) ) {
+		
+		
+			//$description = $this->get_post_description( $post );
+			//$description = $this->apply_cf_fields( $description );
+			if ( !(woocommerce_get_page_id( 'shop' ) == get_option( 'page_on_front' ) )  ){
+		$description = trim( stripslashes( $this->internationalize( get_post_meta( $post->ID, "_aioseop_description", true ) ) ) );
+			} 
+			else if ( woocommerce_get_page_id( 'shop' ) == get_option( 'page_on_front' ) && !empty( $aioseop_options['aiosp_use_static_home_info'] ) ){
+			
+			//$description = $this->get_aioseop_description( $post );
+					$description = trim( stripslashes( $this->internationalize( get_post_meta( $post->ID, "_aioseop_description", true ) ) ) );
+		}else if ( woocommerce_get_page_id( 'shop' ) == get_option( 'page_on_front' ) && empty( $aioseop_options['aiosp_use_static_home_info'] ) ){
+			$description = $this->get_aioseop_description( $post );
+		}
+		
+		
 		} else if ( is_front_page() ) {
 			$description = $this->get_aioseop_description( $post );
-		} else if ( function_exists( 'woocommerce_get_page_id' ) && is_post_type_archive( 'product' ) && ( $post_id = woocommerce_get_page_id( 'shop' ) ) && ( $post = get_post( $post_id ) ) ) {
-			$description = $this->get_post_description( $post );
-			$description = $this->apply_cf_fields( $description );
 		} else if ( is_single() || is_page() || is_attachment() || is_home() || $this->is_static_posts_page() ) {
 			$description = $this->get_aioseop_description( $post );
 		} else if ( ( is_category() || is_tag() || is_tax() ) && $this->show_page_description() ) {
@@ -2849,12 +2867,21 @@ EOF;
 			}
 			if (empty( $title ) )
 				$title = $this->internationalize( get_option( 'blogname' ) ) . ' | ' . $this->internationalize( get_bloginfo( 'description' ) );
-				
+				global $post;
+				$post_id = $post->ID;
 			if ( is_post_type_archive() && is_post_type_archive( 'product' ) && $post_id = woocommerce_get_page_id( 'shop' ) &&  $post = get_post( $post_id ) ){
-				
-				$title = $this->internationalize( get_post_meta( $post->ID, "_aioseop_title", true ) );
+				$frontpage_id = get_option('page_on_front');
+
+				if ( woocommerce_get_page_id( 'shop' ) == get_option( 'page_on_front' ) && !empty( $aioseop_options['aiosp_use_static_home_info'] ) ){
+					$title = $this->internationalize( get_post_meta( $post->ID, "_aioseop_title", true ) );
+				}
+				//$title = $this->internationalize( $aioseop_options['aiosp_home_title'] );
+				if ( !$title ) $title = $this->internationalize( get_post_meta( $frontpage_id, "_aioseop_title", true ) ); //this is/was causing the first product to come through
 				if ( !$title ) $title = $this->internationalize( $post->post_title );
 				if ( !$title ) $title = $this->internationalize( $this->get_original_title( '', false ) );
+				
+				
+				
 				$title = $this->apply_page_title_format( $title, $post );
 	            $title = $this->paged_title( $title );
 				$title = apply_filters( 'aioseop_title_page', $title );
