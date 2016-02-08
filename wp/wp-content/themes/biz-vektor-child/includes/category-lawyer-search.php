@@ -46,7 +46,7 @@
             }
           ?>
           <!-- To Julian: 
-            Please add change this select box to that of tags.
+            Please change this select box to that of tags.
             "条件でお選びください" means "Please select tag".
             Tag is post tag in worpress admin page.
             And in front page, please add this also.
