@@ -32,6 +32,6 @@ $the_query = new WP_Query( $post_args );
       echo 'No result';
     }
     ?>
-    <div class="more"><a href="/info/" title="もっと見る">もっと見る</a></div>
+    <div class="more"><a href="/study/" title="もっと見る">もっと見る</a></div>
   </div>
 </div>
