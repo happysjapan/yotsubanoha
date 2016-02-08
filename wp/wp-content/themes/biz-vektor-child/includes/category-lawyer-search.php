@@ -26,10 +26,10 @@
       <div class="select-box">
         <label for ="searchSelect" class="search--form--label">お住いの地域をお選びください
         <select id="searchSelect" name="category_name" class="search--form--select">
-          <option value="" selected>Default</option>
+          <option value="" selected>地域</option>
           <?php
-            foreach ($categories as $category) {
-              echo '<option value="'.$category->slug.'">'.$category->name.'</option>';
+            foreach ($subcategories as $subcategory) {
+              echo '<option value="'.$subcategory->slug.'">'.$subcategory->name.'</option>';
             }
           ?>
         </select>
@@ -39,12 +39,18 @@
       <div class="select-box">
         <label for ="searchSelect" class="search--form--label">条件でお選びください
         <select id="searchSelect" name="subcategory_name" class="search--form--select">
-          <option value="" selected>Default</option>
+          <option value="" selected>条件</option>
           <?php
             foreach ($subcategories as $subcategory) {
               echo '<option value="'.$subcategory->slug.'">'.$subcategory->name.'</option>';
             }
           ?>
+          <!-- To Julian: 
+            Please add change this select box to that of tags.
+            "条件でお選びください" means "Please select tag".
+            Tag is post tag in worpress admin page.
+            And in front page, please add this also.
+          -->
         </select>
         </label>
       </div>

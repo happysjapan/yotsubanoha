@@ -55,12 +55,19 @@
 			<div class="select-box">
         <label for ="searchSelect" class="search--form--label">条件でお選びください
         <select id="searchSelect" name="subcategory_name" class="search--form--select">
-          <option value="" selected>Default</option>
+          <option value="" selected>条件</option>
           <?php
             foreach ($subcategories as $subcategory) {
               echo '<option value="'.$subcategory->slug.'">'.$subcategory->name.'</option>';
             }
           ?>
+
+          <!-- To Julian: 
+            Please add change this select box to that of tags.
+            "条件でお選びください" means "Please select tag".
+            Tag is post tag in worpress admin page.
+            And in lawyers page, please add this also.
+          -->
         </select>
         </label>
       </div>
