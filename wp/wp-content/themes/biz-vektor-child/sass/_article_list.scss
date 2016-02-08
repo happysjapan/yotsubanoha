@@ -1,8 +1,7 @@
 // セミナー・説明会一覧
 // 全国の就労移行支援事業所 一覧
 
-.article {
-	margin-top: 30px;
+.content .article {
 	margin-bottom: 15px;
 	border: 1px solid $color-darkGrey;
 	p {
@@ -38,10 +37,14 @@
 		.profileWrap {
 			display: table;
 			width: 100%;
+			margin: 15px 0;
 			.imageWrap {
 				display: table-cell;
+				width: 160px;
+				padding-right: 20px;
+				vertical-align: top;
 				img {
-					width: 120px;
+					width: 100%;
 					height: auto;
 				}
 			}

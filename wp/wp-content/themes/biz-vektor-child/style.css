@@ -54,12 +54,12 @@ Version: 0.1.0
 }
 
 /* line 135, sass/core/_utility.scss */
-.article .inner .btnWrap, .info .btnWrap {
+.content .article .inner .btnWrap, .info .btnWrap {
   width: 100%;
   text-align: center;
 }
 /* line 138, sass/core/_utility.scss */
-.article .inner .btnWrap a, .info .btnWrap a {
+.content .article .inner .btnWrap a, .info .btnWrap a {
   display: inline-block;
   min-width: 220px;
   margin: 0 10px;
@@ -79,25 +79,25 @@ Version: 0.1.0
   text-decoration: none;
 }
 /* line 149, sass/core/_utility.scss */
-.article .inner .btnWrap a.btnLightGreen, .info .btnWrap a.btnLightGreen {
+.content .article .inner .btnWrap a.btnLightGreen, .info .btnWrap a.btnLightGreen {
   background-color: #44b700;
 }
 /* line 150, sass/core/_utility.scss */
-.article .inner .btnWrap a.btnLightBlue, .info .btnWrap a.btnLightBlue {
+.content .article .inner .btnWrap a.btnLightBlue, .info .btnWrap a.btnLightBlue {
   background-color: #33b1cc;
 }
 /* line 151, sass/core/_utility.scss */
-.article .inner .btnWrap a.btnBlue, .info .btnWrap a.btnBlue {
+.content .article .inner .btnWrap a.btnBlue, .info .btnWrap a.btnBlue {
   background-color: #3569c9;
 }
 /* line 152, sass/core/_utility.scss */
-.article .inner .btnWrap a:hover, .info .btnWrap a:hover {
+.content .article .inner .btnWrap a:hover, .info .btnWrap a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
 
 /* line 156, sass/core/_utility.scss */
-.article .inner .textWrap .fee, .content.indivlawyer .entry-content section.indivInfo .leftBox .reward, .content.indivlawyer .entry-content section.indivProfile .rightBox .rewardWrap {
+.content .article .inner .textWrap .fee, .content.indivlawyer .entry-content section.indivInfo .leftBox .reward, .content.indivlawyer .entry-content section.indivProfile .rightBox .rewardWrap {
   padding: 10px;
   font-size: 13px;
   font-size: 1.3rem;
@@ -464,42 +464,41 @@ img {
 }
 
 /* line 4, sass/_article_list.scss */
-.article {
-  margin-top: 30px;
+.content .article {
   margin-bottom: 15px;
   border: 1px solid #666666;
 }
-/* line 8, sass/_article_list.scss */
-.article p {
+/* line 7, sass/_article_list.scss */
+.content .article p {
   margin-bottom: 0;
   padding: 0;
 }
-/* line 12, sass/_article_list.scss */
-.article .inner {
+/* line 11, sass/_article_list.scss */
+.content .article .inner {
   padding: 20px;
 }
-/* line 14, sass/_article_list.scss */
-.article .inner h3 {
+/* line 13, sass/_article_list.scss */
+.content .article .inner h3 {
   padding: 0;
   margin: 0;
   border: none;
 }
-/* line 18, sass/_article_list.scss */
-.article .inner h3 a {
+/* line 17, sass/_article_list.scss */
+.content .article .inner h3 a {
   color: #3569c9;
   text-decoration: none;
 }
-/* line 21, sass/_article_list.scss */
-.article .inner h3 a:hover {
+/* line 20, sass/_article_list.scss */
+.content .article .inner h3 a:hover {
   text-decoration: underline;
 }
-/* line 24, sass/_article_list.scss */
-.article .inner .textWrap {
+/* line 23, sass/_article_list.scss */
+.content .article .inner .textWrap {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 26, sass/_article_list.scss */
-.article .inner .textWrap .text {
+/* line 25, sass/_article_list.scss */
+.content .article .inner .textWrap .text {
   float: left;
   font-size: 13px;
   font-size: 1.3rem;
@@ -510,59 +509,63 @@ img {
   width: -webkit-calc(100% - 200px);
   width: calc(100% - 200px);
 }
-/* line 32, sass/_article_list.scss */
-.article .inner .textWrap .fee {
+/* line 31, sass/_article_list.scss */
+.content .article .inner .textWrap .fee {
   float: right;
   width: 150px;
 }
-/* line 38, sass/_article_list.scss */
-.article .inner .profileWrap {
+/* line 37, sass/_article_list.scss */
+.content .article .inner .profileWrap {
   display: table;
   width: 100%;
+  margin: 15px 0;
 }
 /* line 41, sass/_article_list.scss */
-.article .inner .profileWrap .imageWrap {
+.content .article .inner .profileWrap .imageWrap {
   display: table-cell;
+  width: 160px;
+  padding-right: 20px;
+  vertical-align: top;
 }
-/* line 43, sass/_article_list.scss */
-.article .inner .profileWrap .imageWrap img {
-  width: 120px;
+/* line 46, sass/_article_list.scss */
+.content .article .inner .profileWrap .imageWrap img {
+  width: 100%;
   height: auto;
 }
-/* line 48, sass/_article_list.scss */
-.article .inner .profileWrap .detailWrap {
+/* line 51, sass/_article_list.scss */
+.content .article .inner .profileWrap .detailWrap {
   display: table-cell;
 }
-/* line 50, sass/_article_list.scss */
-.article .inner .profileWrap .detailWrap table {
+/* line 53, sass/_article_list.scss */
+.content .article .inner .profileWrap .detailWrap table {
   margin-bottom: 12px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 55, sass/_article_list.scss */
-  .article .inner .textWrap {
+  /* line 58, sass/_article_list.scss */
+  .content .article .inner .textWrap {
     overflow: hidden;
     *zoom: 1;
   }
-  /* line 57, sass/_article_list.scss */
-  .article .inner .textWrap .text, .article .inner .textWrap .fee {
+  /* line 60, sass/_article_list.scss */
+  .content .article .inner .textWrap .text, .content .article .inner .textWrap .fee {
     float: none;
   }
-  /* line 58, sass/_article_list.scss */
-  .article .inner .textWrap .text {
+  /* line 61, sass/_article_list.scss */
+  .content .article .inner .textWrap .text {
     width: 100%;
     margin-bottom: 10px;
   }
-  /* line 62, sass/_article_list.scss */
-  .article .inner .textWrap .fee {
+  /* line 65, sass/_article_list.scss */
+  .content .article .inner .textWrap .fee {
     padding: 8px;
   }
-  /* line 65, sass/_article_list.scss */
-  .article .inner .profileWrap .imageWrap, .article .inner .profileWrap .detailWrap {
+  /* line 68, sass/_article_list.scss */
+  .content .article .inner .profileWrap .imageWrap, .content .article .inner .profileWrap .detailWrap {
     display: block;
   }
 }
-/* line 72, sass/_article_list.scss */
-.article .linkToDetail {
+/* line 75, sass/_article_list.scss */
+.content .article .linkToDetail {
   display: block;
   padding: 12px;
   font-size: 16px;
@@ -574,8 +577,8 @@ img {
   background-color: #016d3b;
   text-decoration: none;
 }
-/* line 81, sass/_article_list.scss */
-.article .linkToDetail:hover {
+/* line 84, sass/_article_list.scss */
+.content .article .linkToDetail:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
@@ -584,95 +587,110 @@ img {
 	全国の就労移行支援事業所を探す 
 	セミナー・説明会検索  ▼
 ===================================================  */
-/* line 7, sass/_office.scss */
+/* line 7, sass/_search.scss */
 .searchArea {
   display: block;
   overflow: hidden;
   *zoom: 1;
   width: 100%;
+  margin-bottom: 40px;
 }
-/* line 11, sass/_office.scss */
+/* line 12, sass/_search.scss */
 .searchArea .searchBox {
   width: 580px;
   float: left;
 }
-/* line 14, sass/_office.scss */
+/* line 15, sass/_search.scss */
 .searchArea .searchBox h2 {
   padding: 8px 10px;
 }
-/* line 18, sass/_office.scss */
+/* line 19, sass/_search.scss */
 .searchArea .searchBox .inner {
-  padding: 20px 30px;
+  padding: 30px;
   border: 1px solid #999999;
   border-top: none;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 23, sass/_office.scss */
+/* line 24, sass/_search.scss */
 .searchArea .searchBox .inner form#searchform {
   float: left;
   margin: 30px 30px 0 0;
 }
-/* line 26, sass/_office.scss */
-.searchArea .searchBox .inner form#searchform dl {
-  display: table;
-  margin-bottom: 10px;
-}
-/* line 29, sass/_office.scss */
-.searchArea .searchBox .inner form#searchform dl > * {
-  display: table-cell;
-}
-/* line 30, sass/_office.scss */
-.searchArea .searchBox .inner form#searchform dl dt {
-  color: #333;
-  padding-right: 20px;
-}
-/* line 35, sass/_office.scss */
-.searchArea .searchBox .inner form#searchform dl dd select option {
-  padding: 5px;
-}
-/* line 40, sass/_office.scss */
+/* line 27, sass/_search.scss */
 .searchArea .searchBox .inner form#searchform label {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
-/* line 44, sass/_office.scss */
-.searchArea .searchBox .inner form#searchform select {
-  margin-left: 5px;
+/* line 31, sass/_search.scss */
+.searchArea .searchBox .inner form#searchform .select-box {
+  overflow: hidden;
+  *zoom: 1;
 }
-/* line 45, sass/_office.scss */
+/* line 33, sass/_search.scss */
+.searchArea .searchBox .inner form#searchform .select-box .search--form--select {
+  float: right;
+  margin-left: 20px;
+}
+/* line 38, sass/_search.scss */
 .searchArea .searchBox .inner form#searchform input#s {
   width: 100%;
   margin-left: 0;
   float: none;
 }
-/* line 50, sass/_office.scss */
+/* line 43, sass/_search.scss */
 .searchArea .searchBox .inner form#searchform input#searchsubmit {
   display: block;
-  width: auto;
-  margin: 20px auto 30px;
-  padding: 10px;
+  width: 160px;
+  margin: 20px auto 0;
+  padding: 12px;
   background-color: #016d3b;
   float: none;
-  font-size: 14px;
-  font-size: 1.4rem;
-}
-/* line 60, sass/_office.scss */
-.searchArea .searchBox .inner .calenderWrap {
-  float: left;
+  font-size: 15px;
+  font-size: 1.5rem;
 }
 @media only screen and (max-width: 767px) {
-  /* line 64, sass/_office.scss */
+  /* line 19, sass/_search.scss */
+  .searchArea .searchBox .inner {
+    padding: 20px;
+  }
+  /* line 55, sass/_search.scss */
   .searchArea .searchBox .inner form#searchform {
     margin: 0;
     float: none;
   }
-  /* line 68, sass/_office.scss */
+  /* line 59, sass/_search.scss */
   .searchArea .searchBox .inner .calenderWrap {
     float: none;
+    margin-top: 30px;
   }
 }
-/* line 75, sass/_office.scss */
+/* line 68, sass/_search.scss */
+.searchArea .searchBox.for_lawyer .inner form#searchform {
+  float: none;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 74, sass/_search.scss */
+.searchArea .searchBox.for_lawyer .inner form#searchform .select-box .search--form--select {
+  float: none;
+  margin-left: 0;
+  margin-top: 10px;
+}
+/* line 85, sass/_search.scss */
+.searchArea .searchBox.for_seminar .inner form#searchform input#s {
+  margin-top: 10px;
+}
+/* line 86, sass/_search.scss */
+.searchArea .searchBox.for_seminar .inner form#searchform input#searchsubmit {
+  margin-top: 40px;
+}
+/* line 88, sass/_search.scss */
+.searchArea .searchBox.for_seminar .inner .calenderWrap {
+  float: right;
+}
+/* line 93, sass/_search.scss */
 .searchArea .consultBox {
   width: 330px;
   height: 100%;
@@ -680,12 +698,12 @@ img {
   border: 1px solid #999999;
   float: right;
 }
-/* line 81, sass/_office.scss */
+/* line 99, sass/_search.scss */
 .searchArea .consultBox .btn {
   padding: 10px;
   background-color: #44b700;
 }
-/* line 86, sass/_office.scss */
+/* line 104, sass/_search.scss */
 .searchArea .btn {
   display: block;
   width: 120px;
@@ -697,23 +715,23 @@ img {
   line-height: 2rem;
 }
 @media only screen and (max-width: 767px) {
-  /* line 96, sass/_office.scss */
+  /* line 114, sass/_search.scss */
   .searchArea > div {
     float: none;
   }
-  /* line 97, sass/_office.scss */
+  /* line 115, sass/_search.scss */
   .searchArea .searchBox {
     width: 100%;
     margin-bottom: 20px;
     padding-right: 0;
   }
-  /* line 102, sass/_office.scss */
+  /* line 120, sass/_search.scss */
   .searchArea .consultBox {
     width: 100%;
   }
 }
 
-/* line 110, sass/_office.scss */
+/* line 128, sass/_search.scss */
 form#searchform {
   background-color: transparent;
   padding: 0;
@@ -721,7 +739,7 @@ form#searchform {
 
 /*	セミナー説明会検索　個別スタイル
 ===================================== */
-/* line 120, sass/_office.scss */
+/* line 138, sass/_search.scss */
 .post-type-archive-info .searchArea .searchBox {
   width: 100%;
 }

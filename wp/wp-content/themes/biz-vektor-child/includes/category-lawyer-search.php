@@ -1,5 +1,5 @@
-<div class="searchBox">
-  <h2>Lawyer</h2>
+<div class="searchBox for_lawyer">
+  <h2>全国の就労移行支援事業所検索</h2>
   <div class="inner">
 
     <?php
@@ -23,8 +23,6 @@
     <!-- [ #search form ] -->
     <form method="get" id="searchform" action="<?php echo home_url(); ?>/search">
 
-      <input class="topSearch" type="search" placeholder="フリーワード" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s">
-
       <div class="select-box">
         <label for ="searchSelect" class="search--form--label">お住いの地域をお選びください
         <select id="searchSelect" name="category_name" class="search--form--select">
@@ -39,7 +37,7 @@
       </div>
 
       <div class="select-box">
-        <label for ="searchSelect" class="search--form--label">Subcategories
+        <label for ="searchSelect" class="search--form--label">条件でお選びください
         <select id="searchSelect" name="subcategory_name" class="search--form--select">
           <option value="" selected>Default</option>
           <?php
@@ -50,6 +48,9 @@
         </select>
         </label>
       </div>
+
+      <input class="topSearch" type="search" placeholder="フリーワード" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s">
+
 
       <input type="hidden" name="post_type" value="lawyer" />
       <input class="btn" id="searchsubmit"  type="submit" value="検索する">

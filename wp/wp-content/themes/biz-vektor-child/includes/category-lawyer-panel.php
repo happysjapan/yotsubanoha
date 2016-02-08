@@ -24,7 +24,7 @@
                 <td><?php echo get_field('office_capacity'); ?>人</td>
               </tr>
               <tr>
-                <th>プログラム 提供時間</th>
+                <th>プログラム<br />提供時間</th>
                 <td><?php echo get_field('office_time'); ?></td>
               </tr>
             </table>
@@ -32,7 +32,7 @@
         </div>
         <div class="btnWrap">
           <a href="" title="無料電話相談" class="btnLightGreen">無料電話相談</a>
-          <a href="/contact/" title="資料請求" class="btnLightBlue">資料請求</a>
+          <a href="https://krs.bz/litalico/m/contact_pc?_bdld=2sGQhc.l8ZM6kL&_ga=1.85635865.1697798074.1452734965" title="資料請求" class="btnLightBlue">資料請求</a>
           <a href="/contact/" title="見学会へ参加" class="btnBlue">見学会へ参加</a>
         </div>
       </div>
