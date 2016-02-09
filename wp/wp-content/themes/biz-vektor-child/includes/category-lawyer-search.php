@@ -60,4 +60,4 @@
   </div>
 </div>
 
-<p class="searchDescription"><?php echo do_shortcode('[contentblock id=panel_consult]'); ?></p>
+<?php echo do_shortcode('[contentblock id=panel_consult]'); ?>
