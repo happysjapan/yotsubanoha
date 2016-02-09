@@ -1,3 +1,4 @@
+<p class="searchDescription"><?php echo do_shortcode('[contentblock id=office_description]'); ?></p>
 <div class="searchBox for_lawyer">
   <h2>全国の就労移行支援事業所検索</h2>
   <div class="inner">
@@ -45,12 +46,6 @@
               echo '<option value="'.$subcategory->slug.'">'.$subcategory->name.'</option>';
             }
           ?>
-          <!-- To Julian: 
-            Please change this select box to that of tags.
-            "条件でお選びください" means "Please select tag".
-            Tag is post tag in worpress admin page.
-            And in front page, please add this also.
-          -->
         </select>
         </label>
       </div>
@@ -65,7 +60,4 @@
   </div>
 </div>
 
-<div class="consultBox">
-  <img src="" alt="" />
-  <a href="" title="相談する" class="btn">相談する</a>
-</div>
+<p class="searchDescription"><?php echo do_shortcode('[contentblock id=panel_consult]'); ?></p>

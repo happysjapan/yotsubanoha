@@ -1,3 +1,4 @@
+<p class="searchDescription"><?php echo do_shortcode('[contentblock id=seminar_description]'); ?></p>
 <div class="searchBox for_seminar">
   <h2>セミナー・説明会検索</h2>
   <div class="inner">
