@@ -62,12 +62,6 @@
             }
           ?>
 
-          <!-- To Julian: 
-            Please change this select box to that of tags.
-            "条件でお選びください" means "Please select tag".
-            Tag is post tag in worpress admin page.
-            And in lawyers page, please add this also.
-          -->
         </select>
         </label>
       </div>
@@ -75,7 +69,7 @@
 
 		</ul>
 		<div class="searchText">
-			<input name="s" id="s" type="text" placeholder="フリーワード" class="topSearch"/>
+			<input name="s" id="s" type="text" placeholder="ヨツバノハ就労移行支援事業所" class="topSearch"/>
 			<input type="hidden" name="post_type" value="lawyer" />
 			<input type="submit" value="検索" id="submit" class="btnGreen" />
 		</div>
