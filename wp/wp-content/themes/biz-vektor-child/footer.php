@@ -13,7 +13,6 @@
 
 <!-- [ #footerSection ] -->
 <div id="footerSection">
-<div class="fb-comments" data-href="http://et-support.handicap.jp/" data-width="600" data-numposts="5"></div>
 
 <div id="pagetop">
 	<div id="pagetopInner" class="innerBox">
@@ -75,14 +74,6 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp?&sensor=false"></script>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=240954495949691";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 <script type="text/javascript">
 	(function($) {
