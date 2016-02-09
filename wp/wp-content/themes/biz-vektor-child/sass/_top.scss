@@ -2,123 +2,84 @@
 /* ===================================================
 	トップページ ▼
 ===================================================  */
-
-//右サイドカラム
-.sideTower .sideWidget .textwidget {
-	padding-top: 0;
-	.banner {
-		display: block;
-		margin-bottom: 15px;
-	}
-	 .SideListWrap {
-		margin-bottom: 15px;
-		h3 {
-			padding: 4px 10px;
-			background-color: #0e6c3d;
-			color: #fff;
-			font-size: 90%;
+.frontpage {
+	//右サイドカラム
+	.sideTower .sideWidget .textwidget {
+		padding-top: 0;
+		.banner {
+			display: block;
+			margin-bottom: 15px;
 		}
-		> div {
-			border: 1px solid #ccc;
-			ul {
-				li {
-					border-bottom: 1px dotted #ccc;
+		 .SideListWrap {
+			margin-bottom: 15px;
+			h3 {
+				padding: 4px 10px;
+				background-color: #0e6c3d;
+				color: #fff;
+				font-size: 90%;
+			}
+			> div {
+				border: 1px solid #ccc;
+				ul {
+					li {
+						border-bottom: 1px dotted #ccc;
+						a {
+							display: block;
+							padding: 6px 10px;
+							color: $color-blue;
+							font-size: 80%;
+							background-image: none;
+							p {
+
+							}
+						}
+					}
+				}
+				.more {
 					a {
 						display: block;
-						padding: 6px 10px;
+						padding: 4px 10px;
+						text-align: right;
+						text-decoration: none;
 						color: $color-blue;
 						font-size: 80%;
-						background-image: none;
-						p {
-
+						&:hover {
+							background-color: #efefef;
 						}
 					}
 				}
 			}
-			.more {
-				a {
-					display: block;
-					padding: 4px 10px;
-					text-align: right;
-					text-decoration: none;
-					color: $color-blue;
-					font-size: 80%;
-					&:hover {
-						background-color: #efefef;
-					}
+		}
+		.ThumbnailList {
+			> div ul li a {
+				display: table;
+				img,p {
+					display: table-cell;
+					vertical-align: top;
+				}
+				img {
+					width: 36px;
+					height: 36px;
+				}
+				p {
+					padding-left: 5px;
 				}
 			}
 		}
-	}
-	.ThumbnailList {
-		> div ul li a {
-			display: table;
-			img,p {
-				display: table-cell;
-				vertical-align: top;
-			}
-			img {
-				width: 36px;
-				height: 36px;
-			}
-			p {
-				padding-left: 5px;
-			}
-		}
-	}
-
-}
-
-/* コンテンツ ▼
--------------------------------------------- */
-.content .sectionBox p {
-	@include font-size(1.3);
-}
-
-
-/* 全国の障害年金無料相談対応の社会労務士事務所を探す ▼
--------------------------------------------- */
-.content {
-	select,input {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		appearance: none;
 
 	}
-	/* selectboxカスタム */
-	.select-box select {
-		@include border-radius(5px);
-		border: 0;
-		margin: 0;
-		width:140px;
-		padding: 3px 30px 3px 6px;
-		vertical-align: middle;
-		font-size: inherit;
-		color: #666666;
-		background: url(images/select_arrow.png) right 50% no-repeat #eeeeee;
-		background-size: 26px, 100%;
-		@include font-size(1.1);
+
+	/* コンテンツ ▼
+	-------------------------------------------- */
+	.sectionBox p {
+		@include font-size(1.3);
 	}
 
 
-	/* inputカスタム */
+	
+	/* 検索ボックス ▼
+	-------------------------------------------- */
 
-	.topSearch {
-		background: #eeeeee;
-		@include border-radius(5px);
-		padding: 5px;
-		border: none;
-		color: #333;
-		width: 60%;
-	}
-	input[type="submit"] {
-		@include border-radius(5px);
-		padding: 3px 20px;
-		border: none;
-		color: #fff;
-		background: $color-lightGreen;
-		&:hover {@include opacity(.9);}
-	}
 	.areaSearch {
 		margin-bottom: 40px;
 
@@ -282,30 +243,36 @@
 				margin-right: 30px;
 				margin-bottom: 20px;
 				float: left;
+				list-style: none;
 				&:nth-child(3n)  {margin-right: 0;}
 				@include calc(width,'100%/3 - 20px');
-				a {
+				div {
 					display: block;
 					text-align: center;
 					p {
-						margin-bottom: 6px;
+						margin-bottom: 3px;
 						text-align: left;
+						color: $color-blue;
 					}
 					.ttl {
 						font-weight: bold;
 					}
 					.desc {
 						@include font-size(1.2);
+						@include line-height(1.6);
+						color: #333;
 					}
 					.reward {
 						@include font-size(1.2);
+						@include line-height(1.6);
 					}
 					img {
 						display: inline-block;
-						width: 130px;
-						height: 130px;
+						width: 180px;
+						height: auto;
+						margin-top: 10px;
 					}
-					.btn {
+					a.btn {
 						display: block;
 						width: 90px;
 						margin: 10px auto 0;
@@ -324,7 +291,6 @@
 		}
 
 		.more {
-			margin-top: 8px;
 			text-align: right;
 		}
 
@@ -341,8 +307,8 @@
 				float: left;
 				&:nth-child(3n)  {margin-right: 20px;}
 				&:nth-child(2n)  {margin-right: 0;}
-				@include calc(width,'100%/2 - 20px');
+				@include calc(width,'100%/2 - 10px');
 			}
 		}
 	}
-} // end of .content
+}

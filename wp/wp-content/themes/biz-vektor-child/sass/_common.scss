@@ -224,3 +224,73 @@
 		text-align: left;
 	}
 }
+.fb-comments, .fb-comments span, .fb-comments iframe {
+    width: 600px !important; 
+}
+
+// contact form common style
+.content {
+	.contact_form {
+		label {
+			margin-right: 10px;
+		}
+		.btn_wrap {
+			text-align: center;
+			input[type="submit"] {
+				width: 120px;
+				margin: 0 20px 0 0;
+				padding: 10px 15px;
+				background: $color-lightGreen;
+				color: #fff;
+				@include font-size(1.5);
+				@include line-height(2);
+				@include border-radius(6px);
+			}
+		}
+	}
+}
+
+/* 検索ボックス ▼
+-------------------------------------------- */
+.areaSearch, .searchArea {
+	select,input {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+
+	}
+	/* selectboxカスタム */
+	.select-box select {
+		@include border-radius(5px);
+		border: 0;
+		margin: 0;
+		width:140px;
+		padding: 3px 30px 3px 6px;
+		vertical-align: middle;
+		font-size: inherit;
+		color: #666666;
+		background: url(images/select_arrow.png) right 50% no-repeat #eeeeee;
+		background-size: 26px, 100%;
+		@include font-size(1.1);
+	}
+
+
+	/* inputカスタム */
+
+	.topSearch { // フリーワード検索ボックス
+		background: #eeeeee;
+		@include border-radius(5px);
+		padding: 5px;
+		border: none;
+		color: #333;
+		width: 60%;
+	}
+	input[type="submit"] {
+		@include border-radius(5px);
+		padding: 3px 20px;
+		border: none;
+		color: #fff;
+		background: $color-lightGreen;
+		&:hover {@include opacity(.9);}
+	}
+}
