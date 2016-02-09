@@ -4,6 +4,7 @@ function do_head_contact_custom($headContact){
     $options = biz_vektor_get_theme_options();
     $contact_txt = $options['contact_txt'];
     $contact_time = nl2br($options['contact_time']);
+
     if ($options['tel_number']) {
         // 電話番号の入力がある場合
         $showHide = "showHide('headContact');";
@@ -28,12 +29,11 @@ function do_head_contact_custom($headContact){
                 // お問い合わせ時間の入力がある場合
                 $headContact .= '<div id="headContactTime">'.$contact_time.'</div>'."\n";
             }
-
         $headContact .= '
         </div>
         <div class="btnWrap">
-			<a href="http://localhost:8888/contact/" title="お問合せ資料請求" class="contact">お問合せ<br />資料請求</a>
-			<a href="http://localhost:8888/contact/" title="見学の申し込み" class="apply">見学の<br />申し込み</a>
+			<a href="/contact-form/" title="お問合せ資料請求" class="contact">お問合せ<br />資料請求</a>
+			<a href="/tour-form/" title="見学の申し込み" class="apply">見学の<br />申し込み</a>
         </div>
         <div class="rightBox">
         	<ul class="snsBtn">
@@ -61,7 +61,7 @@ function do_head_contact_custom($headContact){
 			</dl>
 			<dl class="total">
 				<dt>お祝い金総支給額</dt>
-				<dd>160,000円</dd>
+				<dd>\'<?php echo do_shortcode(\'[contentblock id=paidreward]\'); ?>\'円</dd>
         	</dl>
         </div>
         </div></div>

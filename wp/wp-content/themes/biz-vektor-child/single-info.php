@@ -40,7 +40,7 @@
 		</div>
 		<div class="btnWrap">
 			<a href="tel:0120-697-182" onclick="ga('send', 'event', '電話リンク', 'タップ', '一覧ボタン');" class="btnLightGreen" title="電話でのお問い合わせ">電話でのお問い合わせ</a>
-			<a href="/contact/" class="btnBlue" title="フォームでのお申し込み">フォームでのお申し込み</a>
+			<a href="/seminar-form/" class="btnBlue" title="フォームでのお申し込み">フォームでのお申し込み</a>
 		</div>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . 'Pages:', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->

@@ -132,7 +132,7 @@ $lawyer_by_category = get_posts( $args );
 					</div>
 					<div class="contactWrap rightBox">
 						<p class="telNumber">0120-905-812</p>
-						<a href="https://krs.bz/litalico/m/contact_pc?_bdld=2sGQhc.l8ZM6kL&_ga=1.85635865.1697798074.1452734965" title="まずはフォームで無料相談" class="btn">まずはフォームで無料相談</a>
+						<a href="/officetour-form/" title="まずはフォームで無料相談" class="btn">まずはフォームで無料相談</a>
 					</div>
 				</div>
 				<p class="text"><?php echo get_field('office_introduction'); ?></p>
@@ -186,8 +186,8 @@ $lawyer_by_category = get_posts( $args );
 				</div>
 				<div class="rightBox">
 					<div class="rewardWrap">
-						<p><strong>お祝い金</strong>  <?php echo get_field('office_paidreward'); ?>円支給</p>
-						<a href="" title="" class="btn">お祝い金とは？</a>
+						<p><strong>お祝い金</strong>  <?php echo get_field('reward'); ?>円支給</p>
+						<a href="/celebration/" title="お祝い金とは？" class="btn">お祝い金とは？</a>
 					</div>
 					<div class="googleMap">
 
@@ -211,7 +211,7 @@ $lawyer_by_category = get_posts( $args );
 		</section>
 
 		<section class="indivContact">
-			<a href="https://krs.bz/litalico/m/contact_pc?_bdld=2sGQhc.l8ZM6kL&_ga=1.85635865.1697798074.1452734965" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
+			<a href="/officetour-form/" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
 			<p class="telNumber">0120-905-812</p>
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 <?php echo get_field('reward'); ?>円</span>を支給致します。</p>
 		</section>
@@ -240,7 +240,7 @@ $lawyer_by_category = get_posts( $args );
 		</section>
 
 		<section class="indivContact">
-			<a href="https://krs.bz/litalico/m/contact_pc?_bdld=2sGQhc.l8ZM6kL&_ga=1.85635865.1697798074.1452734965" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
+			<a href="/officetour-form/" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
 			<p class="telNumber">0120-905-812</p>
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 <?php echo get_field('reward'); ?>円</span>を支給致します。</p>
 		</section>
@@ -262,7 +262,7 @@ $lawyer_by_category = get_posts( $args );
 		</section>
 
 		<section class="indivContact">
-			<a href="https://krs.bz/litalico/m/contact_pc?_bdld=2sGQhc.l8ZM6kL&_ga=1.85635865.1697798074.1452734965" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
+			<a href="/officetour-form/" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
 			<p class="telNumber">0120-905-812</p>
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 <?php echo get_field('reward'); ?>円</span>を支給致します。</p>
 		</section>
@@ -315,7 +315,7 @@ $lawyer_by_category = get_posts( $args );
 		</section>
 
 		<section class="indivContact">
-			<a href="https://krs.bz/litalico/m/contact_pc?_bdld=2sGQhc.l8ZM6kL&_ga=1.85635865.1697798074.1452734965" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
+			<a href="/officetour-form/" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
 			<p class="telNumber">0120-905-812</p>
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 25,000円</span>を支給致します。</p>
 		</section>
