@@ -8,7 +8,7 @@
       <div class="select-box">
         <label for ="searchSelect" class="search--form--label">お住いの地域をお選びください
           <select id="searchSelect" name="info_cat" class="search--form--select">
-            <option value="" selected>Default</option>
+            <option value="" selected>地域</option>
             <?php
               $tax_terms = get_terms( 'info-cat');
               foreach ($tax_terms as $tax_term) {
