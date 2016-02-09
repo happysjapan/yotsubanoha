@@ -3,13 +3,12 @@
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
 	<!-- [ #content ] -->
-	<div id="content" class="content">
+	<div id="content" class="content wide">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 <!-- [ #post- ] -->
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<h1 class="entryPostTitle entry-title"><?php the_title(); ?><?php edit_post_link(__('Edit', 'biz-vektor'), ' <span class="edit-link edit-item">[ ', ' ]' ); ?></h1>
-
 
 	<div class="entry-content post-content">
 		<img src="<?php echo get_field('seminar_image'); ?>" alt="" class="mainImage" />
@@ -69,10 +68,10 @@
 <!-- [ /#content ] -->
 
 <!-- [ #sideTower ] -->
-<div id="sideTower" class="sideTower">
+<!-- <div id="sideTower" class="sideTower">
 	<?php get_sidebar('info'); ?>
 </div>
-<!-- [ /#sideTower ] -->
+ --><!-- [ /#sideTower ] -->
 <?php biz_vektor_sideTower_after();?>
 </div>
 <!-- [ /#container ] -->
