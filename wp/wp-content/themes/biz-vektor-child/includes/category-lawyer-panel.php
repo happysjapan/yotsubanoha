@@ -31,9 +31,9 @@
           </div>
         </div>
         <div class="btnWrap">
-          <a href="" title="無料電話相談" class="btnLightGreen">無料電話相談</a>
-          <a href="https://krs.bz/litalico/m/contact_pc?_bdld=2sGQhc.l8ZM6kL&_ga=1.85635865.1697798074.1452734965" title="資料請求" class="btnLightBlue">資料請求</a>
-          <a href="/contact/" title="見学会へ参加" class="btnBlue">見学会へ参加</a>
+          <a href="tel:0120-697-182" title="無料電話相談" class="btnLightGreen" onclick="ga('send', 'event', '電話リンク', 'タップ', '一覧ボタン');">無料電話相談</a>
+          <a href="/contact-form/" title="資料請求" class="btnLightBlue">資料請求</a>
+          <a href="/tour-form/" title="見学会へ参加" class="btnBlue">見学会へ参加</a>
         </div>
       </div>
       <a href="<?php the_permalink(); ?>"  title="詳細ページへ" class="linkToDetail">▶︎&nbsp;詳細ページへ</a>
