@@ -1,8 +1,6 @@
 .widget_calendar{
-    background-color: #999999 !important;
     border: 1px solid #A2A3A4 !important;
     border-radius: 0 0 0 0 !important;
-    box-shadow: 0 2px 4px rgba(50, 50, 50, 0.63);
     float: left;
     margin-bottom: 15px !important;
 }
@@ -32,7 +30,7 @@
 }
 
 #calendar_wrap .ui-datepicker-header{
-    background-color: #6d6e72;
+    background-color: #0e6c3d;
     float: left;
     color: #FFFFFF;
     font-size: 13px;
@@ -41,10 +39,7 @@
     padding: 6px;
     text-align: center;
     text-transform: uppercase;
-    width: 96.2%;
-    width: 96.5% \9;
-    width: 96.5% \0/;
-    /*width: 100% \9;*/
+    width: 100%;
 }
 
 #calendar_wrap .ui-datepicker-title {
@@ -125,7 +120,7 @@
     line-height: 10px;
     padding: 9px!important;
     text-align: center;
-    background: #f1f1f1;
+    background: #fff;
     border: 0.1em solid #999999;
     font-weight: normal;
     color: #000000 !important;
@@ -150,17 +145,19 @@
 }
 
 #calendar_wrap .calendar-pagi{
-    background: none repeat scroll 0 0 #6d6e72;
+    display: none;
+    background: none repeat scroll 0 0 #ccc;
     float: left;
     font-weight: bold;
     width: 97%;
     padding: 5px;
     text-align: center;
     text-transform: uppercase;
-    width: 96.5% \9;
-    width: 96.5% \0/;
+    width: 100%;
 }
-
+#calendar_wrap .calendar-pagi ul {
+    margin-left: 0; 
+}
 #calendar_wrap .calendar-pagi ul li a{
     color: #FFFFFF !important;
     cursor: pointer;
@@ -184,7 +181,7 @@
 }
 
 #calendar_wrap .wp-cal-datepicker-calendar tr td .wp-cal-tooltip {
-    background-color: #6d6e72;
+    background-color: #0e6c3d;
     border: 1px solid #A2A3A4 !important;
     border-radius: 0 0 0 0 !important;
     box-shadow: 0 2px 4px rgba(50, 50, 50, 0.63);
@@ -242,7 +239,7 @@
 }
 
 #calendar_wrap .wp-cal-datepicker-calendar tr td .wp-cal-tooltip ul li a .title {
-    color: #6d6e72;
+    color: #3569c9;
     display: block;
     font-family: arial;
     font-size: 14px;
@@ -253,14 +250,12 @@
 }
 
 #calendar_wrap .wp-cal-datepicker-calendar tr td .wp-cal-tooltip ul li a .title:hover {
-    color: #000;
+    color: #558BEF;
     display: block;
     font-family: arial;
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 5px;
-    *color: #000;
-    _color : #000;
     margin-bottom: 0px \9;
     margin-bottom: 0px \0/;
 }
@@ -339,7 +334,7 @@
 }
 
 #calendar_wrap .wp-cal-datepicker-calendar tr td.WP-Cal-popup {
-    background: #ffd600 !important;
+    background: #88DC56 !important;
     border-radius: 0 0 0 0;
     font-weight: bold;
     text-decoration: none;
@@ -384,10 +379,10 @@
 /*********************************** Calendar Size Style ***********************************/
 
 .widget_calendar_medium_size {
-    min-width: 242px !important;
-    width: 242px;
+    width: 260px;
+    /*
     width: 251px \9 !important;
-    width: 253px \0/ !important;
+    width: 253px \0/ !important;*/
 }
 
 .widget_calendar_small_size {

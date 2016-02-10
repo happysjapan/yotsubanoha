@@ -9,6 +9,10 @@
 	@include clearfix;
 	width: 100%;
 	margin-bottom: 40px;
+	.searchDescription {
+		padding: 0;
+		@include font-size(1.4);
+	}
 	.searchBox {
 		width: 580px;
 		float: left;
@@ -22,8 +26,6 @@
 			border-top: none;
 			@include clearfix;
 			form#searchform {
-				float: left;
-				margin: 30px 30px 0 0;
 				label {
 					display: block;
 					margin-bottom: 20px;
@@ -50,23 +52,10 @@
 					@include font-size(1.5);
 				}
 			}
-			@include SP {
-				padding: 20px;
-				form#searchform {
-					margin: 0;
-					float: none;
-				}
-				.calenderWrap {
-					float: none;
-					margin-top: 30px;
-				}
-
-			}
 		}
 
 		&.for_lawyer .inner { //全国の就労移行支援事業所検索用スタイル
 			form#searchform {
-				float: none;
 				display: block;
 				width: 90%;
 				margin: 0 auto;
@@ -77,25 +66,83 @@
 					}
 				}
 			}
-		}
-		&.for_seminar .inner { //セミナー検索用スタイル
-				
-			form#searchform {
-				input#s {margin-top: 10px;}
-				input#searchsubmit {margin-top: 40px;}
+
+			@include SP { 
+				padding: 20px;
+				form#searchform {
+					width: 100%;
+					.select-box {
+						.search--form--select {
+							float: none;
+							margin-left: 0;
+							margin-top: 10px;
+						}
+					}
+					label {
+						margin-bottom: 20px;
+					}
+				}
 			}
-			.calenderWrap {
-				float: right;
+		}
+		&.for_seminar {
+			width: 100%;
+			.inner { //セミナー検索用スタイル
+				padding: 20px 60px 10px;
+				form#searchform {
+					display: inline-block;
+					max-width: 468px;
+					margin-top: 40px;
+					input#s {margin-top: 10px;}
+					input#searchsubmit {margin-top: 30px;}
+				}
+				.calenderWrap {
+					display: inline-block;
+					vertical-align: top;
+					margin-left: 100px;
+					h3 {
+						margin: 0 0 10px 0;
+						padding: 0;
+						border: none;
+						@include font-size(1.5);
+						text-align: center;
+					}
+					.wp_calendar {
+						/* written in wp_calendar.css*/
+					}
+				}
+			}
+			@include SP {
+				.inner {
+					padding: 20px;
+					form#searchform {
+						margin-top: 0;
+						.select-box {
+							.search--form--select {
+								float: none;
+								margin-left: 0;
+								margin-top: 10px;
+							}
+						}
+						label {
+							margin-bottom: 20px;
+						}
+					}
+					.calenderWrap {
+						margin: 40px 0 0;
+					}
+				}
 			}
 		}
 	}
 	.consultBox {
 		width: 330px;
-		height: 100%;
+		height: 266px;
 		padding: 15px;
 		border: 1px solid $color-grey;
 		float: right;
+		text-align: center;
 		.btn {
+			margin-top: 10px;
 			padding: 10px;
 			background-color: $color-lightGreen;
 		}
@@ -127,15 +174,4 @@
 form#searchform {
 	background-color: transparent;
 	padding: 0;
-}
-
-
- /*	セミナー説明会検索　個別スタイル
- ===================================== */
-.post-type-archive-info {
-	.searchArea {
-		.searchBox {
-			width: 100%;
-		}
-	}
 }

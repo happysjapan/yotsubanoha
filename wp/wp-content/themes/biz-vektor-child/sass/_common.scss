@@ -3,14 +3,22 @@
 ===================================================  */
 
 
-#main #container .content {
-	width: 680px;
-	@include SP {width: 100%;}
-	table {
-		td,th {border: 1px solid $color-grey;}
-		th {background-color: #e8e8e8}
+#pageTitBnr #pageTitInner #pageTit {
+	margin: 20px 0 0;
+	font-weight: bold;
+}
+#main #container {
+	padding-top: 10px;
+	.content {
+		width: 680px;
+		@include SP {width: 100%;}
+		table {
+			td,th {border: 1px solid $color-grey;}
+			th {background-color: #e8e8e8}
+		}
 	}
 }
+
 
 // header
 #header {
@@ -227,7 +235,6 @@
 .fb-comments, .fb-comments span, .fb-comments iframe {
     width: 600px !important; 
 }
-
 // contact form common style
 .content {
 	.contact_form {
