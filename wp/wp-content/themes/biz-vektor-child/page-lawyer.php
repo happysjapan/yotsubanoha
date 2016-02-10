@@ -9,21 +9,21 @@ $post_subcategory_slug = $_GET['subcategory_name'];
 
 if( isset($post_search)) {
   if( isset($post_subcategory_slug) && $post_subcategory_slug != '' ) {
-    echo 'if 1';
+   //  echo 'if 1';
     $post_args = array(
       's'             => $post_search,
       'post_type'     => 'post',
       'category_name' => $post_subcategory_slug
     );
   } else if( isset($post_category_slug) && $post_category_slug != '' ) {
-    echo 'if 2';
+    // echo 'if 2';
     $post_args = array(
       's'             => $post_search,
       'post_type'     => 'post',
       'category_name' => $post_category_slug
     );
   } else {
-    echo 'if 3';
+    // echo 'if 3';
     $post_args = array(
       's'             => $post_search,
       'post_type'     => 'post'
