@@ -14,26 +14,31 @@
 		<img src="<?php echo get_field('seminar_image'); ?>" alt="" class="mainImage" />
 
 		<h2 class="title">■&nbsp;開催情報</h2>
+		
+		<?php while(have_rows('seminar_table')): the_row(); ?>
 		<table>
 			<tbody>
 				<tr>
 				  <th>日時</th>
-				  <td><?php echo get_field('seminar_opening_date'); ?></td>
+				  <td><?php echo the_sub_field('seminar_opening_date'); ?></td>
 				</tr>
 				<tr>
 				  <th>会場</th>
-				  <td><?php echo get_field('seminar_place'); ?></td>
+				  <td><?php echo the_sub_field('seminar_place'); ?></td>
 				</tr>
 				<tr>
 				  <th>参加費</th>
-				  <td><?php echo get_field('seminar_fee'); ?></td>
+				  <td><?php echo the_sub_field('seminar_fee'); ?></td>
 				</tr>
 				<tr>
 				  <th>アクセス</th>
-				  <td><?php echo get_field('seminar_access'); ?></td>
+				  <td><?php echo the_sub_field('seminar_access'); ?></td>
 				</tr>
 			</tbody>
 		</table>
+		<?php endwhile; ?>
+
+
 		<div class="textWrap">
 			<?php the_content(); ?>
 		</div>

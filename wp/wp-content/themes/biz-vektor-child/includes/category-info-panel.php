@@ -5,18 +5,22 @@
         <h3 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
         <div class="profileWrap">
           <div class="detailWrap">
+
+            <?php while(have_rows('seminar_table')): the_row(); ?>
             <table>
               <tbody>
-              <tr>
-                <th>日時</th>
-                <td><?php echo get_field('seminar_opening_date') ?></td>
-              </tr>
-              <tr>
-                <th>会場</th>
-                <td><?php echo get_field('seminar_place'); ?></td>
-              </tr>
+                <tr>
+                  <th>日時</th>
+                  <td><?php echo the_sub_field('seminar_opening_date'); ?></td>
+                </tr>
+                <tr>
+                  <th>会場</th>
+                  <td><?php echo the_sub_field('seminar_place'); ?></td>
+                </tr>
               </tbody>
             </table>
+            <?php endwhile; ?>
+
             <div class="textWrap">
               <?php the_content(); ?>
             </div>
