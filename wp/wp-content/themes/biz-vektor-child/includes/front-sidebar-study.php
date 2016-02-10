@@ -20,7 +20,7 @@ $the_query = new WP_Query( $post_args );
         <div class="ttBox study" id="post-<?php echo get_the_id(); ?>">
           <div>
             <a href="<?php echo get_the_permalink(); ?>">
-              <img src="<?php echo get_field('jobhunting_image'); ?>" alt="<?php echo the_title(); ?>" />
+              <?php echo get_the_post_thumbnail( $post_id, $size, $attr ); ?>
               <p><?php echo the_title(); ?></p>
             </a>
           </div>
