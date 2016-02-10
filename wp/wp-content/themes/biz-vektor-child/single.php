@@ -171,10 +171,11 @@ $lawyer_by_category = get_posts( $args );
 			<h2 class="title">カリキュラム・実習・人材育成などの取り組みに関して</h2>
 			<div class="slideWrap">
 				<ul class="areaSlider">
-					<li><img src="http://localhost:8888/wp-content/uploads/2012/10/8.jpg" alt="" /></li>
-					<li><img src="http://localhost:8888/wp-content/uploads/2012/10/2.jpg" alt="" /></li>	
-					<li><img src="http://localhost:8888/wp-content/uploads/2012/10/4.jpg" alt="" /></li>	
-					<li><img src="http://localhost:8888/wp-content/uploads/2012/10/9.jpg" alt="" /></li>
+
+				<?php while(have_rows('office_image_slider3')): the_row(); ?>
+					<li><img src="<?php the_sub_field('office_slider3_image'); ?>" alt="" /></li>
+				<?php endwhile; ?>
+
 				</ul>
 				<p><?php echo get_field('office_description'); ?></p>
 			</div>
