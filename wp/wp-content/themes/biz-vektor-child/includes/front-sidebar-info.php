@@ -21,8 +21,13 @@ $the_query = new WP_Query( $post_args );
         <div class="ttBox" id="post-<?php echo get_the_id(); ?>">
           <div>
             <a href="<?php echo get_the_permalink(); ?>" title="<?php echo the_title(); ?>">
+              <p>
+              <?php while(have_rows('seminar_table')): the_row(); ?>
+                <span><?php echo the_sub_field('seminar_opening_date'); ?></span>
+              <?php endwhile; ?>
+              </p>
+
               <p><?php echo the_title(); ?></p>
-              <p><?php echo get_field('seminar_opening_date') ?></p>
             </a>
           </div>
         </div>
