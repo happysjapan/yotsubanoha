@@ -166,15 +166,6 @@ function biz_vektor_widgets_init() {
 		'before_title' => '<h3 class="localHead">',
 		'after_title' => '</h3>',
 	) );
-	register_sidebar( array(
-		'name' => __( 'Sidebar(Info search)', 'biz-vektor' ),
-		'id' => 'info-search-right-widget-area',
-		'description' => __( 'This widget area appears on the right of the Info search box.', 'biz-vektor' ),
-		'before_widget' => '<div class="sideWidget widget %2$s" id="%1$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="localHead">',
-		'after_title' => '</h3>',
-	) );
 }
 add_action( 'widgets_init', 'biz_vektor_widgets_init' );
 
