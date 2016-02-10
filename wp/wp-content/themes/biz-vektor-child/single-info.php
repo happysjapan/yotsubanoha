@@ -5,6 +5,8 @@
 	<!-- [ #content ] -->
 	<div id="content" class="content wide">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	
+<?php get_template_part( 'includes/social', 'buttons' ); ?>
 
 <!-- [ #post- ] -->
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -14,7 +16,7 @@
 		<img src="<?php echo get_field('seminar_image'); ?>" alt="" class="mainImage" />
 
 		<h2 class="title">■&nbsp;開催情報</h2>
-		
+
 		<?php while(have_rows('seminar_table')): the_row(); ?>
 		<table>
 			<tbody>
