@@ -89,7 +89,7 @@ $gMenuHtml = '
 <!-- [ #gMenu ] -->
 <div id="gMenu" class="itemClose">
 <div id="gMenuInner" class="innerBox">
-<h3 class="assistive-text" onclick="showHide(\'gMenu\');"><span>MENU</span></h3>
+<h3 class="assistive-text" onclick="showHide(\'gMenu\');"><p></p><p></p><p></p><span class="text">MENU</span></h3>
 <div class="skip-link screen-reader-text">
 	<a href="#content" title="'.__('Skip menu', 'biz-vektor').'">'.__('Skip menu', 'biz-vektor').'</a>
 </div>'."\n";

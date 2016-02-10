@@ -54,15 +54,16 @@ function do_head_contact_custom($headContact){
                     <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
                 </li>
         	</ul>
-
-        	<dl class="total">
-				<dt>掲載相談所数</dt>
-				<dd>1,200件</dd>
-			</dl>
-			<dl class="total">
-				<dt>お祝い金総支給額</dt>
-				<dd>\'<?php echo do_shortcode(\'[contentblock id=paidreward]\'); ?>\'円</dd>
-        	</dl>
+            <div class="totalWrap">
+            	<dl class="total">
+    				<dt>掲載相談所数</dt>
+    				<dd>1,200件</dd>
+    			</dl>
+    			<dl class="total">
+    				<dt>お祝い金総支給額</dt>
+    				<dd>150000円</dd>
+            	</dl>
+            </div>
         </div>
         </div></div>
         ';
