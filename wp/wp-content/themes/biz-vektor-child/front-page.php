@@ -11,40 +11,90 @@
 		<h2>全国の就労移行支援事業所を検索</h2>
 		<div class="searchInner">
 		<ul class="listP">
+
+
+		<?php
+		    // リンク先URL
+			function lawyerCategoryLink($type = "tokyo")
+			{
+			    return "/search/?subcategory_name=$type&s=&post_type=lawyer\n";
+			}
+		?>
+
 		<li><h3>北海道・東北エリア</h3>
 		     <ul class="listC">
-					 	<li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('hokkaido')->cat_ID)); ?>">北海道</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('aomori')->cat_ID)); ?>">青森県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('iwate')->cat_ID)); ?>">岩手県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('miyagi')->cat_ID)); ?>">宮城県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('akita')->cat_ID)); ?>">秋田県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('yamagata')->cat_ID)); ?>">山形県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('fukushima')->cat_ID)); ?>">福島県</a></li>
+			 	<li><a href="<?php echo lawyerCategoryLink("hokkaido");?>">北海道</a></li>
+			 	<li><a href="<?php echo lawyerCategoryLink("aomori");?>">青森県</a></li>
+			 	<li><a href="<?php echo lawyerCategoryLink("iwate");?>">岩手県</a></li>
+			 	<li><a href="<?php echo lawyerCategoryLink("miyagi");?>">宮城県</a></li>
+			 	<li><a href="<?php echo lawyerCategoryLink("akita");?>">秋田県</a></li>
+			 	<li><a href="<?php echo lawyerCategoryLink("yamagata");?>">山形県</a></li>
+			 	<li><a href="<?php echo lawyerCategoryLink("fukushima");?>">福島県</a></li>
 		     </ul>
 		</li>
 		<li><h3>関西エリア</h3>
 		       <ul class="listC">
-					   <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('osaka')->cat_ID)); ?>">大阪府</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('hyogo')->cat_ID)); ?>">兵庫県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('kyoto')->cat_ID)); ?>">京都府</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('shiga')->cat_ID)); ?>">滋賀県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('nara')->cat_ID)); ?>">奈良県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('wakayama')->cat_ID)); ?>">和歌山県</a></li>
-					 </ul>
+					   <li><a href="<?php echo lawyerCategoryLink("osaka");?>">大阪府</a></li>
+					   <li><a href="<?php echo lawyerCategoryLink("hyogo");?>">兵庫県</a></li>
+					   <li><a href="<?php echo lawyerCategoryLink("kyoto");?>">京都府</a></li>
+					   <li><a href="<?php echo lawyerCategoryLink("shiga");?>">滋賀県</a></li>
+					   <li><a href="<?php echo lawyerCategoryLink("nara");?>">奈良県</a></li>
+					   <li><a href="<?php echo lawyerCategoryLink("wakayama");?>">和歌山県</a></li>
+				</ul>
 		</li>
 		<li><h3>甲信越・北陸エリア</h3>
 		     <ul class="listC">
-					 <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('yamanashi')->cat_ID)); ?>">山梨県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('niigata')->cat_ID)); ?>">新潟県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('nagano')->cat_ID)); ?>">長野県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('toyama')->cat_ID)); ?>">富山県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('ishikawa')->cat_ID)); ?>">石川県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('fukui')->cat_ID)); ?>">福井県</a></li>
+					 <li><a href="<<?php echo lawyerCategoryLink("yamanashi");?>">山梨県</a></li>
+					 <li><a href="<?php echo lawyerCategoryLink("niigata");?>">新潟県</a></li>
+					 <li><a href="<?php echo lawyerCategoryLink("nagano");?>">長野県</a></li>
+					 <li><a href="<?php echo lawyerCategoryLink("toyama");?>">富山県</a></li>
+					 <li><a href="<?php echo lawyerCategoryLink("ishikawa");?>">石川県</a></li>
+					 <li><a href="<?php echo lawyerCategoryLink("fukui");?>">福井県</a></li>
 				 </ul>
 		</li>
 		<li><h3>中国・四国エリア</h3>
 		      <ul class="listC">
-						<li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tottori')->cat_ID)); ?>">鳥取県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('shimane')->cat_ID)); ?>">島根県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('okayama')->cat_ID)); ?>">岡山県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('hiroshima')->cat_ID)); ?>">広島県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('yamaguchi')->cat_ID)); ?>">山口県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tokushima')->cat_ID)); ?>">徳島県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('kagawa')->cat_ID)); ?>">香川県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('ehime')->cat_ID)); ?>">愛媛県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('kochi')->cat_ID)); ?>">高知県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("tottori");?>">鳥取県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("shimane");?>">島根県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("okayama");?>">岡山県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("hiroshima");?>">広島県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("yamaguchi");?>">山口県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("tokushima");?>">徳島県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("kagawa");?>">香川県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("ehime");?>">愛媛県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("kochi");?>">高知県</a></li>
 					</ul>
 		</li>
 		<li><h3>関東エリア</h3>
 		     <ul class="listC">
-					 	<li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tokyo')->cat_ID)); ?>">東京都</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('kanagawa')->cat_ID)); ?>">神奈川県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('saitama')->cat_ID)); ?>">埼玉県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('chiba')->cat_ID)); ?>">千葉県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('ibaraki')->cat_ID)); ?>">茨城県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('tochigi')->cat_ID)); ?>">栃木県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('gunma')->cat_ID)); ?>">群馬県</a></li>
-				 </ul>
+				 	<li><a href="<?php echo lawyerCategoryLink("tokyo");?>">東京都</a></li>
+				 	<li><a href="<?php echo lawyerCategoryLink("kanagawa");?>">神奈川県</a></li>
+				 	<li><a href="<?php echo lawyerCategoryLink("saitama");?>">埼玉県</a></li>
+				 	<li><a href="<?php echo lawyerCategoryLink("chiba");?>">千葉県</a></li>
+				 	<li><a href="<?php echo lawyerCategoryLink("ibaraki");?>">茨城県</a></li>
+				 	<li><a href="<?php echo lawyerCategoryLink("tochigi");?>">栃木県</a></li>
+				 	<li><a href="<?php echo lawyerCategoryLink("gunma");?>">群馬県</a></li>
+			 </ul>
 		</li>
 		<li><h3>九州・沖縄エリア</h3>
 		      <ul class="listC">
-						<li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('fukuoka')->cat_ID)); ?>">福岡県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('saga')->cat_ID)); ?>">佐賀県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('nagasaki')->cat_ID)); ?>">長崎県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('kumamoto')->cat_ID)); ?>">熊本県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('oita')->cat_ID)); ?>">大分県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('miyazaki')->cat_ID)); ?>">宮崎県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('kagoshima')->cat_ID)); ?>">鹿児島県</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('okinawa')->cat_ID)); ?>">沖縄県</a></li>
-					</ul>
+				<li><a href="<?php echo lawyerCategoryLink("fukuoka");?>">福岡県</a></li>
+				<li><a href="<?php echo lawyerCategoryLink("saga");?>">佐賀県</a></li><li>
+				<a href="<?php echo lawyerCategoryLink("nagasaki");?>">長崎県</a></li>
+				<li><a href="<?php echo lawyerCategoryLink("kumamoto");?>">熊本県</a></li>
+				<li><a href="<?php echo lawyerCategoryLink("oita");?>">大分県</a></li>
+				<li><a href="<?php echo lawyerCategoryLink("miyazaki");?>">宮崎県</a></li>
+				<li><a href="<?php echo lawyerCategoryLink("kagoshima");?>">鹿児島県</a></li>
+				<li><a href="<?php echo lawyerCategoryLink("okinawa");?>">沖縄県</a></li>
+			</ul>
 		</li>
 			<li><h3>東海エリア</h3>
 		     <ul class="listC">
-					 <li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('aichi')->cat_ID)); ?>">愛知</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('gifu')->cat_ID)); ?>">岐阜</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('shizuoka')->cat_ID)); ?>">静岡</a></li><li><a href="<?php echo esc_url(get_category_link(get_category_by_slug('mie')->cat_ID)); ?>">三重</a></li>
-				 </ul>
+					<li><a href="<?php echo lawyerCategoryLink("aichi");?>">愛知</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("gifu");?>">岐阜</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("shizuoka");?>">静岡</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("mie");?>">三重</a></li>
+			</ul>
 		</li>
 		<li class="cSelect">
 			<?php
