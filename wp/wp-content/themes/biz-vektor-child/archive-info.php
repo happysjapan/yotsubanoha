@@ -21,7 +21,7 @@
         'post_type' => 'info',
         'post_status' => 'publish',
         'orderby' => 'menu_order',
-        'posts_per_page' => 3,
+        'posts_per_page' => 10,
       );
       $custom_args = array_merge($query_array, $custom_args);
       $myposts = get_posts( $custom_args );

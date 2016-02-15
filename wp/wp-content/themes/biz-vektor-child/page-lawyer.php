@@ -16,13 +16,13 @@ if( isset($post_search)) {
     'post_type'     => 'post',
     'category_name' => $post_category_slug,
     'tag'              => $post_tag_slug,
-    'posts_per_page'   => 3
+    'posts_per_page'   => 5
   );
 }
 else {
   $post_args = array(
   	'post_type'        => 'post',
-    'posts_per_page'   => 3
+    'posts_per_page'   => 5
   );
 }
 
