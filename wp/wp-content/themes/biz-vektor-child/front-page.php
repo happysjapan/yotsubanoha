@@ -121,7 +121,7 @@
 
 		</ul>
 		<div class="searchText">
-			<input name="s" id="s" type="text" placeholder="ヨツバノハ就労移行支援事業所" class="topSearch"/>
+			<input name="s" id="s" value="<?php echo wp_specialchars($s, 1); ?>" type="text" placeholder="ヨツバノハ就労移行支援事業所" class="topSearch"/>
 			<input type="hidden" name="post_type" value="lawyer" />
 			<input type="submit" value="検索" id="submit" class="btnGreen" />
 		</div>
