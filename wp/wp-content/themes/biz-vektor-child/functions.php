@@ -29,6 +29,15 @@ function do_head_contact_custom($headContact){
                 // お問い合わせ時間の入力がある場合
                 $headContact .= '<div id="headContactTime">'.$contact_time.'</div>'."\n";
             }
+        $lawyer_args = array(
+        	'post_type'        => 'post',
+          'posts_per_page'   => -1
+        );
+        get_posts( $lawyer_args );
+        $count_lawyers = wp_count_posts();
+
+        $total_cash = do_shortcode('[contentblock id=paidreward]');
+
         $headContact .= '
         </div>
         <div class="btnWrap">
@@ -57,11 +66,11 @@ function do_head_contact_custom($headContact){
             <div class="totalWrap">
             	<dl class="total">
     				<dt>掲載相談所数</dt>
-    				<dd>1,200件</dd>
+    				<dd>'.$count_lawyers->publish.'件</dd>
     			</dl>
     			<dl class="total">
     				<dt>お祝い金総支給額</dt>
-    				<dd>150000円</dd>
+    				<dd>'.$total_cash.'円</dd>
             	</dl>
             </div>
         </div>
