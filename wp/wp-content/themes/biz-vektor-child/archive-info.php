@@ -11,44 +11,39 @@
     </section>
     <!-- [ /#search ] -->
 
-  
-    <h2>START pagination ↓</h2>
-
-    <?php 
+    <?php
 
       // $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+      global $query_string;
+      parse_str($query_string, $query_array);
 
       $custom_args = array(
         'post_type' => 'info',
         'post_status' => 'publish',
         'orderby' => 'menu_order',
         'posts_per_page' => 3,
-        'paged' => $paged
       );
-
-    $custom_query = new WP_Query( $custom_args ); ?>
-
-    <?php if ( $custom_query->have_posts() ) : ?>
+      $custom_args = array_merge($query_array, $custom_args);
+      $myposts = get_posts( $custom_args );
+      ?>
 
       <!-- the loop -->
-      <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
-          <?php get_template_part( 'includes/category', 'info-panel' ); ?>
-          <!-- .entry-content -->
-      <?php endwhile; ?>
+      <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+      	<?php get_template_part( 'includes/category', 'info-panel' ); ?>
+      <?php endforeach;
+      wp_reset_postdata();?>
       <!-- end of the loop -->
 
       <!-- pagination here -->
-      <?php
-        if (function_exists(custom_pagination)) {
-          custom_pagination($custom_query->max_num_pages,"",$paged);
-        }
-      ?>
-
+      <div class="pagination--holder">
+        <?php
+          $args = array(
+            'show_all' 			=> true,
+          );
+          wp_simple_pagination( $args );
+        ?>
+      </div>
     <?php wp_reset_postdata(); ?>
-
-    <?php else:  ?>
-      <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-    <?php endif; ?>
 
 
   </section>
