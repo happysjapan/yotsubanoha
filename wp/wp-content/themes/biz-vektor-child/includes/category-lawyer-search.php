@@ -19,6 +19,8 @@
       'exclude' => $exclude_ids
     );
     $categories = get_categories($args);
+
+    $tags_array = get_tags();
     ?>
 
     <!-- [ #search form ] -->
@@ -38,12 +40,12 @@
       </div>
 
       <div class="select-box">
-        <label for ="searchSelect" class="search--form--label">条件でお選びください
-        <select id="searchSelect" name="subcategory_name" class="search--form--select">
+        <label for ="searchTag" class="search--form--label">条件でお選びください
+        <select id="searchTag" name="tag" class="search--form--select">
           <option value="" selected>条件</option>
           <?php
-            foreach ($subcategories as $subcategory) {
-              echo '<option value="'.$subcategory->slug.'">'.$subcategory->name.'</option>';
+            foreach ($tags_array as $tag) {
+              echo '<option value="'.$tag->slug.'">'.$tag->name.'</option>';
             }
           ?>
         </select>
@@ -52,8 +54,6 @@
 
       <input class="topSearch" type="search" placeholder="フリーワード" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s">
 
-
-      <input type="hidden" name="post_type" value="lawyer" />
       <input class="btn" id="searchsubmit"  type="submit" value="検索する">
     </form>
     <!-- [ /#search form ] -->

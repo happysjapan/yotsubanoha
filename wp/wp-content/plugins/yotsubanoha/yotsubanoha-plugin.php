@@ -2,7 +2,7 @@
 /*
 Plugin Name: Yotsubanoha plugin
 Description: Site specific pluggin adding widgets
-Author: Neopa
+Author: Yotsubanoha
 */
 /* Start Adding Functions Below this Line */
 
@@ -15,7 +15,7 @@ class yotsubanoha_lawyer_date_widget extends WP_Widget {
     'yotsubanoha_lawyer_date_widget',
 
     // Widget name will appear in UI
-    __('Neopa Lawyer by date', 'yotsubanoha_lawyer_date_widget_domain'),
+    __('新着事業所一覧', 'yotsubanoha_lawyer_date_widget_domain'),
 
     // Widget description
     array( 'description' => __( 'Get the last lawyers created', 'yotsubanoha_lawyer_date_widget_domain' ), )
@@ -102,7 +102,7 @@ class yotsubanoha_lawyer_reward_widget extends WP_Widget {
     'yotsubanoha_lawyer_reward_widget',
 
     // Widget name will appear in UI
-    __('Neopa Lawyer by rewards', 'yotsubanoha_lawyer_reward_widget_domain'),
+    __('お祝い金が多い事業所一覧', 'yotsubanoha_lawyer_reward_widget_domain'),
 
     // Widget description
     array( 'description' => __( 'Get the last lawyers created', 'yotsubanoha_lawyer_reward_widget_domain' ), )

@@ -5,39 +5,37 @@
 
 $post_search = $_GET['s'];
 $post_category_slug = $_GET['category_name'];
-$post_subcategory_slug = $_GET['subcategory_name'];
+$post_tag_slug = $_GET['tag'];
+
+global $query_string;
+parse_str($query_string, $query_array);
 
 if( isset($post_search)) {
-  if( isset($post_subcategory_slug) && $post_subcategory_slug != '' ) {
-   //  echo 'if 1';
-    $post_args = array(
-      's'             => $post_search,
-      'post_type'     => 'post',
-      'category_name' => $post_subcategory_slug
-    );
-  } else if( isset($post_category_slug) && $post_category_slug != '' ) {
-    // echo 'if 2';
-    $post_args = array(
-      's'             => $post_search,
-      'post_type'     => 'post',
-      'category_name' => $post_category_slug
-    );
-  } else {
-    // echo 'if 3';
-    $post_args = array(
-      's'             => $post_search,
-      'post_type'     => 'post'
-    );
-  }
+  echo "lolilol";
+  $post_args = array(
+    's'             => $post_search,
+    'post_type'     => 'post',
+    'category_name' => $post_category_slug,
+    'tag'              => $post_tag_slug,
+    'posts_per_page'   => 3
+  );
 }
 else {
+  echo "no lolilol";
   $post_args = array(
-  	'posts_per_page'   => -1,
   	'post_type'        => 'post',
+    'posts_per_page'   => 3
   );
 }
 
-$the_query = new WP_Query( $post_args );
+$merged_args = array_merge($query_array, $post_args);
+$myposts = get_posts( $post_args );
+
+// $myposts = new WP_Query( $post_args );
+
+echo "<pre>";
+var_dump($post_tag_slug);
+echo "</pre>";
 ?>
 <?php get_header(); ?>
 
@@ -53,12 +51,23 @@ $the_query = new WP_Query( $post_args );
     </section>
     <!-- [ /#search ] -->
 
-  <?php if ( $the_query->have_posts() ) {
+    <?php if ( $myposts ) { ?>
+    <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+      <?php get_template_part( 'includes/category', 'lawyer-panel' ); ?>
+    <?php endforeach;
+    wp_reset_postdata();?>
 
-    while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-    <?php get_template_part( 'includes/category', 'lawyer-panel' ); ?>
-    <!-- .entry-content -->
-  <?php endwhile;
+  <!-- pagination here -->
+  <div class="pagination--holder">
+    <?php
+      $args = array(
+        'show_all' 			=> true,
+      );
+      wp_simple_pagination( $args );
+    ?>
+  </div>
+
+  <?php
   }
   else {
     echo 'No result';

@@ -43,7 +43,6 @@
           wp_simple_pagination( $args );
         ?>
       </div>
-    <?php wp_reset_postdata(); ?>
 
 
   </section>
