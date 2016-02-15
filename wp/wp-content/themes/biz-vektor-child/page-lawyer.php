@@ -11,7 +11,6 @@ global $query_string;
 parse_str($query_string, $query_array);
 
 if( isset($post_search)) {
-  echo "lolilol";
   $post_args = array(
     's'             => $post_search,
     'post_type'     => 'post',
@@ -21,7 +20,6 @@ if( isset($post_search)) {
   );
 }
 else {
-  echo "no lolilol";
   $post_args = array(
   	'post_type'        => 'post',
     'posts_per_page'   => 3
@@ -33,9 +31,9 @@ $myposts = get_posts( $post_args );
 
 // $myposts = new WP_Query( $post_args );
 
-echo "<pre>";
-var_dump($post_tag_slug);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($post_tag_slug);
+// echo "</pre>";
 ?>
 <?php get_header(); ?>
 
