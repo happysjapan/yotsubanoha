@@ -3,7 +3,11 @@ add_filter('headContactCustom','do_head_contact_custom');
 function do_head_contact_custom($headContact){
     $options = biz_vektor_get_theme_options();
     $contact_txt = $options['contact_txt'];
+    // $contact_time = nl2br($options['contact_time']);
     $contact_time = nl2br($options['contact_time']);
+
+    $contact_weekday = do_shortcode('[contentblock id=weekday_open]');
+    $contact_weekend = do_shortcode('[contentblock id=weekend_open]');
 
     if ($options['tel_number']) {
         // 電話番号の入力がある場合
@@ -25,10 +29,8 @@ function do_head_contact_custom($headContact){
             } else {
                 $headContact .= '<div id="headContactTel"> '.$options['tel_number'].'</div>'."\n";
             }
-            if ($contact_time) {
-                // お問い合わせ時間の入力がある場合
-                $headContact .= '<div id="headContactTime">'.$contact_time.'</div>'."\n";
-            }
+            $headContact .= '<div id="headContactTime">平日:'.$contact_weekday.' / 土日祝日:'.$contact_weekend.'</div>'."\n";
+            
         $lawyer_args = array(
         	'post_type'        => 'post',
           'posts_per_page'   => -1
