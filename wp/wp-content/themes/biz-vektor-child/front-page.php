@@ -106,7 +106,7 @@
 			?>
 			<div class="select-box">
         <label for ="searchSelect" class="search--form--label">条件でお選びください
-        <select id="searchSelect" name="subcategory_name" class="search--form--select">
+        <select id="searchSelect" name="tag" class="search--form--select">
           <option value="" selected>条件</option>
           <?php
             foreach ($tags_array as $tag) {
