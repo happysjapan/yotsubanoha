@@ -24,7 +24,7 @@
     ?>
 
     <!-- [ #search form ] -->
-    <form method="get" id="searchform" action="<?php echo home_url(); ?>/search">
+    <form method="get" id="searchform" action="<?php echo home_url(); ?>/47zenkoku">
 
       <div class="select-box">
         <label for ="searchSelect" class="search--form--label">お住いの地域をお選びください
