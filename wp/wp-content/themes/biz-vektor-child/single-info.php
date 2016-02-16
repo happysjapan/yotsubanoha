@@ -5,7 +5,7 @@
 	<!-- [ #content ] -->
 	<div id="content" class="content wide">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-	
+
 <?php get_template_part( 'includes/social', 'buttons' ); ?>
 
 <!-- [ #post- ] -->
@@ -46,7 +46,7 @@
 		</div>
 		<div class="btnWrap">
 			<a href="tel:0120-697-182" onclick="ga('send', 'event', '電話リンク', 'タップ', '一覧ボタン');" class="btnLightGreen" title="電話でのお問い合わせ">電話でのお問い合わせ</a>
-			<a href="/seminar-form/" class="btnBlue" title="フォームでのお申し込み">フォームでのお申し込み</a>
+			<a href="/seminar-form/?seminar=<?php the_title(); ?>" class="btnBlue" title="フォームでのお申し込み">フォームでのお申し込み</a>
 		</div>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . 'Pages:', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->

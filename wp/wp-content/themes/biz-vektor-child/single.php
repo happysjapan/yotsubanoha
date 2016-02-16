@@ -73,7 +73,7 @@ $lawyer_by_category = get_posts( $args );
 					</div>
 					<div class="contactWrap rightBox">
 						<p class="telNumber">0120-905-812</p>
-						<a href="/officetour-form/" title="まずはフォームで無料相談" class="btn">まずはフォームで無料相談</a>
+						<a href="/officetour-form/?office=<?php the_title(); ?>" title="まずはフォームで無料相談" class="btn">まずはフォームで無料相談</a>
 					</div>
 				</div>
 				<p class="text"><?php echo get_field('office_introduction'); ?></p>
