@@ -25,13 +25,11 @@ else {
 }
 
 $merged_args = array_merge($query_array, $post_args);
-$myposts = get_posts( $post_args );
+$custom_query = new WP_Query( $merged_args );
 
-// $myposts = new WP_Query( $post_args );
-
-// echo "<pre>";
-// var_dump($post_tag_slug);
-// echo "</pre>";
+echo "<pre>";
+var_dump($post_tag_slug);
+echo "</pre>";
 ?>
 <?php get_header(); ?>
 
@@ -47,26 +45,29 @@ $myposts = get_posts( $post_args );
     </section>
     <!-- [ /#search ] -->
 
-    <?php if ( $myposts ) { ?>
-    <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-      <?php get_template_part( 'includes/category', 'lawyer-panel' ); ?>
-    <?php endforeach;
-    wp_reset_postdata();?>
+    <?php if ( $custom_query->have_posts() ) { ?>
 
-    <!-- pagination -->
+      <!-- the loop -->
+      <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+        <?php get_template_part( 'includes/category', 'lawyer-panel' ); ?>
+        <!-- .entry-content -->
+      <?php endwhile; ?>
+      <!-- end of the loop -->
+
+      <!-- pagination -->
+      <?php
+        if (function_exists(custom_pagination)) {
+          custom_pagination($custom_query->max_num_pages,"",$paged);
+        }
+      ?>
+      <!-- end of pagination -->
+
     <?php
-      if (function_exists(custom_pagination)) {
-        custom_pagination($myposts->max_num_pages,"",$paged);
-      }
+    }
+    else {
+      echo 'No result';
+    }
     ?>
-    <!-- end of pagination -->
-
-  <?php
-  }
-  else {
-    echo 'No result';
-  }
-  ?>
 
   </section>
   <!-- [ /#content ] -->
