@@ -34,7 +34,7 @@ $infoTopUrl = (isset($biz_vektor_options['infoTopUrl']) && $biz_vektor_options['
 if ( is_404() ){
 	$panListHtml .= '<li><span>' . __( 'Not found', 'biz-vektor' ) . '</span></li>';
 } else if ( is_search() ) {
-	$panListHtml .= '<li><span>' . sprintf(__('検索結果 : %s', 'biz-vektor'), get_search_query() ) . '</span></li>';
+	$panListHtml .= '<li><span>' . sprintf(__('検索結果: 「%s」', 'biz-vektor'), get_search_query() ) . '</span></li>';
 // ▼▼ 投稿ページをブログに指定された場合
 } else if ( is_home() ){
 	$panListHtml .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">' . $postLabelName . '</span></li>';
