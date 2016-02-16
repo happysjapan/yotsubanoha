@@ -33,6 +33,9 @@ $infoTopUrl = (isset($biz_vektor_options['infoTopUrl']) && $biz_vektor_options['
 // ▼
 if ( is_404() ){
 	$panListHtml .= '<li><span>' . __( 'Not found', 'biz-vektor' ) . '</span></li>';
+} else if ( is_search() ) {
+	$panListHtml .= '<li><span>' . sprintf(__('検索結果 : %s', 'biz-vektor'), get_search_query() ) . '</span></li>';
+// ▼▼ 投稿ページをブログに指定された場合
 } else if ( is_home() ){
 	$panListHtml .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">' . $postLabelName . '</span></li>';
 // ▼▼ 固定ページ
@@ -192,11 +195,25 @@ if ( is_404() ){
 	}
 	$panListHtml .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">'.single_cat_title('','', FALSE).'</span></li>';
 // ▼▼ カテゴリー
-} else if ( is_category() || is_search() ) {
+} else if ( is_category() ) {
 	$postTopUrl = (isset($biz_vektor_options['postTopUrl']))? esc_html($biz_vektor_options['postTopUrl']) : '';
+	if ($postTopUrl) {
+		$panListHtml .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.$postTopUrl.'" itemprop="url"><span itemprop="title">'.$postLabelName.'</span></a> &raquo; </li>';
+	} else {
+		$panListHtml .= '<li><span>'.$postLabelName.'</span> &raquo; </li>';
+	}
 	// カテゴリー情報を取得して$catに格納
-	$category = get_the_category();
-	$panListHtml .= '<li><span>'. $category[0]->cat_name .'</span></li>';
+	$cat = get_queried_object();
+	// parent が 0 の場合 = 親カテゴリーが存在する場合
+	if($cat->parent != 0):
+		// 祖先のカテゴリー情報を逆順で取得
+		$ancestors = array_reverse(get_ancestors( $cat->cat_ID, 'category' ));
+		// 祖先階層の配列回数分ループ
+		foreach($ancestors as $ancestor):
+			$panListHtml .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_category_link($ancestor).'" itemprop="url"><span itemprop="title">'.get_cat_name($ancestor).'</span></a> &raquo; </li>';
+		endforeach;
+	endif;
+	$panListHtml .= '<li><span>'. $cat->cat_name. '</span></li>';
 // ▼▼ タグ
 } elseif ( is_tag() ) {
 	// 投稿の場合
