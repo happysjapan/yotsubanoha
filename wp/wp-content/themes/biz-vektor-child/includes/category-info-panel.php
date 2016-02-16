@@ -11,7 +11,9 @@
               <tbody>
                 <tr>
                   <th>日時</th>
-                  <td><?php echo the_sub_field('seminar_opening_date'); ?></td>
+                  <td>
+                    <?php echo date('Y').'年'.date('n').'月'.date('d').'日'; ?>
+                  </td>
                 </tr>
                 <tr>
                   <th>会場</th>
