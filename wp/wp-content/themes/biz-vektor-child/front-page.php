@@ -17,7 +17,7 @@
 		    // リンク先URL
 			function lawyerCategoryLink($type = "tokyo")
 			{
-			    return "/search/?subcategory_name=$type&s=&post_type=lawyer\n";
+			    return "/47zenkoku/?category_name=$type&s=&post_type=lawyer";
 			}
 		?>
 
