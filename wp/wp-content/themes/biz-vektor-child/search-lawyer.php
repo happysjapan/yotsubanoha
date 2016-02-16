@@ -26,10 +26,6 @@ else {
 
 $merged_args = array_merge($query_array, $post_args);
 $custom_query = new WP_Query( $merged_args );
-
-echo "<pre>";
-var_dump($post_tag_slug);
-echo "</pre>";
 ?>
 <?php get_header(); ?>
 
