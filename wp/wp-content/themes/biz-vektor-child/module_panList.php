@@ -29,7 +29,7 @@ $postTopUrl = (isset($biz_vektor_options['postTopUrl']))? $biz_vektor_options['p
 $infoTopUrl = (isset($biz_vektor_options['infoTopUrl']) && $biz_vektor_options['infoTopUrl'])? $biz_vektor_options['infoTopUrl'] : home_url().'/info/';
 
 	$panListHtml .= '<ul>';
-	$panListHtml .= '<li id="panHome"><a href="' . home_url() . '"><span>HOME</span></a> &raquo; </li>';
+	$panListHtml .= '<li id="panHome"><a href="' . home_url() . '"><span>トップ</span></a> &raquo; </li>';
 // ▼
 if ( is_404() ){
 	$panListHtml .= '<li><span>' . __( 'Not found', 'biz-vektor' ) . '</span></li>';
