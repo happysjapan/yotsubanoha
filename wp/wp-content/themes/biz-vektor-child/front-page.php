@@ -6,7 +6,7 @@
 	<?php biz_vektor_contentMain_before();?>
 	<div id="content-main">
 
-	<form name="searchform1" id="searchform1" method="get" action="<?php bloginfo( 'url' ); ?>/search">
+	<form name="searchform1" id="searchform1" method="get" action="<?php bloginfo( 'url' ); ?>/47zenkoku">
 	<div class="areaSearch">
 		<h2>全国の就労移行支援事業所を検索</h2>
 		<div class="searchInner">
@@ -121,8 +121,8 @@
 
 		</ul>
 		<div class="searchText">
-			<input name="s" id="s" type="text" placeholder="ヨツバノハ就労移行支援事業所" class="topSearch"/>
 			<input type="hidden" name="post_type" value="lawyer" />
+			<input name="s" id="s" value="<?php echo wp_specialchars($s, 1); ?>" type="text" placeholder="ヨツバノハ就労移行支援事業所" class="topSearch"/>
 			<input type="submit" value="検索" id="submit" class="btnGreen" />
 		</div>
 	</div><!-- /searchInner -->

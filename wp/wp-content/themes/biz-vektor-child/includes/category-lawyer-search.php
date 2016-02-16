@@ -24,7 +24,7 @@
     ?>
 
     <!-- [ #search form ] -->
-    <form method="get" id="searchform" action="<?php echo home_url(); ?>/search">
+    <form method="get" id="searchform" action="<?php echo home_url(); ?>/47zenkoku">
 
       <div class="select-box">
         <label for ="searchSelect" class="search--form--label">お住いの地域をお選びください
@@ -52,6 +52,7 @@
         </label>
       </div>
 
+      <input type="hidden" name="post_type" value="lawyer" />
       <input class="topSearch" type="search" placeholder="フリーワード" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s">
 
       <input class="btn" id="searchsubmit"  type="submit" value="検索する">
