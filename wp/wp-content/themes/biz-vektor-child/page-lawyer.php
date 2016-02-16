@@ -68,7 +68,7 @@ $myposts = get_posts( $post_args );
   <?php
   }
   else {
-    echo 'No result';
+    echo 'お探しの検索は該当がありません。';
   }
   ?>
 
