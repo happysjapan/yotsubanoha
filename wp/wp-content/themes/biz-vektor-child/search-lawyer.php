@@ -61,7 +61,7 @@ $custom_query = new WP_Query( $merged_args );
     <?php
     }
     else {
-      echo 'No result';
+      echo 'お探しの検索は該当がありません。';
     }
     ?>
 
