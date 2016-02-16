@@ -107,13 +107,17 @@
 			<div class="select-box">
         <label for ="searchSelect" class="search--form--label">条件でお選びください
         <select id="searchSelect" name="tag" class="search--form--select">
-          <option value="" selected>条件</option>
+					<option value="">条件</option>
           <?php
-            foreach ($tags_array as $tag) {
-              echo '<option value="'.$tag->slug.'">'.$tag->name.'</option>';
+            foreach ($tags_array as $tag_elem) {
+              if( wp_specialchars($tag, 1) == $tag_elem->slug ) {
+                echo '<option value="'.$tag_elem->slug.'" selected>'.$tag_elem->name.'</option>';
+              }
+              else {
+                echo '<option value="'.$tag_elem->slug.'">'.$tag_elem->name.'</option>';
+              }
             }
           ?>
-
         </select>
         </label>
       </div>

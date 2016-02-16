@@ -22,6 +22,7 @@
         'post_status' => 'publish',
         'orderby' => 'date',
         'posts_per_page' => 3,
+        'paged' => $paged
       );
       $custom_args = array_merge($query_array, $custom_args);
       $myposts = get_posts( $custom_args );
@@ -34,15 +35,13 @@
       wp_reset_postdata();?>
       <!-- end of the loop -->
 
-      <!-- pagination here -->
-      <div class="pagination--holder">
-        <?php
-          $args = array(
-            'show_all' 			=> true,
-          );
-          wp_simple_pagination( $args );
-        ?>
-      </div>
+      <!-- pagination -->
+      <?php
+        if (function_exists(custom_pagination)) {
+          custom_pagination($custom_query->max_num_pages,"",$paged);
+        }
+      ?>
+      <!-- end of pagination -->
 
 
   </section>

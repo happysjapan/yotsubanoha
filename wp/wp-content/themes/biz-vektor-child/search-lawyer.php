@@ -12,13 +12,15 @@ if( isset($post_search)) {
     'post_type'     => 'post',
     'category_name' => $post_category_slug,
     'tag'              => $post_tag_slug,
-    'posts_per_page'   => -1
+    'posts_per_page'   => 3,
+    'paged' => $paged
   );
 }
 else {
   $post_args = array(
   	'post_type'        => 'post',
-    'posts_per_page'   => -1
+    'posts_per_page'   => 3,
+    'paged' => $paged
   );
 }
 
@@ -50,6 +52,14 @@ $myposts = get_posts( $post_args );
       <?php get_template_part( 'includes/category', 'lawyer-panel' ); ?>
     <?php endforeach;
     wp_reset_postdata();?>
+
+    <!-- pagination -->
+    <?php
+      if (function_exists(custom_pagination)) {
+        custom_pagination($myposts->max_num_pages,"",$paged);
+      }
+    ?>
+    <!-- end of pagination -->
 
   <?php
   }

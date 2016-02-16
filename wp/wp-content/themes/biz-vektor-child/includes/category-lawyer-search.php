@@ -29,10 +29,15 @@
       <div class="select-box">
         <label for ="searchSelect" class="search--form--label">お住いの地域をお選びください
         <select id="searchSelect" name="category_name" class="search--form--select">
-          <option value="" selected>地域</option>
+          <option value="">地域</option>
           <?php
             foreach ($subcategories as $subcategory) {
-              echo '<option value="'.$subcategory->slug.'">'.$subcategory->name.'</option>';
+              if( wp_specialchars($category_name, 1) == $subcategory->slug ) {
+                echo '<option value="'.$subcategory->slug.'" selected>'.$subcategory->name.'</option>';
+              }
+              else {
+                echo '<option value="'.$subcategory->slug.'">'.$subcategory->name.'</option>';
+              }
             }
           ?>
         </select>
@@ -42,10 +47,16 @@
       <div class="select-box">
         <label for ="searchTag" class="search--form--label">条件でお選びください
         <select id="searchTag" name="tag" class="search--form--select">
-          <option value="" selected>条件</option>
+          <option value="">条件</option>
           <?php
-            foreach ($tags_array as $tag) {
-              echo '<option value="'.$tag->slug.'">'.$tag->name.'</option>';
+
+            foreach ($tags_array as $tag_elem) {
+              if( wp_specialchars($tag, 1) == $tag_elem->slug ) {
+                echo '<option value="'.$tag_elem->slug.'" selected>'.$tag_elem->name.'</option>';
+              }
+              else {
+                echo '<option value="'.$tag_elem->slug.'">'.$tag_elem->name.'</option>';
+              }
             }
           ?>
         </select>

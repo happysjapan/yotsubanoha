@@ -13,36 +13,38 @@
 
     <?php
 
-      // $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+      $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       global $query_string;
       parse_str($query_string, $query_array);
+
 
       $custom_args = array(
         'post_type' => 'info',
         'post_status' => 'publish',
-        'orderby' => 'menu_order',
+        'orderby' => 'date',
         'posts_per_page' => 10,
+        'paged' => $paged
       );
       $custom_args = array_merge($query_array, $custom_args);
-      $myposts = get_posts( $custom_args );
+      // $custom_query = get_posts( $custom_args );
+      $custom_query = new WP_Query( $custom_args );
+
       ?>
 
       <!-- the loop -->
-      <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-      	<?php get_template_part( 'includes/category', 'info-panel' ); ?>
-      <?php endforeach;
-      wp_reset_postdata();?>
+      <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+        <?php get_template_part( 'includes/category', 'info-panel' ); ?>
+        <!-- .entry-content -->
+      <?php endwhile; ?>
       <!-- end of the loop -->
 
-      <!-- pagination here -->
-      <div class="pagination--holder">
-        <?php
-          $args = array(
-            'show_all' 			=> true,
-          );
-          wp_simple_pagination( $args );
-        ?>
-      </div>
+      <!-- pagination -->
+      <?php
+        if (function_exists(custom_pagination)) {
+          custom_pagination($custom_query->max_num_pages,"",$paged);
+        }
+      ?>
+      <!-- end of pagination -->
 
 
   </section>
