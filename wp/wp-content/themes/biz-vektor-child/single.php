@@ -229,7 +229,7 @@ $lawyer_by_category = get_posts( $args );
 		</section>
 
 		<section class="indivAroundLawyer">
-			<h2 class="title">周辺の終了移行支援事業所一覧</h2>
+			<h2 class="title">周辺の就労移行支援事業所一覧</h2>
 			<div class="slideWrap">
 				<ul class="areaSlider">
 
