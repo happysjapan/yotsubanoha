@@ -22,6 +22,8 @@ function biz_vektor_posttype_beacon($flag){
 /*-------------------------------------------*/
 /*	Custom post type _ add info
 /*-------------------------------------------*/
+/*	Custom post type _ add public_relation
+/*-------------------------------------------*/
 
 add_post_type_support( 'info', 'front-end-editor' );
 
@@ -215,7 +217,7 @@ class WP_Widget_infoArchives extends WP_Widget {
 add_action('widgets_init', create_function('', 'return register_widget("WP_Widget_infoArchives");'));
 add_filter('biz_vektor_extra_posttype_config', 'biz_vektor_info_config', 5);
 function biz_vektor_info_config(){
-	
+
 	$options = biz_bektor_option_validate();
 	$biz_vektor_name = get_biz_vektor_name();
 	$infoLabelName = esc_html( $options['infoLabelName'] );
@@ -341,4 +343,43 @@ function biz_vektor_info_hack_index($flag){
 		</ul>
 	<?php endif; //$options['listInfoArchive']
 	return true;
+}
+
+
+
+
+/*-------------------------------------------*/
+/*	Custom post type _ add public_relation
+/*-------------------------------------------*/
+
+add_post_type_support( 'public_relation', 'front-end-editor' );
+
+add_action( 'init', 'biz_vektor_public_relation_create_post_type', 0 );
+function biz_vektor_public_relation_create_post_type() {
+	$public_relationLabelName = 'Public relation';
+	register_post_type( 'public_relation', /* post-type */
+	array(
+		'labels' => array(
+		'name' => $public_relationLabelName,
+		'singular_name' => $public_relationLabelName
+	),
+	'public' => true,
+	'menu_position' =>5,
+	'has_archive' => true,
+	'supports' => array('title','editor','excerpt','thumbnail','author')
+	)
+	);
+	// Add information category
+	register_taxonomy(
+		'public_relation-cat',
+		'public_relation',
+		array(
+			'hierarchical' => true,
+			'update_count_callback' => '_update_post_term_count',
+			'label' => $public_relationLabelName._x('category','admin menu', 'biz-vektor'),
+			'singular_label' => $public_relationLabelName._x('category','admin menu', 'biz-vektor'),
+			'public' => true,
+			'show_ui' => true,
+		)
+	);
 }
