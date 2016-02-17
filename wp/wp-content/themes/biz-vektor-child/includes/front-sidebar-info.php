@@ -22,8 +22,18 @@ $the_query = new WP_Query( $post_args );
           <div>
             <a href="<?php echo get_the_permalink(); ?>" title="<?php echo the_title(); ?>">
               <p>
-              <?php while(have_rows('seminar_table')): the_row(); ?>
-                <span><?php echo the_sub_field('seminar_opening_date'); ?></span>
+              <?php while(have_rows('seminar_table')): the_row();
+                $date = strtotime(get_sub_field('seminar_opening_date'));
+                $year = date( 'Y', $date);
+                $month = date( 'm', $date);
+                $day = date( 'd', $date);
+                $day_text = date( 'D', $date);
+                $day_text_ja = yotsubanoha_get_ja_day($day_text);
+                $pfx_date = $month.'月'.$day.'日（'.$day_text_ja.'）';
+              ?>
+                <span>
+                  <?php echo $pfx_date; ?>
+                </span>
               <?php endwhile; ?>
               </p>
 
