@@ -9,10 +9,6 @@ if ( is_tax() ) {
     $term = get_term_by( 'slug', $term_slug, $taxonomy );
   endif;
 }
-
-echo "<pre>";
-var_dump($term);
-echo "</pre>";
 ?>
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
