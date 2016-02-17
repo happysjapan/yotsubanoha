@@ -19,6 +19,17 @@
 	}
 }
 
+.business-page--title {
+	font-size: 22px;
+	display: inline;
+	float: left;
+	width: 100%;
+	line-height: 115%;
+	margin: 0;
+	font-weight: bold;
+	border: none;
+}
+
 
 // header
 #header {
@@ -239,7 +250,7 @@
 				}
 			}
 			> div {clear: both;}
-			.menu {	
+			.menu {
 				border: 1px solid $color-green;
 				@include box-shadow(0 3px 3px 0 rgba(0,0,0,.4));
 				li {
@@ -297,7 +308,7 @@
 						width: 60px;
 						height: auto;
 					}
-					p { 
+					p {
 						display: inline-block;
 						margin: 0;
 					}
@@ -340,7 +351,7 @@
 	}
 }
 .fb-comments, .fb-comments span, .fb-comments iframe {
-    width: 600px !important; 
+    width: 600px !important;
 }
 // contact form common style
 .content {
