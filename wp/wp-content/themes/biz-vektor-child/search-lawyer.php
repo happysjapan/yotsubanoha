@@ -3,6 +3,7 @@ $post_search = $_GET['s'];
 $post_category_slug = $_GET['category_name'];
 $post_tag_slug = $_GET['tag'];
 
+global $biz_vektor_options;
 global $query_string;
 parse_str($query_string, $query_array);
 
@@ -34,7 +35,7 @@ $custom_query = new WP_Query( $merged_args );
 
   <!-- [ #content ] -->
   <section id="content" class="content wide">
-
+    <h2 id="business-page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
     <!-- [ #search ] -->
     <section class="searchArea">
       <?php get_template_part( 'includes/category', 'lawyer-search' ); ?>

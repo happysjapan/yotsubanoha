@@ -17,12 +17,13 @@
 		    // リンク先URL
 			function lawyerCategoryLink($type = "tokyo")
 			{
-			    return "/47zenkoku/?category_name=$type&s=&post_type=lawyer";
+			    return get_category_link(get_category_by_slug($type)->term_id);
 			}
 		?>
 
 		<li><h3>北海道・東北エリア</h3>
 		     <ul class="listC">
+					 <?php echo get_category_link(get_category_by_slug('faculty')->term_id); ?>
 			 	<li><a href="<?php echo lawyerCategoryLink("hokkaido");?>">北海道</a></li>
 			 	<li><a href="<?php echo lawyerCategoryLink("aomori");?>">青森県</a></li>
 			 	<li><a href="<?php echo lawyerCategoryLink("iwate");?>">岩手県</a></li>

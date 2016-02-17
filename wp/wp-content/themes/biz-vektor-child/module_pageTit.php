@@ -30,7 +30,6 @@ if (is_page() || is_attachment()){
 	// 標準の投稿タイプ(post)の場合は、管理画面で設定した名前を取得
 	// 投稿が0件の場合はget_post_typeが効かないので is_category()とis_tag()も追加
 	if ( $postType == 'post' || is_category() || is_tag() ) {
-		$pageTitle = esc_html($biz_vektor_options['postLabelName']);
 	// 標準の投稿タイプでない場合は、カスタム投稿タイプ名を取得
 	} else {
 		// 普通のポストタイプが取得出来る場合
@@ -47,7 +46,9 @@ if (is_page() || is_attachment()){
 		}
 	}
 } else if (is_search() ) {
-	$pageTitle = esc_html($biz_vektor_options['postLabelName']);
+	if ($postType == 'info') {
+		$pageTitle = esc_html($biz_vektor_options['postLabelName']);
+	}
 } else if (is_404()){
 	$pageTitle = __('Not found', 'biz-vektor');
 }

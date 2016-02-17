@@ -1,5 +1,7 @@
 <?php get_header();
 
+  global $query_string;
+  
   $cat_list = get_the_category();
   $current_cat = null;
 
@@ -20,14 +22,7 @@
 
   <!-- [ #content ] -->
   <section id="content" class="content wide">
-
-    <?php
-      if(isset($cat_description)) {
-        echo $cat_description;
-      }
-      else { ?>
-        <div id="pageTit">就労移行支援事業所を検索</div>
-      <?php } ?>
+    <h2 id="business-page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
     <!-- [ #search ] -->
     <section class="searchArea">
       <?php get_template_part( 'includes/category', 'lawyer-search' ); ?>
@@ -37,7 +32,7 @@
     <?php
 
       // $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-      global $query_string;
+
       parse_str($query_string, $query_array);
 
       $custom_args = array(
