@@ -22,6 +22,16 @@
 body > #wrap {
 	padding-top: 50px;
 }
+.business-page--title {
+	font-size: 22px;
+	display: inline;
+	float: left;
+	width: 100%;
+	line-height: 115%;
+	margin: 0;
+	font-weight: bold;
+	border: none;
+}
 // header
 #header {
 	#site-title {
@@ -321,7 +331,7 @@ body > #wrap {
 						width: 60px;
 						height: auto;
 					}
-					p { 
+					p {
 						display: inline-block;
 						margin: 0;
 					}
@@ -364,7 +374,7 @@ body > #wrap {
 	}
 }
 .fb-comments, .fb-comments span, .fb-comments iframe {
-    width: 600px !important; 
+    width: 600px !important;
 }
 // contact form common style
 .content {

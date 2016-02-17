@@ -35,19 +35,16 @@ Version: 0.1.0
   font-size: 1.8rem;
   line-height: 30px;
   line-height: 3rem;
-  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  -webkit-border-radius: 4px;
+  -webkit-appearance: none;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
   -moz-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
   text-decoration: none;
@@ -71,10 +68,8 @@ Version: 0.1.0
   line-height: 2rem;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -104,18 +99,16 @@ Version: 0.1.0
   line-height: 18px;
   line-height: 1.8rem;
   background-color: #cff2cf;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   border: 1px solid #006600;
 }
 
 /* line 1, sass/core/_base.scss */
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -187,23 +180,35 @@ img {
 }
 /* line 16, sass/_common.scss */
 #main #container .content table td, #main #container .content table th {
-  border: 1px solid #999999;
+  border: 1px solid #999;
 }
 /* line 17, sass/_common.scss */
 #main #container .content table th {
   background-color: #e8e8e8;
 }
 
-/* line 25, sass/_common.scss */
+/* line 22, sass/_common.scss */
+.business-page--title {
+  font-size: 22px;
+  display: inline;
+  float: left;
+  width: 100%;
+  line-height: 115%;
+  margin: 0;
+  font-weight: bold;
+  border: none;
+}
+
+/* line 36, sass/_common.scss */
 #header #site-title {
   margin-right: 38px;
 }
-/* line 27, sass/_common.scss */
+/* line 38, sass/_common.scss */
 #header #site-title a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
-/* line 31, sass/_common.scss */
+/* line 42, sass/_common.scss */
 #header #headContact {
   max-width: 700px;
   width: 100%;
@@ -211,21 +216,21 @@ img {
   text-align: left;
   float: left;
 }
-/* line 37, sass/_common.scss */
+/* line 48, sass/_common.scss */
 #header #headContact #headContactInner {
   display: table;
 }
-/* line 39, sass/_common.scss */
+/* line 50, sass/_common.scss */
 #header #headContact #headContactInner > div {
   display: table-cell;
   padding-left: 15px;
   vertical-align: top;
 }
-/* line 43, sass/_common.scss */
+/* line 54, sass/_common.scss */
 #header #headContact #headContactInner > div:first-child {
   padding-left: 0;
 }
-/* line 44, sass/_common.scss */
+/* line 55, sass/_common.scss */
 #header #headContact #headContactInner > div#headContactTxt {
   font-weight: bold;
   font-size: 15px;
@@ -233,11 +238,11 @@ img {
   line-height: 22px;
   line-height: 2.2rem;
 }
-/* line 48, sass/_common.scss */
+/* line 59, sass/_common.scss */
 #header #headContact #headContactInner > div#headContactTxt span {
   color: #016d3b;
 }
-/* line 53, sass/_common.scss */
+/* line 64, sass/_common.scss */
 #header #headContact #headContactInner > div.telNumTime #headContactTel {
   padding-left: 45px;
   color: #ce0004;
@@ -249,12 +254,12 @@ img {
   background: url("images/icon_free_voice.gif") no-repeat scroll left center;
   background-size: 40px auto;
 }
-/* line 62, sass/_common.scss */
+/* line 73, sass/_common.scss */
 #header #headContact #headContactInner > div.telNumTime #headContactTime {
   font-size: 11px;
   font-size: 1.1rem;
 }
-/* line 67, sass/_common.scss */
+/* line 78, sass/_common.scss */
 #header #headContact #headContactInner > div.btnWrap a {
   display: inline-block;
   margin-right: 4px;
@@ -265,40 +270,38 @@ img {
   font-size: 1.1rem;
   line-height: 15px;
   line-height: 1.5rem;
-  -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
   text-align: center;
 }
-/* line 77, sass/_common.scss */
+/* line 88, sass/_common.scss */
 #header #headContact #headContactInner > div.btnWrap a.contact {
   background-color: #44b700;
 }
-/* line 80, sass/_common.scss */
+/* line 91, sass/_common.scss */
 #header #headContact #headContactInner > div.btnWrap a.apply {
   background-color: #2180ac;
 }
-/* line 83, sass/_common.scss */
+/* line 94, sass/_common.scss */
 #header #headContact #headContactInner > div.btnWrap a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
-/* line 88, sass/_common.scss */
+/* line 99, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox {
   padding-left: 32px;
 }
-/* line 90, sass/_common.scss */
+/* line 101, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .snsBtn {
   margin-bottom: 6px;
 }
-/* line 92, sass/_common.scss */
+/* line 103, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .snsBtn li {
   display: inline-block;
   vertical-align: top;
 }
-/* line 97, sass/_common.scss */
+/* line 108, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .total {
   width: 190px;
   margin: 0 0 4px;
@@ -309,74 +312,74 @@ img {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 103, sass/_common.scss */
+/* line 114, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .total:last-child {
   margin-bottom: 0;
 }
-/* line 104, sass/_common.scss */
+/* line 115, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .total dt {
   float: left;
 }
-/* line 107, sass/_common.scss */
+/* line 118, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .total dd {
   float: right;
 }
 @media only screen and (max-width: 767px) {
-  /* line 116, sass/_common.scss */
+  /* line 127, sass/_common.scss */
   #header .innerBox {
     margin: 0 5px;
   }
-  /* line 117, sass/_common.scss */
+  /* line 128, sass/_common.scss */
   #header #site-title {
     display: inline-block;
     width: 100px;
     margin-right: 0;
     padding-bottom: 0;
   }
-  /* line 122, sass/_common.scss */
+  /* line 133, sass/_common.scss */
   #header #site-title a img {
     width: 100px;
     margin-top: 0;
     height: auto;
   }
-  /* line 128, sass/_common.scss */
+  /* line 139, sass/_common.scss */
   #header #headContact {
     padding: 0;
   }
-  /* line 130, sass/_common.scss */
+  /* line 141, sass/_common.scss */
   #header #headContact #headContactInner {
     width: 100%;
     margin: 0;
   }
-  /* line 133, sass/_common.scss */
+  /* line 144, sass/_common.scss */
   #header #headContact #headContactInner > div {
     display: block;
     padding: 0;
   }
-  /* line 136, sass/_common.scss */
+  /* line 147, sass/_common.scss */
   #header #headContact #headContactInner > div#headContactTxt {
     display: none;
   }
-  /* line 139, sass/_common.scss */
+  /* line 150, sass/_common.scss */
   #header #headContact #headContactInner > div.telNumTime {
     position: absolute;
     top: 10px;
     left: 110px;
     z-index: 101;
   }
-  /* line 144, sass/_common.scss */
+  /* line 155, sass/_common.scss */
   #header #headContact #headContactInner > div.telNumTime #headContactTel {
     padding-left: 34px;
     font-size: 14px;
     font-size: 1.4rem;
     background-size: 30px auto;
   }
-  /* line 148, sass/_common.scss */
+  /* line 159, sass/_common.scss */
   #header #headContact #headContactInner > div.telNumTime #headContactTel a {
     color: #ce0004;
     text-decoration: none;
   }
-  /* line 153, sass/_common.scss */
+  /* line 164, sass/_common.scss */
   #header #headContact #headContactInner > div.telNumTime #headContactTime {
     font-size: 9px;
     font-size: 0.9rem;
@@ -384,7 +387,7 @@ img {
     letter-spacing: -0.04rem;
     font-family: helvetica,arial;
   }
-  /* line 159, sass/_common.scss */
+  /* line 170, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap {
     display: table;
     width: 100%;
@@ -393,7 +396,7 @@ img {
     bottom: 0;
     z-index: 102;
   }
-  /* line 166, sass/_common.scss */
+  /* line 177, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a {
     display: table-cell;
     margin-right: 0;
@@ -402,47 +405,45 @@ img {
     font-size: 1.3rem;
     line-height: 20px;
     line-height: 2rem;
-    -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
+    -webkit-border-radius: 0;
     border-radius: 0;
     text-align: center;
   }
-  /* line 174, sass/_common.scss */
+  /* line 185, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a br {
     display: none;
   }
-  /* line 175, sass/_common.scss */
+  /* line 186, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a.contact {
     background-color: #44b700;
   }
-  /* line 178, sass/_common.scss */
+  /* line 189, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a.apply {
     background-color: #2180ac;
   }
-  /* line 181, sass/_common.scss */
+  /* line 192, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
     opacity: 0.9;
   }
-  /* line 186, sass/_common.scss */
+  /* line 197, sass/_common.scss */
   #header #headContact #headContactInner > div.rightBox {
     width: 100%;
     margin: 0 10px;
     padding-left: 0;
   }
-  /* line 190, sass/_common.scss */
+  /* line 201, sass/_common.scss */
   #header #headContact #headContactInner > div.rightBox .totalWrap {
     margin-top: 10px;
     padding: 8px;
     background-color: #f2f2f2;
   }
-  /* line 194, sass/_common.scss */
+  /* line 205, sass/_common.scss */
   #header #headContact #headContactInner > div.rightBox .totalWrap .total {
     width: auto;
   }
-  /* line 196, sass/_common.scss */
+  /* line 207, sass/_common.scss */
   #header #headContact #headContactInner > div.rightBox .totalWrap .total dd {
     float: left;
     margin-left: 20px;
@@ -450,7 +451,7 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 208, sass/_common.scss */
+  /* line 219, sass/_common.scss */
   #gMenu {
     border: none;
     width: 220px;
@@ -459,39 +460,35 @@ img {
     right: 5px;
     z-index: 100;
   }
-  /* line 216, sass/_common.scss */
+  /* line 227, sass/_common.scss */
   #gMenu #gMenuInner.innerBox {
     background-color: #fff;
   }
-  /* line 218, sass/_common.scss */
+  /* line 229, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .assistive-text {
     width: 40px;
     margin-bottom: 5px;
     padding: 7px 0 5px;
     background-color: #016d3b;
     color: #fff;
-    -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
     border-radius: 5px;
     text-align: center;
     float: right;
   }
-  /* line 227, sass/_common.scss */
+  /* line 238, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .assistive-text p {
     width: 24px;
     height: 3px;
     margin: 0 auto 4px;
     padding: 0;
-    -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
     border-radius: 2px;
     background-color: #fff;
   }
-  /* line 235, sass/_common.scss */
+  /* line 246, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .assistive-text span.text {
     padding: 0;
     font-size: 10px;
@@ -499,18 +496,18 @@ img {
     line-height: 10px;
     line-height: 1rem;
   }
-  /* line 241, sass/_common.scss */
+  /* line 252, sass/_common.scss */
   #gMenu #gMenuInner.innerBox > div {
     clear: both;
   }
-  /* line 242, sass/_common.scss */
+  /* line 253, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .menu {
     border: 1px solid #016d3b;
-    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.4);
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.4);
   }
-  /* line 246, sass/_common.scss */
+  /* line 257, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .menu li .sub-menu li {
     background-color: #f2f2f2;
     font-size: 12px;
@@ -518,68 +515,68 @@ img {
   }
 }
 
-/* line 258, sass/_common.scss */
+/* line 269, sass/_common.scss */
 #sideTower .sideWidget .textwidget {
   text-align: center;
   padding: 0;
 }
-/* line 261, sass/_common.scss */
+/* line 272, sass/_common.scss */
 #sideTower .sideWidget .textwidget a {
   display: inline-block;
   margin-bottom: 10px;
 }
-/* line 266, sass/_common.scss */
+/* line 277, sass/_common.scss */
 #sideTower .sideWidget h3 {
   padding: 6px 10px;
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 271, sass/_common.scss */
+/* line 282, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection {
   padding-bottom: 0;
-  border: 1px solid #666666;
+  border: 1px solid #666;
 }
-/* line 274, sass/_common.scss */
+/* line 285, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox {
   padding: 0;
   border: none;
-  border-bottom: 1px dotted #666666;
+  border-bottom: 1px dotted #666;
 }
-/* line 278, sass/_common.scss */
+/* line 289, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox:last-child {
   border-bottom: none;
 }
-/* line 280, sass/_common.scss */
+/* line 291, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox div a {
   display: block;
   padding: 6px 10px;
   color: #3569c9;
   background-image: none;
 }
-/* line 285, sass/_common.scss */
+/* line 296, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox div a:hover {
   background-color: #f2f2f2;
   text-decoration: none;
 }
-/* line 289, sass/_common.scss */
+/* line 300, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox div a p {
   margin-top: 5px;
 }
-/* line 291, sass/_common.scss */
+/* line 302, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox div a p:first-child {
   margin-top: 0;
 }
-/* line 296, sass/_common.scss */
+/* line 307, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox.study div img {
   width: 60px;
   height: auto;
 }
-/* line 300, sass/_common.scss */
+/* line 311, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox.study div p {
   display: inline-block;
   margin: 0;
 }
-/* line 307, sass/_common.scss */
+/* line 318, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .more a {
   display: block;
   padding: 4px 10px;
@@ -588,20 +585,20 @@ img {
   color: #3569c9;
   font-size: 80%;
 }
-/* line 314, sass/_common.scss */
+/* line 325, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .more a:hover {
   background-color: #efefef;
 }
 
-/* line 324, sass/_common.scss */
+/* line 335, sass/_common.scss */
 .social--holder {
   text-align: right;
 }
-/* line 326, sass/_common.scss */
+/* line 337, sass/_common.scss */
 .social--holder .social--list {
   margin: 0 0 20px;
 }
-/* line 328, sass/_common.scss */
+/* line 339, sass/_common.scss */
 .social--holder .social--list li {
   display: inline-block;
   margin-bottom: 0;
@@ -609,32 +606,32 @@ img {
   vertical-align: top;
 }
 @media only screen and (max-width: 767px) {
-  /* line 333, sass/_common.scss */
+  /* line 344, sass/_common.scss */
   .social--holder .social--list li .lineButtonPc {
     display: none;
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 324, sass/_common.scss */
+  /* line 335, sass/_common.scss */
   .social--holder {
     text-align: left;
   }
 }
 
-/* line 342, sass/_common.scss */
+/* line 353, sass/_common.scss */
 .fb-comments, .fb-comments span, .fb-comments iframe {
   width: 600px !important;
 }
 
-/* line 348, sass/_common.scss */
+/* line 359, sass/_common.scss */
 .content .contact_form label {
   margin-right: 10px;
 }
-/* line 351, sass/_common.scss */
+/* line 362, sass/_common.scss */
 .content .contact_form .btn_wrap {
   text-align: center;
 }
-/* line 353, sass/_common.scss */
+/* line 364, sass/_common.scss */
 .content .contact_form .btn_wrap input[type="submit"] {
   width: 120px;
   margin: 0 20px 0 0;
@@ -645,32 +642,28 @@ img {
   font-size: 1.5rem;
   line-height: 20px;
   line-height: 2rem;
-  -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 
 /* 検索ボックス ▼
 -------------------------------------------- */
-/* line 369, sass/_common.scss */
+/* line 380, sass/_common.scss */
 .areaSearch, .searchArea {
   /* selectboxカスタム */
   /* inputカスタム */
 }
-/* line 370, sass/_common.scss */
+/* line 381, sass/_common.scss */
 .areaSearch select, .areaSearch input, .searchArea select, .searchArea input {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
-/* line 377, sass/_common.scss */
+/* line 388, sass/_common.scss */
 .areaSearch .select-box select, .searchArea .select-box select {
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   border: 0;
   margin: 0;
@@ -684,32 +677,28 @@ img {
   font-size: 11px;
   font-size: 1.1rem;
 }
-/* line 394, sass/_common.scss */
+/* line 405, sass/_common.scss */
 .areaSearch .topSearch, .searchArea .topSearch {
   background: #eeeeee;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 5px;
   border: none;
   color: #333;
   width: 60%;
 }
-/* line 402, sass/_common.scss */
+/* line 413, sass/_common.scss */
 .areaSearch input[type="submit"], .searchArea input[type="submit"] {
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 3px 20px;
   border: none;
   color: #fff;
   background: #44b700;
 }
-/* line 408, sass/_common.scss */
+/* line 419, sass/_common.scss */
 .areaSearch input[type="submit"]:hover, .searchArea input[type="submit"]:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
@@ -814,7 +803,7 @@ img {
 /* line 93, sass/_top.scss */
 .frontpage .areaSearch .searchInner {
   padding: 20px;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   border-top: none;
 }
 /* line 97, sass/_top.scss */
@@ -853,7 +842,7 @@ img {
 /* line 116, sass/_top.scss */
 .frontpage .areaSearch .searchInner .listP .listC li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 8px;
   margin-bottom: 2px;
 }
 /* line 120, sass/_top.scss */
@@ -1010,9 +999,9 @@ img {
 /* line 233, sass/_top.scss */
 .frontpage .postInFrontPage .inner {
   padding: 20px;
-  border-left: 1px solid #999999;
-  border-right: 1px solid #999999;
-  border-bottom: 1px solid #999999;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
 }
 /* line 239, sass/_top.scss */
 .frontpage .postInFrontPage ul {
@@ -1126,7 +1115,7 @@ img {
 /* line 4, sass/_article_list.scss */
 .content .article {
   margin-bottom: 15px;
-  border: 1px solid #666666;
+  border: 1px solid #666;
 }
 /* line 7, sass/_article_list.scss */
 .content .article p {
@@ -1281,7 +1270,7 @@ img {
 /* line 26, sass/_search.scss */
 .searchArea .searchBox .inner {
   padding: 30px;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   border-top: none;
   overflow: hidden;
   *zoom: 1;
@@ -1427,7 +1416,7 @@ img {
   width: 330px;
   height: 286px;
   padding: 15px;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   float: right;
   text-align: center;
 }
@@ -1571,6 +1560,7 @@ form#searchform {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
+  text-transform: capitalize;
   margin-top: -12px;
   width: 21px;
   height: 24px;
@@ -1903,7 +1893,7 @@ form#searchform {
 .content.indivlawyer .entry-content section.indivStaff ul li div .role {
   font-size: 13px;
   font-size: 1.3rem;
-  color: #666666;
+  color: #666;
 }
 @media only screen and (max-width: 767px) {
   /* line 326, sass/_single.scss */
@@ -1988,7 +1978,7 @@ form#searchform {
 /* line 15, sass/_single-info.scss */
 .info .entry-content {
   padding: 25px;
-  border: 1px solid #999999;
+  border: 1px solid #999;
 }
 /* line 18, sass/_single-info.scss */
 .info .entry-content h2.title {

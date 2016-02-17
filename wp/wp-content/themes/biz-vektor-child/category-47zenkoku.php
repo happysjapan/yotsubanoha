@@ -1,7 +1,7 @@
 <?php get_header();
 
   global $query_string;
-  
+
   $cat_list = get_the_category();
   $current_cat = null;
 
@@ -19,10 +19,10 @@
 ?>
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
+  <h2 class="business-page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
 
   <!-- [ #content ] -->
   <section id="content" class="content wide">
-    <h2 id="business-page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
     <!-- [ #search ] -->
     <section class="searchArea">
       <?php get_template_part( 'includes/category', 'lawyer-search' ); ?>
