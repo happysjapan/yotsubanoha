@@ -33,7 +33,10 @@ if (is_page() || is_attachment()){
 	// 標準の投稿タイプでない場合は、カスタム投稿タイプ名を取得
 	} else {
 		// 普通のポストタイプが取得出来る場合
-		if ($postType) {
+		if ($postType == 'info') {
+
+		}
+		else if ($postType) {
 			$pageTitle = get_post_type_object($postType)->labels->name;
 		// 該当記事が0件の場合に投稿タイプ名が取得出来ないので$wp_query経由で取得する
 		} elseif (is_category() || is_tag()){
@@ -44,10 +47,6 @@ if (is_page() || is_attachment()){
 			global $wp_query;
 			$pageTitle = $wp_query->queried_object->label;
 		}
-	}
-} else if (is_search() ) {
-	if ($postType == 'info') {
-		$pageTitle = esc_html($biz_vektor_options['postLabelName']);
 	}
 } else if (is_404()){
 	$pageTitle = __('Not found', 'biz-vektor');

@@ -1,6 +1,27 @@
-<?php get_header(); ?>
+<?php get_header();
+
+if ( is_tax() ) {
+  $taxonomy   = $wp_query->query_vars['taxonomy'];
+  $term_slug  = $wp_query->query_vars['term'];
+  $taxonomies = get_the_taxonomies();
+
+  if ( isset( $taxonomy ) && isset( $term_slug ) ):
+    $term = get_term_by( 'slug', $term_slug, $taxonomy );
+  endif;
+}
+
+echo "<pre>";
+var_dump($term);
+echo "</pre>";
+?>
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
+  <?php if(isset($term)){ ?>
+    <h2 class="category--title"><?php echo $term->name; ?>の就労移行支援に関する説明会・セミナー</h2>
+    <div class="category-description">
+      <?php echo $term->description; ?>
+    </div>
+  <?php } ?>
 
   <!-- [ #content ] -->
   <section id="content" class="content wide">

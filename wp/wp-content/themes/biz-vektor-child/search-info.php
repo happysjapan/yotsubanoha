@@ -45,6 +45,9 @@ $the_query = new WP_Query( $custom_args );
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
 
+  <?php if(isset($post_slug) && $post_slug !=''){ ?>
+    <h2 class="page--title">検索結果：<?php echo $post_term[0]->name; ?></h2>
+  <?php } ?>
   <!-- [ #content ] -->
   <section id="content" class="content wide">
 

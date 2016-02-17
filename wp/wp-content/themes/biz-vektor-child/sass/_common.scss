@@ -22,7 +22,7 @@
 body > #wrap {
 	padding-top: 50px;
 }
-.business-page--title {
+.page--title {
 	font-size: 22px;
 	display: inline;
 	float: left;
@@ -272,7 +272,7 @@ body > #wrap {
 				}
 			}
 			> div {clear: both;}
-			.menu {	
+			.menu {
 				background-color: #fff;
 				border: 1px solid $color-green;
 				@include box-shadow(0 3px 3px 0 rgba(0,0,0,.4));

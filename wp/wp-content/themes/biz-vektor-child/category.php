@@ -26,7 +26,7 @@
         echo $cat_description;
       }
       else { ?>
-        <div id="pageTit">就労移行支援事業所を検索</div>
+        <h2 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
       <?php } ?>
     <!-- [ #search ] -->
     <section class="searchArea">

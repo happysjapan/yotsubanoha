@@ -32,8 +32,8 @@ $custom_query = new WP_Query( $merged_args );
 
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
-  <h2 class="business-page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
-  
+  <h2 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
+
   <!-- [ #content ] -->
   <section id="content" class="content wide">
     <!-- [ #search ] -->

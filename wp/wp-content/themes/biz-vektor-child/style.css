@@ -193,7 +193,7 @@ body > #wrap {
 }
 
 /* line 25, sass/_common.scss */
-.business-page--title {
+.page--title {
   font-size: 22px;
   display: inline;
   float: left;
