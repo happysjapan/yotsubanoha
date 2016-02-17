@@ -125,7 +125,13 @@ $lawyer_by_category = get_posts( $args );
 						</tbody>
 					</table>
 				</div>
-				<div class="rightBox">
+				<div class="rightBox">				
+		            <div class="termsWrap">
+		              <p class="categoryName">category</p>
+		              <p class="categoryName">category</p>
+		              <p class="tagName">tag</p>
+		              <p class="tagName">tag</p>
+		            </div>
 					<div class="rewardWrap">
 						<p><strong>お祝い金</strong>  <?php echo get_field('reward'); ?>円支給</p>
 						<a href="/celebration/" title="お祝い金とは？" class="btn">お祝い金とは？</a>

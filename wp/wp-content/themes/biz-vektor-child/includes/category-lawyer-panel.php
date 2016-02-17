@@ -4,7 +4,15 @@
       <div class="inner">
         <h3 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
         <div class="profileWrap">
-          <div class="imageWrap"><img src="<?php echo get_field('office_image'); ?>" alt="<?php the_title(); ?>" /></div>
+          <div class="leftWrap">
+            <img src="<?php echo get_field('office_image'); ?>" alt="<?php the_title(); ?>" />
+            <div class="termsWrap">
+              <p class="categoryName">category</p>
+              <p class="categoryName">category</p>
+              <p class="tagName">tag</p>
+              <p class="tagName">tag</p>
+            </div>
+          </div>
           <div class="detailWrap">
             <div class="textWrap">
               <p class="text"><?php echo get_field('office_introduction'); ?></p>

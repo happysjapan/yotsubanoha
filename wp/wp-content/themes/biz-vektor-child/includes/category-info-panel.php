@@ -4,6 +4,18 @@
       <div class="inner">
         <h3 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
         <div class="profileWrap">
+        
+          <div class="leftWrap">
+            <div class="termsWrap">
+              <p class="categoryName">category</p>
+              <p class="categoryName">category</p>
+              <p class="categoryName">category</p>
+              <p class="categoryName">category</p>
+              <p class="categoryName">category</p>
+              <p class="categoryName">category</p>
+            </div>
+          </div>
+
           <div class="detailWrap">
 
             <?php while(have_rows('seminar_table')): the_row();
