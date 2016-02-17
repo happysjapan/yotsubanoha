@@ -167,3 +167,37 @@ function custom_pagination($max_num_pages = '', $range = 1) {
                 echo "</div>\n";
              }
         }
+
+
+
+
+
+/*
+ * Get Japanese days
+ */
+function yotsubanoha_get_ja_day($arg) {
+	switch ($arg) {
+    case 'Mon':
+        $arg_ja = '月';
+        break;
+    case 'Tue':
+        $arg_ja = '火';
+        break;
+    case 'Wed':
+        $arg_ja = '水';
+        break;
+		case 'Thu':
+        $arg_ja = '木';
+        break;
+    case 'Fri':
+        $arg_ja = '金';
+        break;
+    case 'Sat':
+        $arg_ja = '土';
+        break;
+		case 'Sun':
+        $arg_ja = '日';
+        break;
+	}
+	return $arg_ja;
+}

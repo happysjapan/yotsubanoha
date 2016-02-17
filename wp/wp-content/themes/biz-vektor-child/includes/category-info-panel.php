@@ -6,13 +6,15 @@
         <div class="profileWrap">
           <div class="detailWrap">
 
-            <?php while(have_rows('seminar_table')): the_row(); ?>
+            <?php while(have_rows('seminar_table')): the_row();
+            $date = strtotime(get_sub_field('seminar_opening_date'));
+            ?>
             <table>
               <tbody>
                 <tr>
                   <th>日時</th>
                   <td>
-                    <?php echo date('Y').'年'.date('n').'月'.date('d').'日'; ?>
+                    <?php echo date('Y', $date).'年'.date('n', $date).'月'.date('d', $date).'日'; ?>
                   </td>
                 </tr>
                 <tr>

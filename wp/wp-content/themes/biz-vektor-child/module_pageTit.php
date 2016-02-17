@@ -2,22 +2,19 @@
 
 $current_type = get_post_type();
 
-if ( is_home() || is_page() || is_attachment() || is_404() || ( $current_type == 'info' && is_archive() ) ) {
+if ( is_home() || is_page() || is_attachment() || is_search() || is_404() || ( $current_type == 'info' && is_archive() ) ) {
 	$pageTitTag = 'h1';
 } else if ( is_category() || is_tag() || is_author() || is_tax() || is_archive() || is_single() ) {
 	$pageTitTag = 'div';
 }
-if( !is_search() ){
-	$pageTitHtml_before = '<div id="pageTitBnr">'."\n";
-	$pageTitHtml_before .= '<div class="innerBox">'."\n";
-	$pageTitHtml_before .= '<div id="pageTitInner">'."\n";
-	$pageTitHtml_before .= '<'.$pageTitTag.' id="pageTit">'."\n";
-	$pageTitHtml_after = '</'.$pageTitTag.'>'."\n";
-	$pageTitHtml_after .= '</div><!-- [ /#pageTitInner ] -->'."\n";
-	$pageTitHtml_after .= '</div>'."\n";
-	$pageTitHtml_after .= '</div><!-- [ /#pageTitBnr ] -->'."\n";
-}
-
+$pageTitHtml_before = '<div id="pageTitBnr">'."\n";
+$pageTitHtml_before .= '<div class="innerBox">'."\n";
+$pageTitHtml_before .= '<div id="pageTitInner">'."\n";
+$pageTitHtml_before .= '<'.$pageTitTag.' id="pageTit">'."\n";
+$pageTitHtml_after = '</'.$pageTitTag.'>'."\n";
+$pageTitHtml_after .= '</div><!-- [ /#pageTitInner ] -->'."\n";
+$pageTitHtml_after .= '</div>'."\n";
+$pageTitHtml_after .= '</div><!-- [ /#pageTitBnr ] -->'."\n";
 
 /*-------------------------------------------*/
 /*	title
@@ -49,6 +46,8 @@ if (is_page() || is_attachment()){
 			$pageTitle = $wp_query->queried_object->label;
 		}
 	}
+} else if (is_search() ) {
+	$pageTitle = esc_html($biz_vektor_options['postLabelName']);
 } else if (is_404()){
 	$pageTitle = __('Not found', 'biz-vektor');
 }
