@@ -21,7 +21,7 @@
         'post_type' => 'post',
         'post_status' => 'publish',
         'orderby' => 'date',
-        'posts_per_page' => 3,
+        'posts_per_page' => 5,
         'paged' => $paged
       );
       $custom_args = array_merge($query_array, $custom_args);
