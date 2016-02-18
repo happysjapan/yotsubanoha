@@ -17,12 +17,15 @@
 
 		<h2 class="title">■&nbsp;開催情報</h2>
 
-		<?php while(have_rows('seminar_table')): the_row(); ?>
+        <?php while(have_rows('seminar_table')): the_row();
+        $date = strtotime(get_sub_field('seminar_opening_date'));
+        ?>
 		<table>
 			<tbody>
 				<tr>
 				  <th>日時</th>
-				  <td><?php echo the_sub_field('seminar_opening_date'); ?></td>
+				  <td>
+                    <?php echo date('Y', $date).'年'.date('n', $date).'月'.date('d', $date).'日'; ?>&nbsp;<?php echo the_sub_field('seminar_opening_time'); ?></td>
 				</tr>
 				<tr>
 				  <th>会場</th>

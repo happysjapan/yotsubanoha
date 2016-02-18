@@ -110,6 +110,7 @@
 				}
 				.rightBox {
 					@include calc(width,'100% - 255px');
+					
 					.schedule {
 						table {
 							margin: 0;
@@ -169,6 +170,7 @@
 				}
 				.rightBox {
 					padding-left: 30px;
+					@extend %termsWrap;
 					.rewardWrap {
 						@extend %reward;
 						@include clearfix;
