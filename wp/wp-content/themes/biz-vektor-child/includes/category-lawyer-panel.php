@@ -13,7 +13,11 @@
               <?php
               $tags = wp_get_post_tags( get_the_id() );
               foreach ($tags as $tag) { ?>
-                <li class="tagName"><?php echo $tag->name; ?></li>
+                <li class="tagName">
+                  <a class="card--tag-link" href="<?php echo get_term_link( $tag->term_id ); ?> ">
+                    <?php echo $tag->name; ?>
+                  </a>
+                </li>
               <?php } ?>
             </ul>
           </div>
