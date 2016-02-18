@@ -218,14 +218,17 @@ class yotsubanoha_pr_widget extends WP_Widget {
     );
     $the_query = new WP_Query( $post_args ); ?>
 
-  <div class="sideWidget postInFrontPage">
+  <div class="sideWidget pr_wrapper">
       <div class="inner">
         <ul>
           <?php if ( $the_query->have_posts() ) { while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
               <li class="ttBox" id="post-<?php echo get_the_id(); ?>">
                 <div>
-                    <p class="ttl"><?php echo the_title(); ?></p>
+                    <h3 class="ptTitle"><?php echo the_title(); ?></h3>
+                    <div class="prImage"><img src="<?php echo get_field('pr_image'); ?>" alt="<?php echo the_title(); ?>" /></div>
+                    <div class="prDescription"><?php echo the_content(); ?></div>
+                   <div class="moreLink"><a href="<?php echo get_field('pr_link'); ?>">詳しくはこちら</a></div>
                 </div>
               </li>
 

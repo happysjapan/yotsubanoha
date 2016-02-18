@@ -311,4 +311,65 @@
 			}
 		}
 	}
+
+	/* Public Relations ▼
+	-------------------------------------------- */
+	.pr_wrapper {
+		.inner {
+			padding: 0;
+			border: none;
+			div {text-align: left;}
+			ul {
+				margin: 0;
+				@include clearfix;
+				li {
+					@include calc(width,'100%/3 - 17px');
+					margin-right: 25px;
+					margin-bottom: 30px;
+					float: left;
+					list-style: none;
+					&:nth-child(3n)  {
+						margin-right: 0;
+					}
+					h3 {
+						margin: 0 0 10px;
+						padding-left: 10px;
+						@include font-size(1.6);
+					}
+					.prDescription {
+						margin-top: 10px;
+						p {
+							padding: 0;
+							color: #666;
+							@include font-size(1.2);
+							@include line-height(1.6);
+						}
+					}
+				}
+			}
+			@include SP {
+				ul li {
+					width: 100%;
+					margin-right: 0;
+					float: none;
+					&:nth-child(3n)  {margin-right: 0;}
+					.prImage {
+						vertical-align: top;
+						img {
+							display: block;
+							width: 150px;
+							height: auto;
+						}
+					}
+					.prDescription {
+					}
+					.moreLink {
+						text-align: right;
+						a {margin-top: 0;}
+					}
+				}
+			}
+			
+		}
+	}
 }
