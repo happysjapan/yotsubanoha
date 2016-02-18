@@ -27,6 +27,7 @@
                   <th>日時</th>
                   <td>
                     <?php echo date('Y', $date).'年'.date('n', $date).'月'.date('d', $date).'日'; ?>
+                    <?php echo the_sub_field('seminar_opening_time'); ?>
                   </td>
                 </tr>
                 <tr>
