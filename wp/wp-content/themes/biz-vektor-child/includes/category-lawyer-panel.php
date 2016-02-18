@@ -6,12 +6,16 @@
         <div class="profileWrap">
           <div class="leftWrap">
             <img src="<?php echo get_field('office_image'); ?>" alt="<?php the_title(); ?>" />
-            <div class="termsWrap">
-              <p class="categoryName">category</p>
-              <p class="categoryName">category</p>
-              <p class="tagName">tag</p>
-              <p class="tagName">tag</p>
-            </div>
+
+            <?php the_category(); ?>
+
+            <ul class="termsWrap">
+              <?php
+              $tags = wp_get_post_tags( get_the_id() );
+              foreach ($tags as $tag) { ?>
+                <li class="tagName"><?php echo $tag->name; ?></li>
+              <?php } ?>
+            </ul>
           </div>
           <div class="detailWrap">
             <div class="textWrap">

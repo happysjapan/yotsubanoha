@@ -45,7 +45,7 @@ $custom_query = new WP_Query( $merged_args );
       $post_term_name = $post_term[0]->name;
 
       if( isset($post_category_slug) && $post_category_slug != '') {
-        $page_title .= ' - '. $post_term_name;
+        $page_title .= ' × '. $post_term_name;
       }
       else {
         $page_title .= $post_term_name;
@@ -53,7 +53,7 @@ $custom_query = new WP_Query( $merged_args );
     }
     if( isset($post_search) && $post_search != '') {
       if( (isset($post_category_slug) && $post_category_slug != '') || (isset($post_tag_slug) && $post_tag_slug != '')) {
-        $page_title .= ' - '. $post_search;
+        $page_title .= ' × '. $post_search;
       }
       else {
         $page_title .= $post_search;
