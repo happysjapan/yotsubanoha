@@ -17,17 +17,16 @@
 ?>
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
+  <?php
+    if(isset($cat_description)) {
+      echo $cat_description;
+    }
+    else { ?>
+      <h2 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
+    <?php } ?>
 
   <!-- [ #content ] -->
   <section id="content" class="content wide">
-
-    <?php
-      if(isset($cat_description)) {
-        echo $cat_description;
-      }
-      else { ?>
-        <h2 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
-      <?php } ?>
     <!-- [ #search ] -->
     <section class="searchArea">
       <?php get_template_part( 'includes/category', 'lawyer-search' ); ?>
@@ -50,22 +49,27 @@
       $custom_args = array_merge($query_array, $custom_args);
       $myposts = get_posts( $custom_args );
       ?>
+      <?php if ( $myposts ) { ?>
+        <!-- the loop -->
+        <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+        	<?php get_template_part( 'includes/category', 'lawyer-panel' ); ?>
+        <?php endforeach;
+        wp_reset_postdata();?>
+        <!-- end of the loop -->
 
-      <!-- the loop -->
-      <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-      	<?php get_template_part( 'includes/category', 'lawyer-panel' ); ?>
-      <?php endforeach;
-      wp_reset_postdata();?>
-      <!-- end of the loop -->
-
-      <!-- pagination -->
+        <!-- pagination -->
+        <?php
+          if (function_exists(custom_pagination)) {
+            custom_pagination($custom_query->max_num_pages,"",$paged);
+          }
+        ?>
+        <!-- end of pagination -->
       <?php
-        if (function_exists(custom_pagination)) {
-          custom_pagination($custom_query->max_num_pages,"",$paged);
-        }
+      }
+      else {
+        echo 'お探しの検索は該当がありません。';
+      }
       ?>
-      <!-- end of pagination -->
-
 
   </section>
   <!-- [ /#content ] -->
