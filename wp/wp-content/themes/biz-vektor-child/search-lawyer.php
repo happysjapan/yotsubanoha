@@ -32,7 +32,35 @@ $custom_query = new WP_Query( $merged_args );
 
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
-  <h2 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
+  <?php
+  $page_title = esc_html($biz_vektor_options['postLabelName']);
+  if( (isset($post_search) && $post_search != '') || (isset($post_category_slug) && $post_category_slug != '') || (isset($post_tag_slug) && $post_tag_slug != '') ){
+    $page_title = '検索結果：';
+    if( isset($post_category_slug) && $post_category_slug != '') {
+      $post_category = get_category_by_slug( $post_category_slug );
+      $page_title .= $post_category->cat_name;
+    }
+    if( isset($post_tag_slug) && $post_tag_slug != '') {
+      $post_term = get_terms( 'post_tag', 'slug='.$post_tag_slug);
+      $post_term_name = $post_term[0]->name;
+
+      if( isset($post_category_slug) && $post_category_slug != '') {
+        $page_title .= ' - '. $post_term_name;
+      }
+      else {
+        $page_title .= $post_term_name;
+      }
+    }
+    if( isset($post_search) && $post_search != '') {
+      if( (isset($post_category_slug) && $post_category_slug != '') || (isset($post_tag_slug) && $post_tag_slug != '')) {
+        $page_title .= ' - '. $post_search;
+      }
+      else {
+        $page_title .= $post_search;
+      }
+    }
+  } ?>
+  <h2 class="page--title"><?php echo $page_title; ?></h2>
 
   <!-- [ #content ] -->
   <section id="content" class="content wide">
