@@ -10,6 +10,7 @@ if ( is_tax() ) {
   endif;
 }
 ?>
+
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
   <?php if(isset($term)){ ?>
