@@ -4,16 +4,14 @@
       <div class="inner">
         <h3 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
         <div class="profileWrap">
-        
+
           <div class="leftWrap">
-            <div class="termsWrap">
-              <p class="categoryName">category</p>
-              <p class="categoryName">category</p>
-              <p class="categoryName">category</p>
-              <p class="categoryName">category</p>
-              <p class="categoryName">category</p>
-              <p class="categoryName">category</p>
-            </div>
+            <ul class="termsWrap">
+              <?php $tax_terms = wp_get_post_terms( get_the_id(), 'info-cat' );
+              foreach ($tax_terms as $tax_term) {
+                echo '<li class="categoryName">'.$tax_term->name.'</li>';
+              } ?>
+            </ul>
           </div>
 
           <div class="detailWrap">

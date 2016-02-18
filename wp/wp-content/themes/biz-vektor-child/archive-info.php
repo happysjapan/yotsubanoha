@@ -13,11 +13,9 @@
     <!-- [ /#search ] -->
 
     <?php
-
       $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
       global $query_string;
       parse_str($query_string, $query_array);
-
 
       $custom_args = array(
         'post_type' => 'info',
