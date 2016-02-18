@@ -14,7 +14,6 @@ $args = array(
 	'post_type'        => 'post',
 );
 $lawyer_by_category = get_posts( $args );
-
 ?>
 
 
@@ -125,13 +124,17 @@ $lawyer_by_category = get_posts( $args );
 						</tbody>
 					</table>
 				</div>
-				<div class="rightBox">				
-		            <div class="termsWrap">
-		              <p class="categoryName">category</p>
-		              <p class="categoryName">category</p>
-		              <p class="tagName">tag</p>
-		              <p class="tagName">tag</p>
-		            </div>
+				<div class="rightBox">
+					<?php the_category(); ?>
+
+					<ul class="termsWrap">
+						<?php
+						$tags = wp_get_post_tags( get_the_id() );
+						foreach ($tags as $tag) { ?>
+							<li class="tagName"><?php echo $tag->name; ?></li>
+						<?php } ?>
+					</ul>
+					
 					<div class="rewardWrap">
 						<p><strong>お祝い金</strong>  <?php echo get_field('reward'); ?>円支給</p>
 						<a href="/celebration/" title="お祝い金とは？" class="btn">お祝い金とは？</a>
