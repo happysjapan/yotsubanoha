@@ -35,7 +35,7 @@ if ( is_404() ){
 	$panListHtml .= '<li><span>' . __( 'Not found', 'biz-vektor' ) . '</span></li>';
 } else if ( is_search() ) {
 
-	if ( $postType == 'post' ){
+	if ( isset($_GET['post_type']) && $_GET['post_type'] == 'lawyer' ){
 		$post_category_slug = $_GET['category_name'];
 		$post_tag_slug = $_GET['tag'];
 	  $page_title = esc_html($biz_vektor_options['postLabelName']);
