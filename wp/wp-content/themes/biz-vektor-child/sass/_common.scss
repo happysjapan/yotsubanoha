@@ -22,15 +22,21 @@
 body > #wrap {
 	padding-top: 50px;
 }
-.page--title {
-	font-size: 22px;
-	display: inline;
-	float: left;
-	width: 100%;
-	line-height: 115%;
-	margin: 0;
+.page--title,.category--title {
+	display: inline-block;
+	margin: 0 .5% 10px;
+	@include font-size(2.2);
+	@include line-height(3);
 	font-weight: bold;
 	border: none;
+}
+.category-description {
+	margin: 0 .5% 10px;
+	@include font-size(1.4);
+	@include SP {
+		@include font-size(1.2);
+	}
+
 }
 // header
 #header {
