@@ -125,15 +125,22 @@ $lawyer_by_category = get_posts( $args );
 					</table>
 				</div>
 				<div class="rightBox">
-					<?php the_category(); ?>
 
-					<ul class="termsWrap">
-						<?php
-						$tags = wp_get_post_tags( get_the_id() );
-						foreach ($tags as $tag) { ?>
-							<li class="tagName"><?php echo $tag->name; ?></li>
-						<?php } ?>
-					</ul>
+		            <div class="categoryTermsWrap"><?php the_category(); ?></div>
+		            <div class="tagTermsWrap">
+		              <ul>
+		                <?php
+		                $tags = wp_get_post_tags( get_the_id() );
+		                foreach ($tags as $tag) { ?>
+		                  <li>
+		                    <a class="card--tag-link" href="<?php echo get_term_link( $tag->term_id ); ?> ">
+		                      <?php echo $tag->name; ?>
+		                    </a>
+		                  </li>
+		                <?php } ?>
+		              </ul>
+		            </div>
+            
 					
 					<div class="rewardWrap">
 						<p><strong>お祝い金</strong>  <?php echo get_field('reward'); ?>円支給</p>

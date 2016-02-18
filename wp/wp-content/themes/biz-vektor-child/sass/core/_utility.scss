@@ -162,16 +162,28 @@ $SPPoint:    768px;
     border: 1px solid #006600;
 }
 %termsWrap {
-  .termsWrap {
-    p {
-      display: inline-block;
-      margin-bottom: 10px;
+  .categoryTermsWrap,.tagTermsWrap {
+    display: inline-block;
+    ul {
+      margin: 0;
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-bottom: 6px;
+      }
+    }
+    a {
+      display: block;
       padding: 2px 8px;
       color: #fff;
       @include border-radius(4px);
       @include font-size(1.2);
+      text-decoration: none;
     }
-    .categoryName {background-color: #418bca;}
-    .tagName {background-color: #d9544f;}
+  }
+
+  .categoryTermsWrap li a {background-color: #418bca;}
+  .tagTermsWrap li a {
+    background-color: #d9544f;
   }
 }

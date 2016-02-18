@@ -6,12 +6,15 @@
         <div class="profileWrap">
 
           <div class="leftWrap">
-            <ul class="termsWrap">
-              <?php $tax_terms = wp_get_post_terms( get_the_id(), 'info-cat' );
-              foreach ($tax_terms as $tax_term) {
-                echo '<li class="categoryName">'.$tax_term->name.'</li>';
-              } ?>
-            </ul>
+            <div class="categoryTermsWrap">
+              <ul>
+                <?php $tax_terms = wp_get_post_terms( get_the_id(), 'info-cat' );
+                foreach ($tax_terms as $tax_term) {
+                  echo '<li><a href="">'.$tax_term->name.'</a></li>';
+                } ?>
+
+              </ul>
+            </div>
           </div>
 
           <div class="detailWrap">
