@@ -72,7 +72,7 @@ $lawyer_by_category = get_posts( $args );
 						</table>
 					</div>
 					<div class="contactWrap rightBox">
-						<p class="telNumber">0120-905-812</p>
+						<p class="telNumber">0120-697-182</p>
 						<a href="/officetour-form/?office=<?php the_title(); ?>" title="まずはフォームで無料相談" class="btn">まずはフォームで無料相談</a>
 					</div>
 				</div>
@@ -159,7 +159,7 @@ $lawyer_by_category = get_posts( $args );
 
 		<section class="indivContact">
 			<a href="/officetour-form/" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
-			<p class="telNumber">0120-905-812</p>
+			<p class="telNumber">0120-697-182</p>
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 <?php echo get_field('reward'); ?>円</span>を支給致します。</p>
 		</section>
 
@@ -189,7 +189,7 @@ $lawyer_by_category = get_posts( $args );
 
 		<section class="indivContact">
 			<a href="/officetour-form/" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
-			<p class="telNumber">0120-905-812</p>
+			<p class="telNumber">0120-697-182</p>
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 <?php echo get_field('reward'); ?>円</span>を支給致します。</p>
 		</section>
 
@@ -211,7 +211,7 @@ $lawyer_by_category = get_posts( $args );
 
 		<section class="indivContact">
 			<a href="/officetour-form/" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
-			<p class="telNumber">0120-905-812</p>
+			<p class="telNumber">0120-697-182</p>
 			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 <?php echo get_field('reward'); ?>円</span>を支給致します。</p>
 		</section>
 
@@ -264,8 +264,8 @@ $lawyer_by_category = get_posts( $args );
 
 		<section class="indivContact">
 			<a href="/officetour-form/" class="btn" title="まずはフォームで無料相談">まずはフォームで無料相談</a>
-			<p class="telNumber">0120-905-812</p>
-			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 25,000円</span>を支給致します。</p>
+			<p class="telNumber">0120-697-182</p>
+			<p class="text">お電話でのご相談の際は<span>「ヨツバノハを見た」</span>と言って頂くと<br />正式に移行支援が決定しますと<span>お祝い金 <?php echo get_field('reward'); ?>円</span>を支給致します。</p>
 		</section>
 
 
