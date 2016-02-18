@@ -1,4 +1,3 @@
-<p class="searchDescription"><?php echo do_shortcode('[contentblock id=office_description]'); ?></p>
 <div class="searchBox for_lawyer">
   <h2>全国の就労移行支援事業所検索</h2>
   <div class="inner">
