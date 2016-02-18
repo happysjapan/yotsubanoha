@@ -91,10 +91,10 @@
 		</li>
 			<li><h3>東海エリア</h3>
 		     <ul class="listC">
-					<li><a href="<?php echo lawyerCategoryLink("aichi");?>">愛知</a></li>
-					<li><a href="<?php echo lawyerCategoryLink("gifu");?>">岐阜</a></li>
-					<li><a href="<?php echo lawyerCategoryLink("shizuoka");?>">静岡</a></li>
-					<li><a href="<?php echo lawyerCategoryLink("mie");?>">三重</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("aichi");?>">愛知県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("gifu");?>">岐阜県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("shizuoka");?>">静岡県</a></li>
+					<li><a href="<?php echo lawyerCategoryLink("mie");?>">三重県</a></li>
 			</ul>
 		</li>
 		<li class="cSelect">
