@@ -44,10 +44,26 @@ $the_query = new WP_Query( $custom_args );
 
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
+  <?php
+  $page_title = get_post_type_object('info')->labels->name;
 
-  <?php if(isset($post_slug) && $post_slug !=''){ ?>
-    <h2 class="page--title">検索結果：<?php echo $post_term[0]->name; ?></h2>
-  <?php } ?>
+  if( (isset($post_search) && $post_search != '') || (isset($post_slug) && $post_slug != '') ){
+    $page_title = '検索結果：';
+    if( isset($post_slug) && $post_slug != '') {
+      $post_category = get_category_by_slug( $post_slug );
+      $page_title .= $post_category->cat_name;
+    }
+    if( isset($post_search) && $post_search != '') {
+      if( (isset($post_slug) && $post_slug != '') ) {
+        $page_title .= ' × '. $post_search;
+      }
+      else {
+        $page_title .= $post_search;
+      }
+    }
+  } ?>
+  <h2 class="page--title"><?php echo $page_title; ?></h2>
+
   <!-- [ #content ] -->
   <section id="content" class="content wide">
 

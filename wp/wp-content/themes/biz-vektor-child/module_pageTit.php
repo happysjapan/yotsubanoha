@@ -31,7 +31,11 @@ if (is_page() || is_attachment()){
 	// 投稿が0件の場合はget_post_typeが効かないので is_category()とis_tag()も追加
 	if ( $postType == 'post' || is_category() || is_tag() ) {
 	// 標準の投稿タイプでない場合は、カスタム投稿タイプ名を取得
-	} else {
+	}
+	else if ( is_search() ){
+		
+	}
+	else {
 		// 普通のポストタイプが取得出来る場合
 		if ($postType == 'info') {
 

@@ -34,7 +34,61 @@ $infoTopUrl = (isset($biz_vektor_options['infoTopUrl']) && $biz_vektor_options['
 if ( is_404() ){
 	$panListHtml .= '<li><span>' . __( 'Not found', 'biz-vektor' ) . '</span></li>';
 } else if ( is_search() ) {
-	$panListHtml .= '<li><span>' . sprintf(__('検索結果: 「%s」', 'biz-vektor'), get_search_query() ) . '</span></li>';
+
+	if ( $postType == 'post' ){
+		$post_category_slug = $_GET['category_name'];
+		$post_tag_slug = $_GET['tag'];
+	  $page_title = esc_html($biz_vektor_options['postLabelName']);
+
+	  if( get_search_query() != '' || (isset($post_category_slug) && $post_category_slug != '') || (isset($post_tag_slug) && $post_tag_slug != '') ){
+	    $page_title = '検索結果：';
+	    if( isset($post_category_slug) && $post_category_slug != '') {
+	      $post_category = get_category_by_slug( $post_category_slug );
+	      $page_title .= $post_category->cat_name;
+	    }
+	    if( isset($post_tag_slug) && $post_tag_slug != '') {
+	      $post_term = get_terms( 'post_tag', 'slug='.$post_tag_slug);
+	      $post_term_name = $post_term[0]->name;
+
+	      if( isset($post_category_slug) && $post_category_slug != '') {
+	        $page_title .= ' × '. $post_term_name;
+	      }
+	      else {
+	        $page_title .= $post_term_name;
+	      }
+	    }
+	    if( get_search_query() != '') {
+	      if( (isset($post_category_slug) && $post_category_slug != '') || (isset($post_tag_slug) && $post_tag_slug != '')) {
+	        $page_title .= ' × '.'「'.get_search_query().'」';
+	      }
+	      else {
+	        $page_title .= '「'.get_search_query().'」';
+	      }
+	    }
+	  }
+	}
+	else if ( isset($_GET['post_type']) && $_GET['post_type'] == 'info' ){
+		$post_slug = $_GET['info_cat'];
+
+	  $page_title = $infoLabelName;
+	  if( get_search_query() != '' || (isset($post_slug) && $post_slug != '') ){
+	    $page_title = '検索結果：';
+	    if( isset($post_slug) && $post_slug != '') {
+	      $post_category = get_category_by_slug( $post_slug );
+	      $page_title .= $post_category->cat_name;
+	    }
+	    if( get_search_query() != '') {
+	      if( isset($post_slug) && $post_slug != '') {
+	        $page_title .= ' × '.'「'.get_search_query().'」';
+	      }
+	      else {
+	        $page_title .= '「'.get_search_query().'」';
+	      }
+	    }
+	  }
+	}
+
+	$panListHtml .= '<li><span>' . $page_title .'</span></li>';
 // ▼▼ 投稿ページをブログに指定された場合
 } else if ( is_home() ){
 	$panListHtml .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">' . $postLabelName . '</span></li>';
