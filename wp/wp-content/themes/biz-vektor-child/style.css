@@ -782,6 +782,8 @@ body > #wrap {
   -------------------------------------------- */
   /* 新着事業所一覧 ▼
   -------------------------------------------- */
+  /* Public Relations ▼
+  -------------------------------------------- */
 }
 /* line 7, sass/_top.scss */
 .frontpage .sideTower .sideWidget .textwidget {
@@ -1176,6 +1178,86 @@ body > #wrap {
   /* line 309, sass/_top.scss */
   .frontpage .postInFrontPage ul li:nth-child(2n) {
     margin-right: 0;
+  }
+}
+/* line 318, sass/_top.scss */
+.frontpage .pr_wrapper .inner {
+  padding: 0;
+  border: none;
+}
+/* line 321, sass/_top.scss */
+.frontpage .pr_wrapper .inner div {
+  text-align: left;
+}
+/* line 322, sass/_top.scss */
+.frontpage .pr_wrapper .inner ul {
+  margin: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 325, sass/_top.scss */
+.frontpage .pr_wrapper .inner ul li {
+  width: -moz-calc(100%/3 - 17px);
+  width: -o-calc(100%/3 - 17px);
+  width: -webkit-calc(100%/3 - 17px);
+  width: calc(100%/3 - 17px);
+  margin-right: 25px;
+  margin-bottom: 30px;
+  float: left;
+  list-style: none;
+}
+/* line 331, sass/_top.scss */
+.frontpage .pr_wrapper .inner ul li:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 334, sass/_top.scss */
+.frontpage .pr_wrapper .inner ul li h3 {
+  margin: 0 0 10px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+/* line 339, sass/_top.scss */
+.frontpage .pr_wrapper .inner ul li .prDescription {
+  margin-top: 10px;
+}
+/* line 341, sass/_top.scss */
+.frontpage .pr_wrapper .inner ul li .prDescription p {
+  padding: 0;
+  color: #666;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 16px;
+  line-height: 1.6rem;
+}
+@media only screen and (max-width: 767px) {
+  /* line 351, sass/_top.scss */
+  .frontpage .pr_wrapper .inner ul li {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+  /* line 355, sass/_top.scss */
+  .frontpage .pr_wrapper .inner ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 356, sass/_top.scss */
+  .frontpage .pr_wrapper .inner ul li .prImage {
+    vertical-align: top;
+  }
+  /* line 358, sass/_top.scss */
+  .frontpage .pr_wrapper .inner ul li .prImage img {
+    display: block;
+    width: 150px;
+    height: auto;
+  }
+  /* line 366, sass/_top.scss */
+  .frontpage .pr_wrapper .inner ul li .moreLink {
+    text-align: right;
+  }
+  /* line 368, sass/_top.scss */
+  .frontpage .pr_wrapper .inner ul li .moreLink a {
+    margin-top: 0;
   }
 }
 

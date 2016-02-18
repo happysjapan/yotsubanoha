@@ -8,6 +8,7 @@
 
     <!-- [ #search ] -->
     <section class="searchArea">
+      <p class="searchDescription"><?php echo do_shortcode('[contentblock id=seminar_description]'); ?></p>
       <?php get_template_part( 'includes/category', 'info-search' ); ?>
     </section>
     <!-- [ /#search ] -->
