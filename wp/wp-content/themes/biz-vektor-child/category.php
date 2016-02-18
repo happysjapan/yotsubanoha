@@ -7,6 +7,7 @@
   foreach ($cat_list as $cat) {
     if( $cat->slug != '47zenkoku') {
       $cat_description = $cat->category_description;
+      $cat_title = $cat->name.'の就労移行支援事業所「障害福祉サービス」検索';
       $i++;
     }
   }
@@ -18,12 +19,15 @@
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
   <?php
-    if(isset($cat_description)) {
-      echo $cat_description;
+    if(isset($cat_title)) {
+      echo '<h2 class="page--title">'.$cat_title.'</h2>';
     }
     else { ?>
       <h2 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
-    <?php } ?>
+  <?php }
+    if(isset($cat_description)) {
+      echo $cat_description;
+    } ?>
 
   <!-- [ #content ] -->
   <section id="content" class="content wide">
