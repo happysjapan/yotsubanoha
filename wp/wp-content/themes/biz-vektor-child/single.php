@@ -260,7 +260,7 @@ $lawyer_by_category = get_posts( $args );
 
 		<section class="indivSeminar">
 			<h2 class="title">説明会・セミナー一覧</h2>
-			<p>てきsつおおおお</p>
+			<p><?php echo get_field('office_seminar_ description'); ?></p>
 			<p class="note">まずは、働くことに関する不安などの就職相談等も承ります。お気軽にご連絡ください。</p>
 			<div class="btn_wrap"><a href="/info/" title="説明会・セミナー一覧" class="btn">説明会・セミナー一覧</a></div>
 		</section>
