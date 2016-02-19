@@ -256,29 +256,34 @@ body > #wrap {
 }
 
 /* line 33, sass/_common.scss */
+.pageDescription {
+  margin: 0 .5% 15px;
+}
+
+/* line 36, sass/_common.scss */
 .category-description {
-  margin: 0 .5% 10px;
+  margin: 0 .5% 15px;
   font-size: 14px;
   font-size: 1.4rem;
 }
 @media only screen and (max-width: 767px) {
-  /* line 33, sass/_common.scss */
+  /* line 36, sass/_common.scss */
   .category-description {
     font-size: 12px;
     font-size: 1.2rem;
   }
 }
 
-/* line 43, sass/_common.scss */
+/* line 46, sass/_common.scss */
 #header #site-title {
   margin-right: 38px;
 }
-/* line 45, sass/_common.scss */
+/* line 48, sass/_common.scss */
 #header #site-title a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
-/* line 49, sass/_common.scss */
+/* line 52, sass/_common.scss */
 #header #headContact {
   max-width: 700px;
   width: 100%;
@@ -286,21 +291,21 @@ body > #wrap {
   text-align: left;
   float: left;
 }
-/* line 55, sass/_common.scss */
+/* line 58, sass/_common.scss */
 #header #headContact #headContactInner {
   display: table;
 }
-/* line 57, sass/_common.scss */
+/* line 60, sass/_common.scss */
 #header #headContact #headContactInner > div {
   display: table-cell;
   padding-left: 15px;
   vertical-align: top;
 }
-/* line 61, sass/_common.scss */
+/* line 64, sass/_common.scss */
 #header #headContact #headContactInner > div:first-child {
   padding-left: 0;
 }
-/* line 62, sass/_common.scss */
+/* line 65, sass/_common.scss */
 #header #headContact #headContactInner > div#headContactTxt {
   font-weight: bold;
   font-size: 15px;
@@ -308,11 +313,11 @@ body > #wrap {
   line-height: 22px;
   line-height: 2.2rem;
 }
-/* line 66, sass/_common.scss */
+/* line 69, sass/_common.scss */
 #header #headContact #headContactInner > div#headContactTxt span {
   color: #016d3b;
 }
-/* line 71, sass/_common.scss */
+/* line 74, sass/_common.scss */
 #header #headContact #headContactInner > div.telNumTime #headContactTel {
   padding-left: 45px;
   color: #ce0004;
@@ -324,12 +329,12 @@ body > #wrap {
   background: url("images/icon_free_voice.gif") no-repeat scroll left center;
   background-size: 40px auto;
 }
-/* line 80, sass/_common.scss */
+/* line 83, sass/_common.scss */
 #header #headContact #headContactInner > div.telNumTime #headContactTime {
   font-size: 11px;
   font-size: 1.1rem;
 }
-/* line 85, sass/_common.scss */
+/* line 88, sass/_common.scss */
 #header #headContact #headContactInner > div.btnWrap a {
   display: inline-block;
   margin-right: 4px;
@@ -345,33 +350,33 @@ body > #wrap {
   border-radius: 6px;
   text-align: center;
 }
-/* line 95, sass/_common.scss */
+/* line 98, sass/_common.scss */
 #header #headContact #headContactInner > div.btnWrap a.contact {
   background-color: #44b700;
 }
-/* line 98, sass/_common.scss */
+/* line 101, sass/_common.scss */
 #header #headContact #headContactInner > div.btnWrap a.apply {
   background-color: #2180ac;
 }
-/* line 101, sass/_common.scss */
+/* line 104, sass/_common.scss */
 #header #headContact #headContactInner > div.btnWrap a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
-/* line 106, sass/_common.scss */
+/* line 109, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox {
   padding-left: 32px;
 }
-/* line 108, sass/_common.scss */
+/* line 111, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .snsBtn {
   margin-bottom: 6px;
 }
-/* line 110, sass/_common.scss */
+/* line 113, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .snsBtn li {
   display: inline-block;
   vertical-align: top;
 }
-/* line 115, sass/_common.scss */
+/* line 118, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .total {
   width: 190px;
   margin: 0 0 4px;
@@ -382,20 +387,20 @@ body > #wrap {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 121, sass/_common.scss */
+/* line 124, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .total:last-child {
   margin-bottom: 0;
 }
-/* line 122, sass/_common.scss */
+/* line 125, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .total dt {
   float: left;
 }
-/* line 125, sass/_common.scss */
+/* line 128, sass/_common.scss */
 #header #headContact #headContactInner > div.rightBox .total dd {
   float: right;
 }
 @media only screen and (max-width: 767px) {
-  /* line 42, sass/_common.scss */
+  /* line 45, sass/_common.scss */
   #header {
     width: 100%;
     padding: 5px;
@@ -405,11 +410,11 @@ body > #wrap {
     z-index: 1000;
     overflow: visible;
   }
-  /* line 141, sass/_common.scss */
+  /* line 144, sass/_common.scss */
   #header .innerBox {
     margin: 0;
   }
-  /* line 144, sass/_common.scss */
+  /* line 147, sass/_common.scss */
   #header #site-title {
     display: inline-block;
     width: 74px;
@@ -419,17 +424,17 @@ body > #wrap {
     line-height: 1rem;
     vertical-align: middle;
   }
-  /* line 151, sass/_common.scss */
+  /* line 154, sass/_common.scss */
   #header #site-title a {
     display: inline-block;
   }
-  /* line 152, sass/_common.scss */
+  /* line 155, sass/_common.scss */
   #header #site-title a img {
     width: 74px;
     margin-top: 0;
     height: auto;
   }
-  /* line 158, sass/_common.scss */
+  /* line 161, sass/_common.scss */
   #header #headContact {
     display: inline-block;
     width: auto;
@@ -438,28 +443,28 @@ body > #wrap {
     float: none;
     vertical-align: middle;
   }
-  /* line 165, sass/_common.scss */
+  /* line 168, sass/_common.scss */
   #header #headContact #headContactInner {
     width: 100%;
     margin: 0;
   }
-  /* line 168, sass/_common.scss */
+  /* line 171, sass/_common.scss */
   #header #headContact #headContactInner > div {
     display: block;
     padding: 0;
   }
-  /* line 171, sass/_common.scss */
+  /* line 174, sass/_common.scss */
   #header #headContact #headContactInner > div#headContactTxt {
     display: none;
   }
-  /* line 174, sass/_common.scss */
+  /* line 177, sass/_common.scss */
   #header #headContact #headContactInner > div.telNumTime {
     border: 2px solid #44b700;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
   }
-  /* line 177, sass/_common.scss */
+  /* line 180, sass/_common.scss */
   #header #headContact #headContactInner > div.telNumTime #headContactTel {
     margin: 2px 4px 0;
     padding-left: 34px;
@@ -468,12 +473,12 @@ body > #wrap {
     background-size: 30px auto;
     font-weight: bold;
   }
-  /* line 183, sass/_common.scss */
+  /* line 186, sass/_common.scss */
   #header #headContact #headContactInner > div.telNumTime #headContactTel a {
     color: #ce0004;
     text-decoration: none;
   }
-  /* line 188, sass/_common.scss */
+  /* line 191, sass/_common.scss */
   #header #headContact #headContactInner > div.telNumTime #headContactTime {
     padding: 2px 4px 0;
     font-size: 10px;
@@ -486,7 +491,7 @@ body > #wrap {
     background-color: #44b700;
     color: #fff;
   }
-  /* line 198, sass/_common.scss */
+  /* line 201, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap {
     display: table;
     width: 100%;
@@ -495,7 +500,7 @@ body > #wrap {
     bottom: 0;
     z-index: 102;
   }
-  /* line 205, sass/_common.scss */
+  /* line 208, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a {
     display: table-cell;
     margin-right: 0;
@@ -509,41 +514,41 @@ body > #wrap {
     border-radius: 0;
     text-align: center;
   }
-  /* line 213, sass/_common.scss */
+  /* line 216, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a br {
     display: none;
   }
-  /* line 214, sass/_common.scss */
+  /* line 217, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a.contact {
     background-color: #44b700;
   }
-  /* line 217, sass/_common.scss */
+  /* line 220, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a.apply {
     background-color: #2180ac;
   }
-  /* line 220, sass/_common.scss */
+  /* line 223, sass/_common.scss */
   #header #headContact #headContactInner > div.btnWrap a:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
     opacity: 0.9;
   }
-  /* line 225, sass/_common.scss */
+  /* line 228, sass/_common.scss */
   #header #headContact #headContactInner > div.rightBox {
     display: none;
     width: 100%;
     margin: 0 10px;
     padding-left: 0;
   }
-  /* line 230, sass/_common.scss */
+  /* line 233, sass/_common.scss */
   #header #headContact #headContactInner > div.rightBox .totalWrap {
     margin-top: 10px;
     padding: 8px;
     background-color: #f2f2f2;
   }
-  /* line 234, sass/_common.scss */
+  /* line 237, sass/_common.scss */
   #header #headContact #headContactInner > div.rightBox .totalWrap .total {
     width: auto;
   }
-  /* line 236, sass/_common.scss */
+  /* line 239, sass/_common.scss */
   #header #headContact #headContactInner > div.rightBox .totalWrap .total dd {
     float: left;
     margin-left: 20px;
@@ -551,7 +556,7 @@ body > #wrap {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 248, sass/_common.scss */
+  /* line 251, sass/_common.scss */
   #gMenu {
     border: none;
     width: auto;
@@ -560,7 +565,7 @@ body > #wrap {
     right: 5px;
     z-index: 1001;
   }
-  /* line 257, sass/_common.scss */
+  /* line 260, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .assistive-text {
     width: 40px;
     margin-bottom: 5px;
@@ -573,7 +578,7 @@ body > #wrap {
     text-align: center;
     float: right;
   }
-  /* line 266, sass/_common.scss */
+  /* line 269, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .assistive-text p {
     width: 24px;
     height: 3px;
@@ -584,7 +589,7 @@ body > #wrap {
     border-radius: 2px;
     background-color: #fff;
   }
-  /* line 274, sass/_common.scss */
+  /* line 277, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .assistive-text span.text {
     padding: 0;
     font-size: 10px;
@@ -592,11 +597,11 @@ body > #wrap {
     line-height: 10px;
     line-height: 1rem;
   }
-  /* line 280, sass/_common.scss */
+  /* line 283, sass/_common.scss */
   #gMenu #gMenuInner.innerBox > div {
     clear: both;
   }
-  /* line 281, sass/_common.scss */
+  /* line 284, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .menu {
     background-color: #fff;
     border: 1px solid #016d3b;
@@ -604,7 +609,7 @@ body > #wrap {
     -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.4);
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.4);
   }
-  /* line 286, sass/_common.scss */
+  /* line 289, sass/_common.scss */
   #gMenu #gMenuInner.innerBox .menu li .sub-menu li {
     background-color: #f2f2f2;
     font-size: 12px;
@@ -612,68 +617,68 @@ body > #wrap {
   }
 }
 
-/* line 298, sass/_common.scss */
+/* line 301, sass/_common.scss */
 #sideTower .sideWidget .textwidget {
   text-align: center;
   padding: 0;
 }
-/* line 301, sass/_common.scss */
+/* line 304, sass/_common.scss */
 #sideTower .sideWidget .textwidget a {
   display: inline-block;
   margin-bottom: 10px;
 }
-/* line 306, sass/_common.scss */
+/* line 309, sass/_common.scss */
 #sideTower .sideWidget h3 {
   padding: 6px 10px;
   font-size: 14px;
   font-size: 1.4rem;
 }
-/* line 311, sass/_common.scss */
+/* line 314, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection {
   padding-bottom: 0;
   border: 1px solid #666;
 }
-/* line 314, sass/_common.scss */
+/* line 317, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox {
   padding: 0;
   border: none;
   border-bottom: 1px dotted #666;
 }
-/* line 318, sass/_common.scss */
+/* line 321, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox:last-child {
   border-bottom: none;
 }
-/* line 320, sass/_common.scss */
+/* line 323, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox div a {
   display: block;
   padding: 6px 10px;
   color: #3569c9;
   background-image: none;
 }
-/* line 325, sass/_common.scss */
+/* line 328, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox div a:hover {
   background-color: #f2f2f2;
   text-decoration: none;
 }
-/* line 329, sass/_common.scss */
+/* line 332, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox div a p {
   margin-top: 5px;
 }
-/* line 331, sass/_common.scss */
+/* line 334, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox div a p:first-child {
   margin-top: 0;
 }
-/* line 336, sass/_common.scss */
+/* line 339, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox.study div img {
   width: 60px;
   height: auto;
 }
-/* line 340, sass/_common.scss */
+/* line 343, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .ttBox.study div p {
   display: inline-block;
   margin: 0;
 }
-/* line 347, sass/_common.scss */
+/* line 350, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .more a {
   display: block;
   padding: 4px 10px;
@@ -682,24 +687,24 @@ body > #wrap {
   color: #3569c9;
   font-size: 80%;
 }
-/* line 354, sass/_common.scss */
+/* line 357, sass/_common.scss */
 #sideTower .sideWidget > .ttBoxSection .more a:hover {
   background-color: #efefef;
 }
-/* line 361, sass/_common.scss */
+/* line 364, sass/_common.scss */
 #sideTower .localHead a {
   color: #fff;
 }
 
-/* line 367, sass/_common.scss */
+/* line 370, sass/_common.scss */
 .social--holder {
   text-align: right;
 }
-/* line 369, sass/_common.scss */
+/* line 372, sass/_common.scss */
 .social--holder .social--list {
   margin: 0 0 20px;
 }
-/* line 371, sass/_common.scss */
+/* line 374, sass/_common.scss */
 .social--holder .social--list li {
   display: inline-block;
   margin-bottom: 0;
@@ -707,32 +712,32 @@ body > #wrap {
   vertical-align: top;
 }
 @media only screen and (max-width: 767px) {
-  /* line 376, sass/_common.scss */
+  /* line 379, sass/_common.scss */
   .social--holder .social--list li .lineButtonPc {
     display: none;
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 367, sass/_common.scss */
+  /* line 370, sass/_common.scss */
   .social--holder {
     text-align: left;
   }
 }
 
-/* line 385, sass/_common.scss */
+/* line 388, sass/_common.scss */
 .fb-comments, .fb-comments span, .fb-comments iframe {
   width: 600px !important;
 }
 
-/* line 391, sass/_common.scss */
+/* line 394, sass/_common.scss */
 .content .contact_form label {
   margin-right: 10px;
 }
-/* line 394, sass/_common.scss */
+/* line 397, sass/_common.scss */
 .content .contact_form .btn_wrap {
   text-align: center;
 }
-/* line 396, sass/_common.scss */
+/* line 399, sass/_common.scss */
 .content .contact_form .btn_wrap input[type="submit"] {
   width: 120px;
   margin: 0 20px 0 0;
@@ -750,18 +755,18 @@ body > #wrap {
 
 /* 検索ボックス ▼
 -------------------------------------------- */
-/* line 412, sass/_common.scss */
+/* line 415, sass/_common.scss */
 .areaSearch, .searchArea {
   /* selectboxカスタム */
   /* inputカスタム */
 }
-/* line 413, sass/_common.scss */
+/* line 416, sass/_common.scss */
 .areaSearch select, .areaSearch input, .searchArea select, .searchArea input {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
-/* line 420, sass/_common.scss */
+/* line 423, sass/_common.scss */
 .areaSearch .select-box select, .searchArea .select-box select {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -778,7 +783,7 @@ body > #wrap {
   font-size: 11px;
   font-size: 1.1rem;
 }
-/* line 437, sass/_common.scss */
+/* line 440, sass/_common.scss */
 .areaSearch .topSearch, .searchArea .topSearch {
   background: #eeeeee;
   -moz-border-radius: 5px;
@@ -789,7 +794,7 @@ body > #wrap {
   color: #333;
   width: 60%;
 }
-/* line 445, sass/_common.scss */
+/* line 448, sass/_common.scss */
 .areaSearch input[type="submit"], .searchArea input[type="submit"] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -799,7 +804,7 @@ body > #wrap {
   color: #fff;
   background: #44b700;
 }
-/* line 451, sass/_common.scss */
+/* line 454, sass/_common.scss */
 .areaSearch input[type="submit"]:hover, .searchArea input[type="submit"]:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
