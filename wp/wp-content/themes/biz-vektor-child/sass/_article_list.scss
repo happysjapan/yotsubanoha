@@ -49,13 +49,10 @@
 					height: auto;
 				}
 				@extend %termsWrap;
-				.termsWrap {
-					margin-top: 15px;
-				}
 			}
 			.detailWrap {
 				display: table-cell;
-				table {margin-bottom: 12px;}
+				table {margin: 0 0 12px;}
 			}
 		}
 		@extend %btnList;
@@ -70,8 +67,9 @@
 				.fee {padding: 8px;}
 			}
 			.profileWrap {
-				.imageWrap,.detailWrap {
+				.leftWrap,.detailWrap {
 					display: block;
+					width: 100%;
 				}
 			}
 
@@ -87,5 +85,12 @@
 		background-color: $color-green;
 		text-decoration: none;
 		&:hover {@include opacity(.9);}
+	}
+	.officeWrap { // 事業所一覧のみ
+		.profileWrap .leftWrap {
+			div:first-of-type {
+				margin-top: 15px;
+			}
+		}
 	}
 }

@@ -152,6 +152,18 @@ $SPPoint:    768px;
         &:hover {@include opacity(.9);}
       }
     }
+    @include SP {
+      .btnWrap {
+        a {
+          min-width: 126px;
+          margin: 0 0 5px;
+          padding: 12px;
+          @include font-size(1.6);
+          @include line-height(1.8);
+          &:last-child {margin-bottom: 0;}
+        }
+      }
+    }
 }
 %reward {
     padding: 10px;

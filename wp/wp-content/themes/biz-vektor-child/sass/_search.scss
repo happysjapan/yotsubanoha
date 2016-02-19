@@ -118,9 +118,16 @@
 			}
 			@include SP {
 				.inner {
-					padding: 20px;
+					padding: 20px 20px 90px;
+					overflow: visible;
+					&:after {
+						content: "";
+						display: block;
+						clear: both;
+					}
 					form#searchform {
 						margin-top: 0;
+						float: none;
 						.select-box {
 							.search--form--select {
 								float: none;
@@ -133,7 +140,17 @@
 						}
 					}
 					.calenderWrap {
-						margin: 40px 0 0;
+						display: block;
+						margin: 40px auto 0;
+						float: none;
+						.widget_calendar_medium_size {width: auto;}
+						#calendar_wrap .wp-cal-datepicker-calendar {
+							position: relative;
+							tr td .wp-cal-tooltip {
+								left: 0;
+								top: 176px;
+							}
+						}
 					}
 				}
 			}
