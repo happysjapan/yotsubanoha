@@ -45,8 +45,8 @@
 		</li>
 		<li><h3>甲信越・北陸エリア</h3>
 		     <ul class="listC">
-					 <li><a href="<<?php echo lawyerCategoryLink("yamanashi");?>">山梨県</a></li>
-					 <li><a href="<?php echo lawyerCategoryLink("niigata");?>">新潟県</a></li>
+					 <li><a href="<?php echo lawyerCategoryLink("yamanashi");?>">山梨県</a></li>
+					 <li><a href="<?php echo lawyerCategoryLink("nigata");?>">新潟県</a></li>
 					 <li><a href="<?php echo lawyerCategoryLink("nagano");?>">長野県</a></li>
 					 <li><a href="<?php echo lawyerCategoryLink("toyama");?>">富山県</a></li>
 					 <li><a href="<?php echo lawyerCategoryLink("ishikawa");?>">石川県</a></li>

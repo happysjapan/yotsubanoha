@@ -7,19 +7,21 @@
           <div class="leftWrap">
             <img src="<?php echo get_field('office_image'); ?>" alt="<?php the_title(); ?>" />
 
-            <?php the_category(); ?>
+            <div class="categoryTermsWrap"><?php the_category(); ?></div>
+            <div class="tagTermsWrap">
+              <ul>
+                <?php
+                $tags = wp_get_post_tags( get_the_id() );
+                foreach ($tags as $tag) { ?>
+                  <li>
+                    <a class="card--tag-link" href="<?php echo get_term_link( $tag->term_id ); ?> ">
+                      <?php echo $tag->name; ?>
+                    </a>
+                  </li>
+                <?php } ?>
+              </ul>
+            </div>
 
-            <ul class="termsWrap">
-              <?php
-              $tags = wp_get_post_tags( get_the_id() );
-              foreach ($tags as $tag) { ?>
-                <li class="tagName">
-                  <a class="card--tag-link" href="<?php echo get_term_link( $tag->term_id ); ?> ">
-                    <?php echo $tag->name; ?>
-                  </a>
-                </li>
-              <?php } ?>
-            </ul>
           </div>
           <div class="detailWrap">
             <div class="textWrap">

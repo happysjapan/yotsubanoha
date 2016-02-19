@@ -339,12 +339,17 @@
 					.prDescription {
 						margin-top: 10px;
 						p {
+							margin: 0;
 							padding: 0;
 							color: #666;
 							@include font-size(1.2);
 							@include line-height(1.6);
 						}
 					}
+					.moreLink {
+						text-align: right;
+					}
+
 				}
 			}
 			@include SP {
@@ -364,7 +369,6 @@
 					.prDescription {
 					}
 					.moreLink {
-						text-align: right;
 						a {margin-top: 0;}
 					}
 				}

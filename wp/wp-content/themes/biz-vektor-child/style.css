@@ -105,10 +105,23 @@ Version: 0.1.0
   border: 1px solid #006600;
 }
 
-/* line 166, sass/core/_utility.scss */
-.content .article .inner .profileWrap .leftWrap .termsWrap p, .content.indivlawyer .entry-content section.indivProfile .rightBox .termsWrap p {
+/* line 165, sass/core/_utility.scss */
+.content .article .inner .profileWrap .leftWrap .categoryTermsWrap, .content.indivlawyer .entry-content section.indivProfile .rightBox .categoryTermsWrap, .content .article .inner .profileWrap .leftWrap .tagTermsWrap, .content.indivlawyer .entry-content section.indivProfile .rightBox .tagTermsWrap {
   display: inline-block;
-  margin-bottom: 10px;
+}
+/* line 167, sass/core/_utility.scss */
+.content .article .inner .profileWrap .leftWrap .categoryTermsWrap ul, .content.indivlawyer .entry-content section.indivProfile .rightBox .categoryTermsWrap ul, .content .article .inner .profileWrap .leftWrap .tagTermsWrap ul, .content.indivlawyer .entry-content section.indivProfile .rightBox .tagTermsWrap ul {
+  margin: 0;
+}
+/* line 169, sass/core/_utility.scss */
+.content .article .inner .profileWrap .leftWrap .categoryTermsWrap ul li, .content.indivlawyer .entry-content section.indivProfile .rightBox .categoryTermsWrap ul li, .content .article .inner .profileWrap .leftWrap .tagTermsWrap ul li, .content.indivlawyer .entry-content section.indivProfile .rightBox .tagTermsWrap ul li {
+  list-style: none;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+/* line 175, sass/core/_utility.scss */
+.content .article .inner .profileWrap .leftWrap .categoryTermsWrap a, .content.indivlawyer .entry-content section.indivProfile .rightBox .categoryTermsWrap a, .content .article .inner .profileWrap .leftWrap .tagTermsWrap a, .content.indivlawyer .entry-content section.indivProfile .rightBox .tagTermsWrap a {
+  display: block;
   padding: 2px 8px;
   color: #fff;
   -moz-border-radius: 4px;
@@ -116,13 +129,14 @@ Version: 0.1.0
   border-radius: 4px;
   font-size: 12px;
   font-size: 1.2rem;
+  text-decoration: none;
 }
-/* line 174, sass/core/_utility.scss */
-.content .article .inner .profileWrap .leftWrap .termsWrap .categoryName, .content.indivlawyer .entry-content section.indivProfile .rightBox .termsWrap .categoryName {
+/* line 185, sass/core/_utility.scss */
+.content .article .inner .profileWrap .leftWrap .categoryTermsWrap li a, .content.indivlawyer .entry-content section.indivProfile .rightBox .categoryTermsWrap li a {
   background-color: #418bca;
 }
-/* line 175, sass/core/_utility.scss */
-.content .article .inner .profileWrap .leftWrap .termsWrap .tagName, .content.indivlawyer .entry-content section.indivProfile .rightBox .termsWrap .tagName {
+/* line 186, sass/core/_utility.scss */
+.content .article .inner .profileWrap .leftWrap .tagTermsWrap li a, .content.indivlawyer .entry-content section.indivProfile .rightBox .tagTermsWrap li a {
   background-color: #d9544f;
 }
 
@@ -1223,6 +1237,7 @@ body > #wrap {
 }
 /* line 341, sass/_top.scss */
 .frontpage .pr_wrapper .inner ul li .prDescription p {
+  margin: 0;
   padding: 0;
   color: #666;
   font-size: 12px;
@@ -1230,32 +1245,32 @@ body > #wrap {
   line-height: 16px;
   line-height: 1.6rem;
 }
+/* line 349, sass/_top.scss */
+.frontpage .pr_wrapper .inner ul li .moreLink {
+  text-align: right;
+}
 @media only screen and (max-width: 767px) {
-  /* line 351, sass/_top.scss */
+  /* line 356, sass/_top.scss */
   .frontpage .pr_wrapper .inner ul li {
     width: 100%;
     margin-right: 0;
     float: none;
   }
-  /* line 355, sass/_top.scss */
+  /* line 360, sass/_top.scss */
   .frontpage .pr_wrapper .inner ul li:nth-child(3n) {
     margin-right: 0;
   }
-  /* line 356, sass/_top.scss */
+  /* line 361, sass/_top.scss */
   .frontpage .pr_wrapper .inner ul li .prImage {
     vertical-align: top;
   }
-  /* line 358, sass/_top.scss */
+  /* line 363, sass/_top.scss */
   .frontpage .pr_wrapper .inner ul li .prImage img {
     display: block;
     width: 150px;
     height: auto;
   }
-  /* line 366, sass/_top.scss */
-  .frontpage .pr_wrapper .inner ul li .moreLink {
-    text-align: right;
-  }
-  /* line 368, sass/_top.scss */
+  /* line 372, sass/_top.scss */
   .frontpage .pr_wrapper .inner ul li .moreLink a {
     margin-top: 0;
   }
