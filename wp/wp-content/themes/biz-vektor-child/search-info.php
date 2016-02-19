@@ -62,7 +62,7 @@ $the_query = new WP_Query( $custom_args );
       }
     }
   } ?>
-  <h2 class="page--title"><?php echo $page_title; ?></h2>
+  <h1 class="page--title"><?php echo $page_title; ?></h1>
 
   <!-- [ #content ] -->
   <section id="content" class="content wide">

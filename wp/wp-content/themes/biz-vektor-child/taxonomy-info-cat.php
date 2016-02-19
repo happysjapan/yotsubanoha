@@ -14,7 +14,7 @@ if ( is_tax() ) {
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
   <?php if(isset($term)){ ?>
-    <h2 class="category--title"><?php echo $term->name; ?>の就労移行支援に関する説明会・セミナー</h2>
+    <h1 class="category--title"><?php echo $term->name; ?>の就労移行支援に関する説明会・セミナー</h1>
     <div class="category-description">
       <?php echo $term->description; ?>
     </div>
