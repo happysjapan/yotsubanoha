@@ -2,9 +2,9 @@
 
 $current_type = get_post_type();
 
-if ( is_home() || is_page() || is_attachment() || is_search() || is_404() || ( $current_type == 'info' && is_archive() ) ) {
+if ( is_home() || is_page() || is_attachment() || is_search() || is_404() ) {
 	$pageTitTag = 'h1';
-} else if ( is_category() || is_tag() || is_author() || is_tax() || is_archive() || is_single() ) {
+} else if ( is_category() || is_tag() || is_author() || is_tax() || is_archive() || is_single() || ( $current_type == 'info' && is_archive() ) ) {
 	$pageTitTag = 'div';
 }
 $pageTitHtml_before = '<div id="pageTitBnr">'."\n";
@@ -33,7 +33,7 @@ if (is_page() || is_attachment()){
 	// 標準の投稿タイプでない場合は、カスタム投稿タイプ名を取得
 	}
 	else if ( is_search() ){
-		
+
 	}
 	else {
 		// 普通のポストタイプが取得出来る場合
@@ -72,4 +72,5 @@ $allowed_html = array(
 $pageTitHtml .= wp_kses($pageTitle,$allowed_html);
 $pageTitHtml .= $pageTitHtml_after;
 $pageTitHtml = apply_filters( 'bizvektor_pageTitHtml', $pageTitHtml );
-echo $pageTitHtml;
+
+	echo $pageTitHtml;
