@@ -3,27 +3,31 @@
   $cat_list = get_the_category();
   $current_cat = null;
 
+  $cat_object = get_queried_object();
+
   $i=0;
   foreach ($cat_list as $cat) {
     if( $cat->slug != '47zenkoku') {
       $cat_description = $cat->category_description;
+      $cat_title = $cat->name.'の就労移行支援事業所「障害福祉サービス」検索';
       $i++;
     }
   }
 
   // echo "<pre>";
-  // var_dump($cat_description);
+  // var_dump($cat_object);
   // echo "</pre>";
 ?>
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
   <?php
-    if(isset($cat_description)) {
-      echo $cat_description;
+    if(isset($cat_object)) {
+      echo '<h2 class="page--title">'.$cat_object->name.'の就労移行支援事業所「障害福祉サービス」検索</h2>';
+      echo $cat_object->description;
     }
     else { ?>
       <h2 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
-    <?php } ?>
+  <?php } ?>
 
   <!-- [ #content ] -->
   <section id="content" class="content wide">

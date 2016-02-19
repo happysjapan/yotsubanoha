@@ -9,10 +9,9 @@
             <div class="categoryTermsWrap">
               <ul>
                 <?php $tax_terms = wp_get_post_terms( get_the_id(), 'info-cat' );
-                foreach ($tax_terms as $tax_term) {
-                  echo '<li><a href="">'.$tax_term->name.'</a></li>';
-                } ?>
-
+                foreach ($tax_terms as $tax_term) { ?>
+                  <li><a href="<?php echo get_term_link( $tax_term->term_id ); ?>"><?php echo $tax_term->name; ?></a></li>
+                <?php } ?>
               </ul>
             </div>
           </div>
