@@ -30,8 +30,11 @@ body > #wrap {
 	font-weight: bold;
 	border: none;
 }
+.pageDescription {
+	margin: 0 .5% 15px;
+}
 .category-description {
-	margin: 0 .5% 10px;
+	margin: 0 .5% 15px;
 	@include font-size(1.4);
 	@include SP {
 		@include font-size(1.2);
