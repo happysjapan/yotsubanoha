@@ -22,11 +22,11 @@
 <div id="container" class="innerBox">
   <?php
     if(isset($cat_object)) {
-      echo '<h2 class="page--title">'.$cat_object->name.'の就労移行支援事業所「障害福祉サービス」検索</h2>';
-      echo '<div class="descriptionWrap">'.$cat_object->description.'</div>';
+      echo '<h1 class="page--title">'.$cat_object->name.'の就労移行支援事業所「障害福祉サービス」検索</h1>';
+      echo $cat_object->description;
     }
     else { ?>
-      <h2 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
+      <h1 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h1>
   <?php } ?>
 
   <!-- [ #content ] -->
