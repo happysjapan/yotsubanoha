@@ -23,7 +23,7 @@
   <?php
     if(isset($cat_object)) {
       echo '<h2 class="page--title">'.$cat_object->name.'の就労移行支援事業所「障害福祉サービス」検索</h2>';
-      echo $cat_object->description;
+      echo '<div class="descriptionWrap">'.$cat_object->description.'</div>';
     }
     else { ?>
       <h2 class="page--title"><?php echo esc_html($biz_vektor_options['postLabelName']); ?></h2>
