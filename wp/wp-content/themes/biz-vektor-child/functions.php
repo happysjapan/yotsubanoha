@@ -59,10 +59,10 @@ function do_head_contact_custom($headContact){
                       var js, fjs = d.getElementsByTagName(s)[0];
                       if (d.getElementById(id)) return;
                       js = d.createElement(s); js.id = id;
-                      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=240954495949691";
+                      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=1496824190624319";
                       fjs.parentNode.insertBefore(js, fjs);
                     }(document, \'script\', \'facebook-jssdk\'));</script>
-                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+                    <div class="fb-like" data-href="'.get_site_url().'" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
                 </li>
         	</ul>
             <div class="totalWrap">
