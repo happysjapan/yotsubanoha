@@ -48,8 +48,6 @@ if (is_page() || is_attachment()){
 			$pageTitle = $wp_query->queried_object->name;
 		}
 		elseif(is_archive()) {
-			global $wp_query;
-			$pageTitle = $wp_query->queried_object->label;
 		}
 	}
 } else if (is_404()){
