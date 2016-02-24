@@ -6,6 +6,7 @@
 biz_vektor_get_theme_options(); ?>
 <html xmlns:fb="http://ogp.me/ns/fb#" <?php language_attributes(); ?>>
 <head>
+<meta name="google-site-verification" content="bxqEqLEbhXZNxbutDJeGrkNiGATJXf4cRDvkIn98tcA" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title><?php wp_title(); ?></title>
 <link rel="start" href="<?php echo home_url(); ?>" title="HOME" />
@@ -101,7 +102,7 @@ $gMenuHtml .= '</div><!-- [ /#gMenuInner ] -->
 $gMenuHtml = apply_filters( 'bizvektor_gMenuHtml', $gMenuHtml );
 // gMenuのHTMLを出力
 echo $gMenuHtml;
-} // if ($gMenu) 
+} // if ($gMenu)
 ?>
 
 <?php echo get_biz_vektor_header_image_home();?>
