@@ -51,6 +51,7 @@
 		.telNumber {
 			color: $color-red;
 			background: url("images/icon_free_voice.gif") no-repeat scroll left center;
+			text-decoration: none;
 		}
 		.btn {
 			background-color: $color-lightGreen;
@@ -124,7 +125,7 @@
 						.telNumber {
 							display: inline-block;
 							margin-bottom: 8px;
-							padding-left: 62px;
+							padding-left: 56px;
 							@include font-size(3);
 							@include line-height(3.5);
 							background-size: 52px auto;
@@ -226,9 +227,9 @@
 				}
 				.telNumber {
 					display: block;
-					width: 480px;
+					width: 470px;
 					margin: 0 auto 20px;
-					padding: 0 20px 0 100px;
+					padding: 0 20px 0 92px;
 					@include font-size(4.8);
 					@include line-height(6);
 					background-size: 92px auto;
