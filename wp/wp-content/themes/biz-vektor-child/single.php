@@ -35,7 +35,10 @@ $lawyer_by_category = get_posts( $args );
 
 		<section class="indivInfo tableRow">
 			<div class="leftBox">
-				<img src="<?php echo get_field('office_image'); ?>" alt="<?php the_title(); ?>" />
+				<?php
+					$office_image = get_field('office_image');
+				 ?>
+				<img src="<?php echo $office_image['sizes']['medium']; ?>" alt="<?php the_title(); ?>" />
 				<p class="reward"<strong>お祝い金</strong>：<?php echo get_field('reward'); ?>円</p>
 			</div>
 			<div class="rightBox">
@@ -140,8 +143,8 @@ $lawyer_by_category = get_posts( $args );
 		                <?php } ?>
 		              </ul>
 		            </div>
-            
-					
+
+
 					<div class="rewardWrap">
 						<p><strong>お祝い金</strong>  <?php echo get_field('reward'); ?>円支給</p>
 						<a href="/celebration/" title="お祝い金とは？" class="btn">お祝い金とは？</a>

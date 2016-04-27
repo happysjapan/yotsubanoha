@@ -5,7 +5,10 @@
         <h3 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
         <div class="profileWrap">
           <div class="leftWrap">
-            <img src="<?php echo get_field('office_image'); ?>" alt="<?php the_title(); ?>" />
+            <?php
+    					$office_image = get_field('office_image');
+    				 ?>
+            <img src="<?php echo $office_image['sizes']['thumbnail']; ?>" alt="<?php the_title(); ?>" />
 
             <div class="categoryTermsWrap"><?php the_category(); ?></div>
             <div class="tagTermsWrap">
