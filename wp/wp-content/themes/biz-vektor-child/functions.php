@@ -201,3 +201,78 @@ function yotsubanoha_get_ja_day($arg) {
 	}
 	return $arg_ja;
 }
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*	Custom post type _ add public_relation
+/*-------------------------------------------*/
+
+add_post_type_support( 'public_relation', 'front-end-editor' );
+
+add_action( 'init', 'biz_vektor_public_relation_create_post_type', 0 );
+function biz_vektor_public_relation_create_post_type() {
+	$public_relationLabelName = 'Public relation';
+	register_post_type( 'public_relation', /* post-type */
+	array(
+		'labels' => array(
+		'name' => $public_relationLabelName,
+		'singular_name' => $public_relationLabelName
+	),
+	'public' => true,
+	'menu_position' =>5,
+	'has_archive' => true,
+	'supports' => array('title','editor','excerpt','thumbnail','author')
+	)
+	);
+	// Add information category
+	register_taxonomy(
+		'public_relation-cat',
+		'public_relation',
+		array(
+			'hierarchical' => true,
+			'update_count_callback' => '_update_post_term_count',
+			'label' => $public_relationLabelName._x('category','admin menu', 'biz-vektor'),
+			'singular_label' => $public_relationLabelName._x('category','admin menu', 'biz-vektor'),
+			'public' => true,
+			'show_ui' => true,
+		)
+	);
+}
+
+
+add_post_type_support( 'study', 'front-end-editor' );
+
+add_action( 'init', 'happys_study_create_post_type', 0 );
+function happys_study_create_post_type() {
+ $studyLabelName = 'Study';
+ register_post_type( 'study', /* post-type */
+ array(
+	 'labels' => array(
+	 'name' => $studyLabelName,
+	 'singular_name' => $studyLabelName
+ ),
+ 'public' => true,
+ 'menu_position' =>5,
+ 'has_archive' => true,
+ 'supports' => array('title','editor','excerpt','thumbnail','author')
+ )
+ );
+ // Add information category
+ register_taxonomy(
+	 'study-cat',
+	 'study',
+	 array(
+		 'hierarchical' => true,
+		 'update_count_callback' => '_update_post_term_count',
+		 'label' => $studyLabelName._x(' category','admin menu', 'biz-vektor'),
+		 'singular_label' => $studyLabelName._x(' category','admin menu', 'biz-vektor'),
+		 'public' => true,
+		 'show_ui' => true,
+	 )
+ );
+}

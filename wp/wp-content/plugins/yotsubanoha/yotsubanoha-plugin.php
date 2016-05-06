@@ -47,11 +47,14 @@ class yotsubanoha_lawyer_date_widget extends WP_Widget {
           <?php if ( $the_query->have_posts() ) { while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
             <li id="post-<?php echo get_the_id(); ?>">
+              <?php
+      					$office_image = get_field('office_image');
+      				 ?>
               <div>
                     <p class="ttl"><?php echo the_title(); ?></p>
                     <p class="desc"><?php echo get_field('office_address'); ?></p>
                     <p class="reward">お祝い金：<?php echo get_field('reward'); ?>円</p>
-                    <img src="<?php echo get_field('office_image'); ?>" alt="<?php echo the_title(); ?>" />
+                    <img src="<?php echo $office_image['sizes']['thumbnail']; ?>" alt="<?php echo the_title(); ?>" />
                     <a href="<?php echo get_the_permalink(); ?>" title="<?php echo the_title(); ?>" class="btn">詳細</a>
               </div>
             </li>
@@ -136,11 +139,14 @@ class yotsubanoha_lawyer_reward_widget extends WP_Widget {
           <?php if ( $the_query->have_posts() ) { while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
               <li class="ttBox" id="post-<?php echo get_the_id(); ?>">
+                <?php
+        					$office_image = get_field('office_image');
+        				 ?>
                 <div>
                     <p class="ttl"><?php echo the_title(); ?></p>
                     <p class="desc"><?php echo get_field('office_address'); ?></p>
                     <p class="reward">お祝い金：<?php echo get_field('reward'); ?>円</p>
-                    <img src="<?php echo get_field('office_image'); ?>" alt="<?php echo the_title(); ?>" />
+                    <img src="<?php echo $office_image['sizes']['thumbnail']; ?>" alt="<?php echo the_title(); ?>" />
                     <a href="<?php echo get_the_permalink(); ?>" title="<?php echo the_title(); ?>" class="btn">詳細</a>
                 </div>
               </li>
