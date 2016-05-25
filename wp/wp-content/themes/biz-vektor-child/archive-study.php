@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 <!-- [ #container ] -->
 <div id="container" class="innerBox">
-  <h1 class="page--title"><?php echo get_post_type_object('study')->labels->name; ?></h1>
-
   <!-- [ #content ] -->
   <section id="content" class="content wide">
 
