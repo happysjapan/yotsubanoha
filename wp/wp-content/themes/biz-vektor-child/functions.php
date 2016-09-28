@@ -259,7 +259,7 @@ add_post_type_support( 'study', 'front-end-editor' );
 
 add_action( 'init', 'happys_study_create_post_type', 0 );
 function happys_study_create_post_type() {
- $studyLabelName = 'Study';
+ $studyLabelName = '就職・就活事例';
  register_post_type( 'study', /* post-type */
  array(
 	 'labels' => array(
